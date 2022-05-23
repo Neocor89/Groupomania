@@ -1,5 +1,10 @@
 <template>
-  <div class="app">
-    <h1>This is an about page</h1>
+  <div class="about">
+    <h1>HELLO EVERYONE</h1>
+    <h1>HELLO EVERYONE</h1>
+    <h1>HELLO EVERYONE</h1>
+    <h1>HELLO EVERYONE</h1>
+    <h1>HELLO EVERYONE</h1>
+
   </div>
 </template>

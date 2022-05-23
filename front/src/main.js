@@ -1,36 +1,16 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
 
-import VueRouteMiddleware from 'vue-route-middleware';
+//: ADD import from use bootstrap in project Vue
+import Vue from 'vue'
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 
-Vue.use(VueRouter);
-
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ './views/Home.vue'),
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue'),
-  },
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
  
-];
+//: TEST THIS = import 'bootstrap-vue/dist/bootstrap.js'
 
-const router = new VueRouter({
-  routes,
-});
 
-router.beforeEach(VueRouteMiddleware());
-
-export default router;
+createApp(App).use(store).use(router).mount('#app')
