@@ -58,6 +58,8 @@
 </template>
 
 <script>
+// TODO vérifier si Bootstrap fonctione bien
+import "bootstrap/dist/css/bootstrap.min.css";
 export default {
   name: 'Signup',
   data() {
