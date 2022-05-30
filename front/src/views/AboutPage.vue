@@ -9,7 +9,4 @@ export default {
 </script>
 
 <style>
-h1 {
- min-height: 100vh;
-}
 </style>

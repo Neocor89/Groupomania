@@ -3,7 +3,7 @@
     <h1>Hello Signup</h1>
     <h2>
       Avec <span class="logotext">Groupomania</span>, <br />
-      restez en contact avec votre �quipe.
+      Restez en contact avec vos collègues.
     </h2>
     <from>
       <p>S'inscrir</p>
