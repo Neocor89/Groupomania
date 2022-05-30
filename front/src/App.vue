@@ -3,16 +3,26 @@
   <div id="app">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <h1>Hello World</h1>
+    <!-- <About /> -->
+    <NameField title="Hello NAMEFIELD"/>
   </div>
   </nav>
 </template>
 
 <script>
+// import About from "./views/About.vue"
+import NameField from "./components/NameField.vue"
 
-
+export default {
+  name: 'App',
+  components: {
+    // About,
+    NameField
+  },
+}
 
 </script>
-
 
 <style lang="scss">
 
