@@ -8,7 +8,6 @@ const path = require('path');
 const auth = require('./middleware/auth');
 
 const userCtrl = require('./controllers/user');
-const notificationsCtrl = require('./controllers/notifications');
 
 const postsRoutes = require('./routes/posts');
 const userRoutes = require('./routes/user');
@@ -37,18 +36,5 @@ app.get('/api/users/:id', auth, userCtrl.getOneUser);
 app.get('/api/users', auth, userCtrl.getAllUsers);
 app.delete('/api/users/:id', auth, userCtrl.deleteUserAccount);
 
-
-//: Pas de notifications
-app.get(
-  '/api/notifications',
-  auth,
-  notificationsCtrl.getNotificationsOfOneUser
-);
-app.delete(
-  '/api/notifications/:id',
-  auth,
-  notificationsCtrl.deleteNotification
-);
-//: Pas de notifications
 
 module.exports = app;
