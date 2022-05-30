@@ -13,7 +13,7 @@
         placeholder="Pr�nom"
         v-model="input.firstName"
         class="account-input text-dark mb-2 mt-4 pl-3 w-100"
-        aria-label="�crire votre pr�nom"
+        aria-label="�crire votre prenom"
       />
       <input
         id="lastName"
@@ -50,7 +50,7 @@
                 </button>
                 <p class="my-3 text-danger">{{ errorMessage }}</p>
                  <p class="font-small grey-text d-flex justify-content-center mb-1">
-              Vous avez d�j� un compte ?
+              Vous avez déjà un compte ?
               <router-link to="/login" class="font-weight-bold ml-1">
                 Connectez-vous</router-link>
     </from>
@@ -70,37 +70,7 @@ export default {
         password: '',
       },
     };
-  },
-  methods: {
-    signup() {
-      if (
-        this.input.firstName != '' &&
-        this.input.lastName != '' &&
-        this.input.email != '' &&
-        this.input.password != ''
-      ) {
-        apiClient
-          .post('api/auth/signup', this.input)
-          .then((data) => {
-            if (!data.token) {
-              this.errorMessage = data.error.errors[0].message;
-            } else {
-              localStorage.setItem('userToken', data.token);
-              localStorage.setItem('userData', JSON.stringify(data.user));
-              router.push({ name: 'Posts' });
-            }
-          })
-          .catch((error) => {
-            if (error.error) {
-              return (this.errorMessage = error.error.errors[0].message);
-            }
-            this.errorMessage = 'Erreur de connexion';
-          });
-      } else {
-        this.errorMessage = 'Veuillez renseigner les champs ci-dessus :-(';
-      }
-    },
-  },
+  }
 }
 </script>
 

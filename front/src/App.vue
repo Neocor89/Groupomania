@@ -2,8 +2,7 @@
    <nav>
   <div id="app">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    <h1>Hello World</h1>
+    <router-link to="/about">AboutPage</router-link>
     <!-- <About /> -->
     <NameField title="Hello NAMEFIELD"/>
   </div>
@@ -11,13 +10,14 @@
 </template>
 
 <script>
-// import About from "./views/About.vue"
+// import SignUp from "./views/About.vue"
 import NameField from "./components/NameField.vue"
+// import AboutPage from "./views/AboutPage.vue"
 
 export default {
   name: 'App',
   components: {
-    // About,
+    // AboutPage,
     NameField
   },
 }
