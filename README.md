@@ -28,3 +28,10 @@ La création d’un réseau social interne, moderne et ludique, qui permettra au
 employés 
 * la chargé-e de communication **Groupomania** doit pouvoir afficher les dernières **messages** des salariés ;
 
+## Setup
+
+`Launch server 🚀`
+```node
+npm run start
+```
+
