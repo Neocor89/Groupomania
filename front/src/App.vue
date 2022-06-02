@@ -1,23 +1,45 @@
 <template>
   <div id="app">
-   <nav>
-    <router-link to="/AboutPage">About</router-link>
-    <router-link to="/">Login</router-link>
+    <div
+      id="nav"
+      class="sticky-top justify-content-start justify-content-sm-center mb-1"
+    >
+      <router-link to="/">
+        <img
+          id="logo"
+          :src="
+            require('./assets/groupomania-logo_black.png')
+          "
+          alt="logo Groupomania"
+          width="230"
+          height="200"
+        />
+      </router-link>
+    </div>
+    
+     <!-- <SignUp /> -->
+     <!-- <NavBar /> -->
+    <!-- <router-link to="/">Home</router-link>  -->
+    <!-- <router-link to="/AboutPage">About</router-link> | -->
+    <!-- <router-link to="/signUp">SignUp</router-link> -->
     <router-view />
-  </nav>
-  <NameField />
+    <img class="size__img" src="./assets/groupomania_background-removebg.png" alt="">
   </div>
 </template>
 
 <script>
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import NameField from './components/NameField.vue'
+// import NavBar from './components/NavBar';
+// import SignUp from './components/SignUp';
+// import NameField from './components/NameField';
 
 export default {
   name: 'App',
   components: {
-    NameField
+    // NameField
+    // NavBar,
+    // SignUp
   },
 }
 
@@ -25,24 +47,28 @@ export default {
 
 <style lang="scss">
 
+.size__img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  background-position: center center;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #17a2b859;
+  background-color: #fcfcfc59;
 }
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #c25516;
-    }
-  }
+#nav {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 5px 13px -7px #000000,
+    5px 5px 15px 7px rgb(203 103 13 / 44%);;
+  box-shadow: 0px 10px 13px -7px #0000004b,
+    5px 5px 15px 7px rgba(184, 184, 184, 0);
+  z-index: 1;
+  margin: 0px 15px 0 15px;
 }
 @media screen and (min-width: 280px) and (max-width: 767px) {
   body,

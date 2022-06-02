@@ -1,34 +1,33 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import Vue from 'vue';
 // import VueRouter from 'vue-router';
-// Vue.use(VueRouter);
-
-import AboutPage from '../views/AboutPage'
-import Login from '../views/Login'
+// import auth from '../middleware/auth';
+import VueRouteMiddleware from 'vue-route-middleware';
 
 const routes = [
   {
-    path: '/',
-    name: 'Login',
-    component: Login
-  },
-  {
     path: '/AboutPage',
     name: 'AboutPage',
-    component: AboutPage
-  }
+    component: () =>
+    import(/* webpackChunkName: "about" */ '../views/AboutPage.vue'),
+
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/Login.vue'),
+  },
+  {
+    path: '/signUp',
+    name: 'SignUp',
+    component: () => import('../components/SignUp.vue'),
+  // component: () => import('../components/Signup.vue'),
+}
 ]
 
 //  route level code-splitting
 //  this generates a separate chunk (about.[hash].js) for this route
 //  which is lazy-loaded when the route is visited.
 // component: () => import(/* webpackChunkName: "about" */ '../views/AboutPage.vue')
-
-// {
-//   path: '/signup',
-//   name: 'Signup',
-//   component: () => import('../components/NameField.vue'),
-// },
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
@@ -37,6 +36,6 @@ const router = createRouter({
 
 
 
-// router.beforeEach(VueRouteMiddleware());
+router.beforeEach(VueRouteMiddleware());
 
 export default router

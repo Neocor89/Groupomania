@@ -1,16 +1,15 @@
 <template>
   <section>
-    <h1>Hello Signup</h1>
     <h2>
-      Avec <span class="logotext">Groupomania</span>, <br />
+      <span class="logotext">Groupomania</span> <br />
       Restez en contact avec vos collègues.
     </h2>
     <from>
-      <p>S'inscrir</p>
+      <p>S'inscrire</p>
       <input
         id="firstName"
         type="text"
-        placeholder="Pr�nom"
+        placeholder="Prénom"
         v-model="input.firstName"
         class="account-input text-dark mb-2 mt-4 pl-3 w-100"
         aria-label="�crire votre prenom"
@@ -26,7 +25,7 @@
       <input
         id="email"
         type="email"
-        placeholder="@"
+        placeholder="@email"
         v-model="input.email"
         class="account-input text-dark mb-2 pl-3 w-100"
         aria-label="�crire votre adresse mail"
@@ -45,12 +44,10 @@
         id="signup-button"
         class="btn btn-outline-info"
         aria-label="S'inscrire"
-      >
-        Inscription
-                </button>
+      >Inscription</button>
                 <p class="my-3 text-danger">{{ errorMessage }}</p>
                  <p class="font-small grey-text d-flex justify-content-center mb-1">
-              Vous avez déjà un compte ?
+              Vous avez déjà un compte ?</p>
               <router-link to="/login" class="font-weight-bold ml-1">
                 Connectez-vous</router-link>
     </from>
@@ -61,7 +58,7 @@
 // TODO vérifier si Bootstrap fonctione bien
 // import "bootstrap/dist/css/bootstrap.min.css";
 export default {
-  name: 'Signup',
+  name: "SignupVue",
   data() {
     return {
       errorMessage: '',

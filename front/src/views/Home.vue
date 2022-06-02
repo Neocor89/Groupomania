@@ -1,12 +1,14 @@
 <template>
-<p>LO</p>
+  <br>
 </template>
 
 <script>
 export default {
-  name: 'AboutPage'
+ name: "HomeVue"
 }
+
 </script>
 
 <style>
+
 </style>
