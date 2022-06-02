@@ -1,22 +1,23 @@
 <template>
-   <nav>
   <div id="app">
-    <router-link to="/">Home</router-link> |
+   <nav>
     <router-link to="/AboutPage">About</router-link>
-  </div>
-  <div>
+    <router-link to="/">Login</router-link>
     <router-view />
-  </div>
   </nav>
+  <NameField />
+  </div>
 </template>
 
 <script>
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import NameField from './components/NameField.vue'
 
 export default {
   name: 'App',
   components: {
+    NameField
   },
 }
 
