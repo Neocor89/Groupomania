@@ -6,6 +6,7 @@
     >
       <router-link to="/">
         <img
+        class="resize__logo"
           id="logo"
           :src="
             require('./assets/groupomania-logo_black.png')
@@ -17,35 +18,43 @@
       </router-link>
     </div>
     
+    <!-- <img class="size__img" src="./assets/groupomania_background_mixte01.png" alt=""> -->
+    <router-view />
      <!-- <SignUp /> -->
-     <!-- <NavBar /> -->
     <!-- <router-link to="/">Home</router-link>  -->
     <!-- <router-link to="/AboutPage">About</router-link> | -->
     <!-- <router-link to="/signUp">SignUp</router-link> -->
-    <router-view />
-    <img class="size__img" src="./assets/groupomania_background-removebg.png" alt="">
+     <!-- <Login /> -->
+     <Footer />
   </div>
 </template>
 
 <script>
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 // import SignUp from './components/SignUp';
+// import Login from './views/Login';
 // import NameField from './components/NameField';
 
 export default {
   name: 'App',
   components: {
     // NameField
-    // NavBar,
+    Footer
     // SignUp
+    // Login
   },
 }
 
 </script>
 
 <style lang="scss">
+
+.resize__logo {
+  height: 120px;
+  object-fit: cover;
+}
 
 .size__img {
   width: 100%;
@@ -62,7 +71,12 @@ export default {
   background-color: #fcfcfc59;
 }
 #nav {
-  background: #ffffff;
+  // background: #ffffff;
+  background-image: url('./assets/groupomania_background_mixte01.png');
+  background-position: 5% 83%;
+
+
+  width: 100%;
   -webkit-box-shadow: 0px 5px 13px -7px #000000,
     5px 5px 15px 7px rgb(203 103 13 / 44%);;
   box-shadow: 0px 10px 13px -7px #0000004b,

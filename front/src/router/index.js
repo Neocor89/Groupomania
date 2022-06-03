@@ -5,10 +5,10 @@ import VueRouteMiddleware from 'vue-route-middleware';
 
 const routes = [
   {
-    path: '/AboutPage',
-    name: 'AboutPage',
+    path: '/',
+    name: 'Home',
     component: () =>
-    import(/* webpackChunkName: "about" */ '../views/AboutPage.vue'),
+    import(/* webpackChunkName: "about" */ '../views/Home.vue'),
 
   },
   {
@@ -19,7 +19,7 @@ const routes = [
   {
     path: '/signUp',
     name: 'SignUp',
-    component: () => import('../components/SignUp.vue'),
+    component: () => import('../views/SignUp.vue'),
   // component: () => import('../components/Signup.vue'),
 }
 ]

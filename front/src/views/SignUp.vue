@@ -1,7 +1,7 @@
 <template>
   <section>
-    <h2>
-      <span class="logotext">Groupomania</span> <br />
+    <h2 class="display-5 pt-4">
+      <!-- <span class="logotext">Groupomania</span> <br /> -->
       Restez en contact avec vos collègues.
     </h2>
     <from>
@@ -12,7 +12,7 @@
         placeholder="Prénom"
         v-model="input.firstName"
         class="account-input text-dark mb-2 mt-4 pl-3 w-100"
-        aria-label="�crire votre prenom"
+        aria-label="Renseignez votre prenom"
       />
       <input
         id="lastName"
@@ -20,7 +20,7 @@
         placeholder="Nom"
         v-model="input.lastName"
         class="account-input text-dark mb-2 pl-3 w-100"
-        aria-label="�crire votre nom"
+        aria-label="Renseignez votre nom"
       />
       <input
         id="email"
@@ -28,7 +28,7 @@
         placeholder="@email"
         v-model="input.email"
         class="account-input text-dark mb-2 pl-3 w-100"
-        aria-label="�crire votre adresse mail"
+        aria-label="Renseignez votre adresse mail"
       />
       <input
         id="password"
@@ -36,13 +36,13 @@
         placeholder="Mot de passe"
         v-model="input.password"
         class="account-input text-dark mb-2 pl-3 w-100"
-        aria-label="�crire votre mot de passe"
+        aria-label="Renseignez votre mot de passe"
       />
       <button
         v-on:click.stop="signup()"
         type="submit"
         id="signup-button"
-        class="btn btn-outline-info"
+        class="btn btn-outline-warning"
         aria-label="S'inscrire"
       >Inscription</button>
                 <p class="my-3 text-danger">{{ errorMessage }}</p>
@@ -81,7 +81,7 @@ span.logotext {
 }
 a {
   text-decoration: none;
-  color: #0180ff !important;
+  color: #ff8801 !important;
 }
 @media screen and (min-width: 280px) and (max-width: 769px) {
   .account-card {
