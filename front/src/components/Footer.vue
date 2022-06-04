@@ -1,100 +1,72 @@
 <template>
-  <footer class="bg-light text-center text-white">
-  <!-- 
-    Grid container 
-  --------------->
-
-  <div class="container p-4 pb-0">
-    <!-- 
-      Section: Social media 
-    ---------------------->
-
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
+  <!-- Grid container -->
+  <div class="container pt-4">
+    <!-- Section: Social media -->
     <section class="mb-4">
-      <!-- 
-        Facebook 
-      --------->
-
+      <!-- Facebook -->
       <a
-        class="btn btn-primary btn-floating m-1"
-        style="background-color: #3b5998;"
-        href="#!"
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="https://www.facebook.com"
         role="button"
+        data-mdb-ripple-color="dark"
         ><i class="fab fa-facebook-f"></i
       ></a>
-      <!-- 
-        Twitter 
-      -------->
 
+      <!-- Twitter -->
       <a
-        class="btn btn-primary btn-floating m-1"
-        style="background-color: #55acee;"
-        href="#!"
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="https://www.twitter.com"
         role="button"
+        data-mdb-ripple-color="dark"
         ><i class="fab fa-twitter"></i
       ></a>
-      <!-- 
-        Google 
-      ------->
 
+      <!-- Google -->
       <a
-        class="btn btn-primary btn-floating m-1"
-        style="background-color: #dd4b39;"
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
         href="https://www.google.com"
         role="button"
+        data-mdb-ripple-color="dark"
         ><i class="fab fa-google"></i
       ></a>
-      <!-- 
-        Instagram 
-      ---------->
 
+      <!-- Instagram -->
       <a
-        class="btn btn-primary btn-floating m-1"
-        style="background-color: #ac2bac;"
-        href="https://instagram.com"
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+         href="https://instagram.com"
         role="button"
+        data-mdb-ripple-color="dark"
         ><i class="fab fa-instagram"></i
       ></a>
-      <!-- 
-        Linkedin 
-      --------->
 
+      <!-- Linkedin -->
       <a
-        class="btn btn-primary btn-floating m-1"
-        style="background-color: #0082ca;"
-        href="https://www.linkedin.com"
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="https://linkedin.com"
         role="button"
-        ><i class="fab fa-linkedin-in"></i
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-linkedin"></i
       ></a>
-      <!-- 
-        Github 
-      ------->
-
+      <!-- Github -->
       <a
-        class="btn btn-primary btn-floating m-1"
-        style="background-color: #333333;"
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
         href="https://github.com"
         role="button"
+        data-mdb-ripple-color="dark"
         ><i class="fab fa-github"></i
       ></a>
     </section>
-    <!-- 
-      Section: Social media 
-    ---------------------->
+    <!-- Section: Social media -->
   </div>
-  <!-- 
-    Grid container 
-  --------------->
 
-  <!-- 
+  <!--------- 
     Copyright 
-  ---------->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2022 Groupomania:
-    <a class="text-white" href="https://github.com/">Groupomania.com</a>
+  -->
+  <div class="text-center text-dark p-3" style="background-color: rgba(231, 111, 81, 0.9);">
+    © 2022 Copyright:
+    <a class="text-dark" href="https://github.com/Neocor89">Groupomania.com</a>
   </div>
-  <!-- 
-    Copyright 
-  ---------->
 </footer>
 </template>
 
@@ -104,6 +76,21 @@ export default {
 }
 </script>
 
-<style>
+<style> 
+
+footer {
+ position: absolute;
+ width: 100%;
+ bottom: 0;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  transition: 0.5s ease-in-out;
+}
 
 </style>

@@ -35,12 +35,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from './components/Footer';
 // import SignUp from './components/SignUp';
 // import Login from './views/Login';
-// import NameField from './components/NameField';
+
 
 export default {
   name: 'App',
   components: {
-    // NameField
     Footer
     // SignUp
     // Login

@@ -1,64 +1,91 @@
 <template>
-  <section>
-    <h2 class="display-5 pt-4">
-      <!-- <span class="logotext">Groupomania</span> <br /> -->
-      Restez en contact avec vos collègues.
-    </h2>
-    <from>
-      <p>S'inscrire</p>
-      <input
-        id="firstName"
-        type="text"
-        placeholder="Prénom"
-        v-model="input.firstName"
-        class="account-input text-dark mb-2 mt-4 pl-3 w-100"
-        aria-label="Renseignez votre prenom"
-      />
-      <input
-        id="lastName"
-        type="text"
-        placeholder="Nom"
-        v-model="input.lastName"
-        class="account-input text-dark mb-2 pl-3 w-100"
-        aria-label="Renseignez votre nom"
-      />
-      <input
-        id="email"
-        type="email"
-        placeholder="@email"
-        v-model="input.email"
-        class="account-input text-dark mb-2 pl-3 w-100"
-        aria-label="Renseignez votre adresse mail"
-      />
-      <input
-        id="password"
-        type="password"
-        placeholder="Mot de passe"
-        v-model="input.password"
-        class="account-input text-dark mb-2 pl-3 w-100"
-        aria-label="Renseignez votre mot de passe"
-      />
-      <button
-        v-on:click.stop="signup()"
-        type="submit"
-        id="signup-button"
-        class="btn btn-outline-warning"
-        aria-label="S'inscrire"
-      >Inscription</button>
+<div class="page__container">
+   <div class="slogan">
+      <h2 class="color__text py-3">
+        <span class="text__slogan">Prennez contact avec votre équipe</span> <br />
+      </h2>
+    </div>
+    <div class="container-fluid">
+      <div class=" row text-center justify-content-center">
+        <div class="col-lg-8">
+        <!--: Avant <div class="col-12 lg-4"> -->
+          <div
+            class="card account-card border-0 shadow p-3 mb-5 mt-3 bg-white rounded"
+          >
+            <div class="pt-sm-3 pt-lg-0">
+              <p class=" card-text login-text h4">S'inscrire</p>
+              <form>
+                <div class="form-group">
+                  <input
+                    id="firstName"
+                    type="text"
+                    placeholder="Prénom"
+                    v-model="input.firstName"
+                    class=" input-group account-input text-dark mb-2 mt-4 pl-3 w-100"
+                    aria-label="écrire votre pr�nom"
+                  />
+                  <input
+                    id="lastName"
+                    type="text"
+                    placeholder="Nom"
+                    v-model="input.lastName"
+                    class="account-input text-dark mb-2 pl-3 w-100"
+                    aria-label="écrire votre nom"
+                  />
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="em@il"
+                    v-model="input.email"
+                    class="account-input text-dark mb-2 pl-3 w-100"
+                    aria-label="écrire votre adresse mail"
+                  />
+                  <input
+                    id="password"
+                    type="password"
+                    placeholder="Mot de passe"
+                    v-model="input.password"
+                    class="account-input text-dark mb-2 pl-3 w-100"
+                    aria-label="écrire votre mot de passe"
+                  />
+                </div>
+
+                <button
+                  v-on:click.stop="signup()"
+                  type="submit"
+                  id="signup-button"
+                  class="btn mt-3 btn__subscribe"
+                  aria-label="S'inscrire"
+                >
+                  Inscription
+                </button>
                 <p class="my-3 text-danger">{{ errorMessage }}</p>
-                 <p class="font-small grey-text d-flex justify-content-center mb-1">
-              Vous avez déjà un compte ?</p>
+              </form>
+            </div>
+            <div class="line my-3"></div>
+
+            <p class="font-small grey-text d-flex justify-content-center mb-1">
+              Vous avez déjà un compte ?
               <router-link to="/login" class="font-weight-bold ml-1">
-                Connectez-vous</router-link>
-    </from>
-  </section>
+                Connectez-vous</router-link
+              >
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-// TODO vérifier si Bootstrap fonctione bien
+// import SignUp from '../components/SignUp.vue';
 // import "bootstrap/dist/css/bootstrap.min.css";
 export default {
-  name: "SignupVue",
+ name: 'SignUp',
+ components: {
+  //  SignUp
+ },
   data() {
     return {
       errorMessage: '',
@@ -73,15 +100,50 @@ export default {
 }
 </script>
 
-<style lang="scss">
-span.logotext {
-  color: white;
+<style lang="scss" scoped>
+
+.btn__subscribe {
+  background: linear-gradient(to bottom right, #e76f51, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.btn__subscribe:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(240, 187, 154, 0.5);
+}
+
+.btn__subscribe:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(241, 198, 171, 0.5);
+}
+
+
+.page__container {
+  background: rgba(255, 255, 255, 0);
+}
+
+span.text__slogan {
+  color: #e76f51;
   font-weight: 800;
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 a {
   text-decoration: none;
-  color: #ff8801 !important;
+  // color: #0180ff !important;
 }
 @media screen and (min-width: 280px) and (max-width: 769px) {
   .account-card {
@@ -99,4 +161,5 @@ a {
     display: none;
   }
 }
-</style>
+</style>>
+
