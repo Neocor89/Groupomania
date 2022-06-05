@@ -19,7 +19,7 @@
     </div>
     
     <!-- <img class="size__img" src="./assets/groupomania_background_mixte01.png" alt=""> -->
-    <router-view />
+    <router-view class="btn__style" />
      <!-- <SignUp /> -->
     <!-- <router-link to="/">Home</router-link>  -->
     <!-- <router-link to="/AboutPage">About</router-link> | -->
@@ -50,6 +50,11 @@ export default {
 
 <style lang="scss">
 
+router-view {
+  text-decoration: none;
+  background: #000;
+}
+
 .resize__logo {
   height: 120px;
   object-fit: cover;
@@ -67,11 +72,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #fcfcfc59;
+  // background-color: #fcfcfc59;
 }
 #nav {
   // background: #ffffff;
-  background-image: url('./assets/groupomania_background_mixte01.png');
+  background-image: url('./assets/groupomania_background-removebg.png');
   background-position: 5% 83%;
 
 

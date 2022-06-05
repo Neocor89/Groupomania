@@ -1,7 +1,6 @@
 <template>
   <div>
     <div>
-
       <ProfilBtn />
     </div>
   </div>

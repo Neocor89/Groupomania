@@ -49,7 +49,7 @@
 
             <p class="font-small d-flex justify-content-center mb-1">
               Vous n'êtes pas encore inscrit ?
-              <router-link to="/signup" class="">
+              <router-link to="/signup" class="btn__style">
                 Rejoingez vos collègues</router-link
               >
             </p>
@@ -121,8 +121,11 @@ export default {
 
 a {
   text-decoration: none;
-  color: #0180ff !important;
+  color: #e2421a !important;
 }
+
+
+
 .line {
   display: block;
   width: 100%;

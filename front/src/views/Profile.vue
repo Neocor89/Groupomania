@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <Menu /> -->
-
+    <!-- Route à éditer !!!! -->
     <b-row class="text-center justify-content-center">
       <b-col cols="12" lg="6">
         <b-card

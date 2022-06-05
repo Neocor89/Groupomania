@@ -14,20 +14,20 @@
         divCustomClass="div-profile-btn-img"
       />
     </button>
-    <b-collapse
+    <div
       id="profile-collapsed"
       v-bind:class="`collapsed mt-2 position-fixed ${
         areActionsVisible && 'visible'
       }`"
     >
-      <b-card class="border-0" @click="toggleActions">
+      <div class="card border-0" @click="toggleActions">
         <p class="card-text">
           <button
             class="collapsed-btn btn-block text-left"
             @click="changeOrReloadPage('Profile')"
             aria-label="Voir mon profil"
           >
-            <b-icon icon="person" class="mr-2"></b-icon>Voir mon profil
+            <i icon="person" class="mr-2"></i>Voir mon profil
           </button>
         </p>
         <p class="card-text">
@@ -36,21 +36,21 @@
             @click="changeOrReloadPage('Posts')"
             aria-label="Voir la page d'accueil"
           >
-            <b-icon icon="house" class="mr-2"></b-icon>Voir la page d'accueil
+            <i icon="house" class="mr-2"></i>Voir la page d'accueil
           </button>
         </p>
         <p class="card-text">
           <button
             class="collapsed-btn btn-block text-left"
             @click="logout"
-            aria-label="Se déconnecter"
+            aria-label="Se dï¿½connecter"
           >
-            <b-icon icon="box-arrow-right" class="mr-2"></b-icon>
-            Se déconnecter
+            <i icon="box-arrow-right" class="mr-2"></i>
+            Se dï¿½connecter
           </button>
         </p>
-      </b-card>
-    </b-collapse>
+      </div>
+    </div>
   </div>
 </template>
 
