@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 // import VueRouter from 'vue-router';
-// import auth from '../middleware/auth';
+import auth from '../middleware/auth';
 import VueRouteMiddleware from 'vue-route-middleware';
 
 const routes = [
@@ -15,6 +15,14 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: () => import('../views/Login.vue'),
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: () => import('../views/Profile.vue'),
+    meta: {
+      middleware: auth,
+    },
   },
   {
     path: '/signUp',

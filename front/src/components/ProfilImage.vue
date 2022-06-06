@@ -3,7 +3,7 @@
     <img
       class="profile-picture__img"
       :class="customClass"
-      :src="src || 'avatar-placeholder.jpg'"
+      :src="src || './assets/avatar-placeholder.png'"
       alt=""
     />
   </div>
@@ -16,7 +16,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .profile-picture {
   overflow: hidden;
   border-radius: 100%;

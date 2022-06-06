@@ -2,7 +2,7 @@
   <div class="page-container">
     <div class="slogan">
       <h2>
-        <span class="pt-3 logotext"> Garder le contact avec votre équipe</span> <br />
+        <span class="pb-3 logoText"> Garder le contact avec votre équipe</span> <br />
       </h2>
     </div>
     <div class="container-fluid">
@@ -20,7 +20,7 @@
                     type="email"
                     placeholder="em@il"
                     v-model="input.email"
-                    class="account-input text-dark mb-2 mt-4 pl-3 w-100"
+                    class="account-input text-dark mb-3 mt-4 pl-3 w-100"
                     aria-label="Entrez votre adresse mail"
                   />
                   <input
@@ -49,7 +49,7 @@
 
             <p class="font-small d-flex justify-content-center mb-1">
               Vous n'êtes pas encore inscrit ?
-              <router-link to="/signup" class="btn__style">
+              <router-link to="/signup">
                 Rejoingez vos collègues</router-link
               >
             </p>
@@ -57,18 +57,21 @@
         </div>
       </div>
     </div>
+    <!-- <Profile /> -->
   </div>
 </template>
 
 <script>
 //TODO : Problème sur les 3 composants à vérifier et corriger progréssivement
 // import Signup from '../components/Signup';
+// import Profile from '../views/Profile';
 // import { apiClient } from '../services/apiClient';
 // import router from '../router/index';
 export default {
   name: 'LoginVue',
   components: {
     // Signup,
+    // Profile
   },
   // props: ['notification'],
   data() {
@@ -117,13 +120,18 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 a {
   text-decoration: none;
   color: #e2421a !important;
 }
 
+.logoText {
+   color: #e76f51;
+  font-weight: 800;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
 
 
 .line {
@@ -165,14 +173,19 @@ a {
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
+  
+  &:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(240, 187, 154, 0.5);
+  } &:hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(241, 198, 171, 0.5);
+  }
+  
 }
-
-.btn__subscribe:not([disabled]):focus {
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(240, 187, 154, 0.5);
+@media screen and (min-width: 280px) and (max-width: 768px) {
+  .logoText {
+  font-size: 1.3rem;
+  font-family: 'Kdam Thmor Pro', sans-serif;
 }
-
-.btn__subscribe:not([disabled]):hover {
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(241, 198, 171, 0.5);
 }
 
 </style>

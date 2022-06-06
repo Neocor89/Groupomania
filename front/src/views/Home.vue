@@ -1,9 +1,9 @@
 <template>
 <div class="home__page">
   <br>
-  <router-link to="/login" style="--clr#e76f51" class="btn__style"><span>Login</span><i></i></router-link>
-  <router-link to="/Profile" style="--clr#e76f51" class="btn__style"><span>Profile</span><i></i></router-link>
-  <router-link to="Signup" style="--clr#e76f51" class="btn__style"><span>Signup</span><i></i></router-link>
+  <router-link to="/login" style="--clr#e76f51" class="btn__style" ><span>Login</span><i></i></router-link>
+  <router-link to="/Profile" style="--clr#e76f51" class="btn__style" ><span>Profile</span><i></i></router-link>
+  <router-link to="Signup" style="--clr#e76f51" class="btn__style" ><span>Signup</span><i></i></router-link>
   <router-view/>
   </div>
   
@@ -18,11 +18,10 @@ export default {
 
 <style scoped>
 
-.btn__style {
-  margin: 40px 60px;
-}
+
 
 a {
+  margin: 60px 30px;
   position: relative;
   background: #e76f51;
   text-decoration: none;
@@ -37,9 +36,9 @@ a {
 
 a:hover {
   letter-spacing: 0.15rem;
-  /* background: var(--clr); */
+  background: var(--clr);
   background: rgb(36, 35, 35);
-  /* box-shadow: 0 0 95px var(--clr); */
+  box-shadow: 0 0 95px var(--clr);
   font-weight: bold;
 }
 

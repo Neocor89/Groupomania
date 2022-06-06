@@ -121,14 +121,11 @@ export default {
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
-}
-
-.btn__subscribe:not([disabled]):focus {
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(240, 187, 154, 0.5);
-}
-
-.btn__subscribe:not([disabled]):hover {
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(241, 198, 171, 0.5);
+  &:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(240, 187, 154, 0.5);
+  } &:hover {
+      box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(241, 198, 171, 0.5);
+  }
 }
 
 
@@ -143,7 +140,6 @@ span.text__slogan {
 }
 a {
   text-decoration: none;
-  // color: #0180ff !important;
 }
 @media screen and (min-width: 280px) and (max-width: 769px) {
   .account-card {

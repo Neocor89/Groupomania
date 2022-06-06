@@ -84,13 +84,4 @@ footer {
  bottom: 0;
 }
 
-footer a {
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-  transition: 0.5s ease-in-out;
-}
-
 </style>
