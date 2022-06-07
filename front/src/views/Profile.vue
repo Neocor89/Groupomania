@@ -103,15 +103,14 @@
             </button>
           </form>
 
-          <!-- <UserDeleteAccount /> -->
         </div>
       </div>
     </div>
-    <!-- <PostsList :userId="userData.id" /> -->
   </div>
 </template>
 
 <script>
+//TODO : Revoir les 3 SPA à réintégrer et corriger 
 // import { apiClient } from '../services/api-client';
 import ProfileImage from '../components/ProfilImage.vue';
 // import PostsList from '../components/PostsList';
@@ -125,51 +124,7 @@ export default {
     // Menu,
     // UserDeleteAccount,
   },
-  // data() {
-  //   const userData = JSON.parse(localStorage.getItem('userData'));
-  //   return {
-  //     userData,
-  //     input: {
-  //       firstName: userData.firstName,
-  //       lastName: userData.lastName,
-  //       email: userData.email,
-  //     },
-  //     selectedFile: null,
-  //     url: null,
-  //   };
-  // },
-  methods: {
-    // onFileSelected() {
-    //   this.url = URL.createObjectURL(event.target.files[0]);
-    //   this.selectedFile = event.target.files[0];
-    // },
-    // triggerInput() {
-    //   this.$refs.fileUpload.click();
-    // },
-    // editUser(event) {
-    //   let body = this.input;
-    //   const isFormData = !!this.selectedFile;
-    //   if (isFormData) {
-    //     const formData = new FormData();
-    //     formData.append('image', this.selectedFile);
-    //     formData.append('user', JSON.stringify(body));
-    //     body = formData;
-    //   }
-    //   apiClient.put('api/auth/edit', body, { isFormData }).then((res) => {
-    //     localStorage.setItem('userData', JSON.stringify(res.user));
-    //     this.userData = res.user;
-    //     window.location.reload();
-    //   })
-    // }
-  },
-  computed: {
-    // emptyInput() {
-    //   return (
-    //     !this.input.firstName.trim().length ||
-    //     !this.input.lastName.trim().length
-    //   );
-    // },
-  },
+  
 };
 </script>
 
@@ -218,21 +173,6 @@ export default {
   
 }
 
-// .save-btn {
-//   background-color: #3f3f3fc7;
-//   color: white;
-//   border-radius: 0.5rem;
-//   border: none;
-//   margin-bottom: 1rem;
-//   padding: 0.375rem 0.75rem;
-//   &:hover,
-//   &:focus,
-//   &:active {
-//     background-color: #17a2b8;
-//     color: white;
-//     outline: none;
-//   }
-// }
 .card-body {
   padding-bottom: 0;
 }

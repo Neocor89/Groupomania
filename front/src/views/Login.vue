@@ -62,7 +62,7 @@
 </template>
 
 <script>
-//TODO : Problème sur les 3 composants à vérifier et corriger progréssivement
+//TODO : Revoir les 3 SPA à réintégrer et corriger 
 // import Signup from '../components/Signup';
 // import Profile from '../views/Profile';
 // import { apiClient } from '../services/apiClient';
@@ -83,40 +83,7 @@ export default {
       },
     };
   }
-//   mounted() {
-//     if (this.$route.query.deletedAccount) {
-//       this.$bvToast.toast('Votre compte a bien été supprimé', {
-//         title: 'Notification',
-//         autoHideDelay: 4000,
-//       });
-//     }
-//   },
-//   methods: {
-//     login() {
-//       if (this.input.email != '' && this.input.password != '') {
-//         apiClient
-//           .post('api/auth/login', this.input)
-//           .then((data) => {
-//             if (!data.token) {
-//               this.errorMessage = 'Utilisateur introuvable';
-//             } else {
-//               localStorage.setItem('userToken', data.token);
-//               localStorage.setItem('userData', JSON.stringify(data.user));
-//               router.push({ name: 'Posts' });
-//             }
-//           })
-//           .catch((error) => {
-//             if (error.error) {
-//               return (this.errorMessage = error.error);
-//             }
-//             this.errorMessage = 'Problème de connexion';
-//           });
-//       } else {
-//         this.errorMessage =
-//           'Veuillez renseigner votre email et mot de passe :-(';
-//       }
-//     },
-//   },
+
 };
 </script>
 
@@ -186,6 +153,11 @@ a {
   font-size: 1.3rem;
   font-family: 'Kdam Thmor Pro', sans-serif;
 }
+
+.btn__subscribe {
+  background: #fff;
+}
+
 }
 
 </style>

@@ -79,6 +79,7 @@
 </template>
 
 <script>
+//TODO : Revoir les 3 SPA à réintégrer et corriger 
 // import SignUp from '../components/SignUp.vue';
 // import "bootstrap/dist/css/bootstrap.min.css";
 export default {

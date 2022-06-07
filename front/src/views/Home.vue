@@ -1,9 +1,10 @@
 <template>
 <div class="home__page">
   <br>
-  <router-link to="/login" style="--clr#e76f51" class="btn__style" ><span>Login</span><i></i></router-link>
-  <router-link to="/Profile" style="--clr#e76f51" class="btn__style" ><span>Profile</span><i></i></router-link>
-  <router-link to="Signup" style="--clr#e76f51" class="btn__style" ><span>Signup</span><i></i></router-link>
+  <router-link to="/login" class="btn btn-outline-warning  btn-lg" data-mdb-ripple-color="#000000" style="color:#000;border-color:#e0600b;" >Login</router-link>
+  <router-link to="/Profile" style="--clr#e76f51" class="myButton" >Profile</router-link>
+  <router-link to="Signup" style="--clr#e76f51" class="myButton" >Signup</router-link>
+
   <router-view/>
   </div>
   
@@ -18,83 +19,41 @@ export default {
 
 <style scoped>
 
-
-
-a {
-  margin: 60px 30px;
-  position: relative;
-  background: #e76f51;
-  text-decoration: none;
-  color: #222;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  letter-spacing: 0.1rem;
-  padding: 10px 30px;
-  transition: 0.5s;
-  border-radius: 4px;
+/* .myButton {
+	box-shadow: 3px 6px 6px 0px #f73b3b;
+  margin: 30px;
+	background-color:transparent;
+	border-radius:12px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-size:18px;
+	font-weight:bold;
+	padding:5px 35px;
+	text-decoration:none;
 }
 
-a:hover {
-  letter-spacing: 0.15rem;
-  background: var(--clr);
-  background: rgb(36, 35, 35);
-  box-shadow: 0 0 95px var(--clr);
-  font-weight: bold;
-}
+.myButton:hover {
+  transition: box-shadow 0.4s ease-in-out;
+	box-shadow: 0px 0px 3px 0px #f73b3b;
+	background-color:#fcfcfc;
+	border-radius:15px;
+	border:1px solid #f26a6a;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Georgia;
+	font-size:18px;
+	font-weight:bold;
+	padding:5px 35px;
+	text-decoration:none;
+	text-shadow:-1px 3px 0px #ffffff;
+} */
 
-a::before {
-  content: "";
-  position: absolute;
-  inset: 2px;
-  background: #ffffff;
-}
+@media screen and (min-width: 280px) and (max-width: 768px) {
+  
 
-a span {
-  position: relative;
-  z-index: 1;
 }
-
-a i {
-  position: absolute;
-  inset: 0;
-  display: block;
-}
-
-a i::before {
-  content: "";
-  position: absolute;
-  top: -3.5px;
-  left: 80%;
-  width: 10px;
-  height: 5px;
-  border: 2px solid #e76f51;
-  background: #27282c;
-  transform: translateX(-50%);
-  transition: 0.5s;
-}
-
-a:hover i::before {
-  width: 20px;
-  left: 20%;
-}
-
-a i::after {
-  content: "";
-  position: absolute;
-  bottom: -3.5px;
-  left: 20%;
-  width: 10px;
-  height: 5px;
-  border: 2px solid #e76f51;
-  background: #27282c;
-  transform: translateX(-50%);
-  transition: 0.5s;
-}
-
-a:hover i::after {
-  width: 20px;
-  left: 80%;
-}
-
 
 </style>
