@@ -9,11 +9,9 @@
         class="resize__logo logo__size"
           id="logo"
           :src="
-            require('./assets/groupomania-logo_black.png')
+            require('./assets/background-removebg.png')
           "
           alt="logo Groupomania"
-          width="230"
-          height="200"
         />
       </router-link>
     </div>
@@ -50,20 +48,17 @@ export default {
 
 <style lang="scss">
 
-router-view {
-  text-decoration: none;
-  background: #000;
-}
 
 .resize__logo {
-  height: 80px;
+  width: 200px;
+  height: 120px;
   object-fit: cover;
 }
+
 
 .size__img {
   width: 100%;
   max-height: 100%;
-  object-fit: cover;
   background-position: center center;
 }
 
@@ -75,14 +70,14 @@ router-view {
 }
 
 #nav {
-  background-image: url('./assets/groupomania_background-removebg.png');
-  background-position: 5% 83%;
+   background-image: url('./assets/groupomania_background_mixte01.png');
+  background-position: 15% 94%;
   width: 100%;
   -webkit-box-shadow: 0px 5px 13px -7px #000000,
     5px 5px 15px 7px rgb(203 103 13 / 44%);;
   box-shadow: 0px 10px 13px -7px #0000004b,
     5px 5px 15px 7px rgba(184, 184, 184, 0);
-  z-index: 1;
+  // z-index: 1;
 }
 
 @media screen and (min-width: 280px) and (max-width: 767px) {

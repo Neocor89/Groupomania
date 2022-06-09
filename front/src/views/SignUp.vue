@@ -10,7 +10,7 @@
         <div class="col-lg-8">
         <!--: Avant <div class="col-12 lg-4"> -->
           <div
-            class="card account-card border-0 shadow p-3 mb-5 mt-3 bg-white rounded"
+            class="card account-card border-0 shadow p-3 mt-1 bg-white rounded"
           >
             <div class="pt-sm-3 pt-lg-0">
               <p class=" card-text login-text h4">S'inscrire</p>
@@ -66,7 +66,7 @@
 
             <p class="font-small grey-text d-flex justify-content-center mb-1">
               Vous avez déjà un compte ?
-              <router-link to="/login" class="font-weight-bold ml-1">
+              <router-link to="/login" class="mx-3">
                 Connectez-vous</router-link
               >
             </p>

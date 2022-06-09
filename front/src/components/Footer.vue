@@ -3,7 +3,7 @@
   <!-- Grid container -->
   <div class="container pt-4">
     <!-- Section: Social media -->
-    <section class="mb-4">
+    <section class="mb-1">
       <!-- Facebook -->
       <a
         class="btn btn-link btn-floating btn-lg text-dark m-1"
@@ -28,6 +28,7 @@
         href="https://www.google.com"
         role="button"
         data-mdb-ripple-color="dark"
+        alt="Logo Google"
         ><i class="fab fa-google"></i
       ></a>
 
@@ -37,6 +38,7 @@
          href="https://instagram.com"
         role="button"
         data-mdb-ripple-color="dark"
+        alt="Logo instagram"
         ><i class="fab fa-instagram"></i
       ></a>
 
@@ -46,6 +48,7 @@
         href="https://linkedin.com"
         role="button"
         data-mdb-ripple-color="dark"
+        alt="Logo inkedin"
         ><i class="fab fa-linkedin"></i
       ></a>
       <!-- Github -->
@@ -54,6 +57,7 @@
         href="https://github.com"
         role="button"
         data-mdb-ripple-color="dark"
+        alt="Logo github"
         ><i class="fab fa-github"></i
       ></a>
     </section>
