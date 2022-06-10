@@ -73,7 +73,7 @@
                     type="email"
                     placeholder="Email"
         
-                    class="mb-3 pl-lg-3"
+                    class="mb-3 pl-lg-3 test"
                     disabled
                   />
                 </div>
@@ -110,7 +110,8 @@
 </template>
 
 <script>
-//TODO : Revoir les 3 SPA à réintégrer et corriger 
+//TODO : Revoir les 3 SPA à réintégrer et corriger
+//TODO : FINIR BACKEND + réintégrer CODE enlevé dans composants 
 // import { apiClient } from '../services/api-client';
 import ProfileImage from '../components/ProfilImage.vue';
 // import PostsList from '../components/PostsList';
@@ -124,51 +125,36 @@ export default {
     // Menu,
     // UserDeleteAccount,
   },
-  
+
 };
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/_variables.scss";
+@import "@/assets/scss/_mixins.scss";
+
 .row {
   margin-left: 0;
   margin-right: 0;
 }
 .div-main-picture {
-  width: 100px;
-  height: 100px;
+  width: $size-medium-comp;
+  height: $size-medium-comp;
   margin-bottom: 1rem;
 }
 .profile-main-picture {
-  height: 100px;
+  height: $size-medium-comp;
 }
 .custom-file-label {
   text-align: left;
 }
 
 .save-btn {
-  background: linear-gradient(to bottom right, #e76f51, #FF9A5A);
-  border: 0;
-  border-radius: 12px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 2.5;
-  outline: transparent;
-  padding: 0 1rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .2s ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  
+  @include submit-btn;
   &:focus {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(240, 187, 154, 0.5);
+    box-shadow: $shadow-focus;
   } &:hover {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(241, 198, 171, 0.5);
+    box-shadow: $shadow-hover;
   }
   
 }
@@ -176,19 +162,22 @@ export default {
 .card-body {
   padding-bottom: 0;
 }
+
 .shadow {
-  box-shadow: 0rem 0.2rem 0.5rem rgba(53, 53, 53, 0.37) !important;
+  box-shadow: $shadow !important;
 }
+
 @media screen and (min-width: 280px) and (max-width: 768px) {
+
   .create-button {
     width: 100% !important;
   }
   .div-main-picture {
-    width: 75px;
-    height: 75px;
+    width: $size-small-comp;
+    height: $size-small-comp;
   }
   .profile-main-picture {
-    height: 75px;
+    height: $size-small-comp;
   }
   .shadow {
     box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.08) !important;

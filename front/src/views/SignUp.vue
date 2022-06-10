@@ -80,6 +80,7 @@
 
 <script>
 //TODO : Revoir les 3 SPA à réintégrer et corriger 
+//TODO : FINIR BACKEND + réintégrer CODE enlevé dans composants 
 // import SignUp from '../components/SignUp.vue';
 // import "bootstrap/dist/css/bootstrap.min.css";
 export default {

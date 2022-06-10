@@ -48,17 +48,18 @@ export default {
 
 <style lang="scss">
 
+@import "@/assets/scss/_variables.scss";
+@import "@/assets/scss/_mixins.scss";
 
 .resize__logo {
   width: 200px;
   height: 120px;
-  object-fit: cover;
 }
 
 
 .size__img {
-  width: 100%;
-  max-height: 100%;
+  width: $full-size;
+  max-height: $full-size;
   background-position: center center;
 }
 
@@ -66,18 +67,13 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: $txt-center;
 }
 
 #nav {
-   background-image: url('./assets/groupomania_background_mixte01.png');
-  background-position: 15% 94%;
-  width: 100%;
-  -webkit-box-shadow: 0px 5px 13px -7px #000000,
-    5px 5px 15px 7px rgb(203 103 13 / 44%);;
-  box-shadow: 0px 10px 13px -7px #0000004b,
-    5px 5px 15px 7px rgba(184, 184, 184, 0);
-  // z-index: 1;
+  background-image: url('./assets/groupomania_background_mixte01.png');
+  @include nav-position;
+  // z-index: 1; 
 }
 
 @media screen and (min-width: 280px) and (max-width: 767px) {

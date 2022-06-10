@@ -23,23 +23,18 @@ export default {
  name: "HomeVue"
 }
 
+
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "@/assets/scss/_variables.scss";
+@import "@/assets/scss/_mixins.scss";
 
 .router__links {
-	display: grid;
-	grid-template-columns: 200px;
-	grid-template-rows: 100px;
-	justify-content: center;
-	align-items: center;
-	padding: 15px;
+	@include linksPosition;
 } 
 .link--effect:hover {
-	border-radius: 4rem;
-	transition: border-radius 0.3s ease-in;
-	border: 2px solid;
-	box-shadow: 10px 0.2rem 25px rgba(192, 192, 192, 0.533);
+	@include btnEffects;
 }
 
 @media screen and (min-width: 280px) and (max-width: 768px) {

@@ -62,11 +62,13 @@
 </template>
 
 <script>
-//TODO : Revoir les 3 SPA à réintégrer et corriger 
+//TODO : Revoir les 3 SPA à réintégrer et corriger
+//TODO : FINIR BACKEND + réintégrer CODE enlevé dans composants 
 // import Signup from '../components/Signup';
 // import Profile from '../views/Profile';
 // import { apiClient } from '../services/apiClient';
 // import router from '../router/index';
+
 export default {
   name: 'LoginVue',
   components: {
@@ -88,6 +90,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@import "@/assets/scss/_variables.scss";
+@import "@/assets/scss/_mixins.scss";
 
 a {
   text-decoration: none;
