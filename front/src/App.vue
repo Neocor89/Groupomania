@@ -48,12 +48,14 @@ export default {
 
 <style lang="scss">
 
-@import "@/assets/scss/_variables.scss";
-@import "@/assets/scss/_mixins.scss";
+@import "@/assets/scss/utils/_variables.scss";
+@import "@/assets/scss/utils/_mixins.scss";
+@import "@/assets/scss/utils/_breakpoints.scss";
 
 .resize__logo {
   width: 200px;
   height: 120px;
+  object-fit: cover;
 }
 
 

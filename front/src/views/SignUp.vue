@@ -79,7 +79,7 @@
 </template>
 
 <script>
-//TODO : Revoir les 3 SPA à réintégrer et corriger 
+
 //TODO : FINIR BACKEND + réintégrer CODE enlevé dans composants 
 // import SignUp from '../components/SignUp.vue';
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -104,29 +104,16 @@ export default {
 
 <style lang="scss" scoped>
 
+@import "@/assets/scss/utils/_variables.scss";
+@import "@/assets/scss/utils/_mixins.scss";
+@import "@/assets/scss/utils/_breakpoints.scss";
+
 .btn__subscribe {
-  background: linear-gradient(to bottom right, #e76f51, #FF9A5A);
-  border: 0;
-  border-radius: 12px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 2.5;
-  outline: transparent;
-  padding: 0 1rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .2s ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
+  @include submit-btn;
   &:not([disabled]):focus {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(240, 187, 154, 0.5);
+    box-shadow: $shadow-focus;
   } &:hover {
-      box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(241, 198, 171, 0.5);
+      box-shadow: $shadow-hover;
   }
 }
 
@@ -136,12 +123,12 @@ export default {
 }
 
 span.text__slogan {
-  color: #e76f51;
-  font-weight: 800;
+  color: $col-prim;
+  font-weight: $w800;
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 a {
-  text-decoration: none;
+  text-decoration: $nothing;
 }
 @media screen and (min-width: 280px) and (max-width: 769px) {
   .account-card {
@@ -153,10 +140,10 @@ a {
     box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.08) !important;
   }
   .login-text {
-    font-size: 1.1rem;
+    font-size: $fsize-S;
   }
   .slogan {
-    display: none;
+    display: $nothing;
   }
 }
 </style>>

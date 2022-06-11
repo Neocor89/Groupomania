@@ -1,0 +1,38 @@
+/* 
+? Start > Example use breakpoints
+*/
+
+
+// @media screen and (min-width: $breakpoint) {
+//   #{$af-primary} {
+//     background: $col-primary;
+//   }
+
+//   #{$af-secondary} {
+//     background: $col-secondary;
+//     box-shadow: $shadow-dp-1;
+//   }
+// }
+/* 
+? End < Example use breakpoints
+*/
+
+/* 
+::*::*::*::*::*::*::*::*::
+ + + Breakpoints Size + + 
+::*::*::*::*::*::*::*::*::
+*/
+
+$breakpoints: (
+  sm-screen: 280px,
+  md-screen: 768px,
+  lg-screen: 991px,
+  xl-screen: 1024px,
+);
+
+$class: (
+  login-classText: ".logoText",
+  login-classBtn: ".btn__subscribe",
+  signup-cardsElmts: ".account-card, .card-body",
+  af-secondary: ".card",
+);

@@ -27,8 +27,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/_variables.scss";
-@import "@/assets/scss/_mixins.scss";
+@import "@/assets/scss/utils/_variables.scss";
+@import "@/assets/scss/utils/_mixins.scss";
+@import "@/assets/scss/utils/_breakpoints.scss";
 
 .router__links {
 	@include linksPosition;

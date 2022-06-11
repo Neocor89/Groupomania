@@ -91,78 +91,9 @@ export default {
 
 <style lang="scss" scoped>
 
-@import "@/assets/scss/_variables.scss";
-@import "@/assets/scss/_mixins.scss";
-
-a {
-  text-decoration: none;
-  color: #e2421a !important;
-}
-
-.logoText {
-   color: #e76f51;
-  font-weight: 800;
-  text-shadow: 2px 2px 2px rgb(0, 0, 0);
-}
-
-
-.line {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: rgba(192, 192, 192, 0.5);
-}
-.account-input {
-  &:-webkit-autofill {
-    border: none;
-    -webkit-text-fill-color: #212529;
-    transition: background-color 5000s ease-in-out 0s;
-  }
-  &:focus {
-    border: none;
-    border-radius: 6px;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(32, 120, 244, 0.5);
-  }
-}
-
-.btn__subscribe {
-  background: linear-gradient(to bottom right, #e76f51, #FF9A5A);
-  border: 0;
-  border-radius: 12px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 2.5;
-  outline: transparent;
-  padding: 0 1rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .2s ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  
-  &:not([disabled]):focus {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(240, 187, 154, 0.5);
-  } &:hover {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(241, 198, 171, 0.5);
-  }
-  
-}
-@media screen and (min-width: 280px) and (max-width: 768px) {
-  .logoText {
-  font-size: 1.3rem;
-  font-family: 'Kdam Thmor Pro', sans-serif;
-}
-
-.btn__subscribe {
-  background: #fff;
-}
-
-}
+@import "@/assets/scss/utils/_variables.scss";
+@import "@/assets/scss/utils/_mixins.scss";
+@import "@/assets/scss/utils/_breakpoints.scss";
+@import "@/assets/scss/style-pages/_login.scss";
 
 </style>
