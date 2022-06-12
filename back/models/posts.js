@@ -1,10 +1,9 @@
-'use strict';
-const { Model } = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 
-const moment = require('moment');
+const moment = require("moment");
 
-// TODO :: ? :: ? :: ? :: ? :: ? ::
-const { deleteFile } = require('../services/file-removal');
+const { deleteFile } = require("../services/file-deleted");
 
 module.exports = (sequelize, DataTypes) => {
   class Post extends Model {
@@ -14,13 +13,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Post.belongsTo(models.User, { foreignKey: 'userId' });
-      // Post.hasMany(models.Comments);
-      // Post.hasMany(models.Likes);
+      Post.belongsTo(models.User, { foreignKey: "userId" });
+      
     }
 
     readableCreatedAt() {
-      return moment(this.createdAt).locale('fr').format('LL');
+      return moment(this.createdAt).locale("fr").format("LL");
     }
   }
   Post.init(
@@ -28,18 +26,17 @@ module.exports = (sequelize, DataTypes) => {
       userId: DataTypes.INTEGER,
       content: DataTypes.TEXT,
       imageUrl: DataTypes.STRING,
-      likesCount: DataTypes.INTEGER,
     },
     {
       sequelize,
       validate: {
         eitherContentOrImageUrl() {
           if (!this.content && !this.imageUrl) {
-            throw new Error('Vous ne pouvez pas créer de publication vide !');
+            throw new Error("Vous ne pouvez pas créer de publication vide !");
           }
         },
       },
-      modelName: 'Post',
+      modelName: "Post",
     }
   );
 

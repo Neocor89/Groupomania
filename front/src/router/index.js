@@ -24,6 +24,14 @@ const routes = [
       middleware: auth,
     },
   },
+  // {
+  //   path: '/profile/:userId',
+  //   name: 'UserProfile',
+  //   component: () => import('../views/UserProfile.vue'),
+  //   meta: {
+  //     middleware: auth,
+  //   },
+  // },
   {
     path: '/signUp',
     name: 'SignUp',

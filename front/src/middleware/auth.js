@@ -4,4 +4,4 @@ export default function auth(to, from, next) {
   }
   return next();
 }
-//! changement ligne 3 = return next({ name: 'Login' });
+//! changement ligne 3 => return next({ name: 'Login' });

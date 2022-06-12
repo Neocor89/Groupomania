@@ -101,7 +101,7 @@ exports.deletePost = (req, res, next) => {
   Post.findOne({ where })
     .then((post) => {
       if (!post) {
-        res.status(400).json({ error: "VVous ne disposez pas de l'autorisation" });
+        res.status(400).json({ error: "Vous ne disposez pas de l'autorisation" });
       }
       post
         .destroy()

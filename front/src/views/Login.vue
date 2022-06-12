@@ -13,7 +13,7 @@
           >
             <div class="pt-sm-3 pt-lg-0">
               <p class="card-text login-text h4">Se connecter</p>
-              <form>
+              <form role="form">
                 <div class="form-group">
                   <input
                     id="email"

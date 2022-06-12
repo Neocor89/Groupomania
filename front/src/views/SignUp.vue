@@ -79,7 +79,8 @@
 </template>
 
 <script>
-
+import { apiClient } from '../services/api-client';
+import router from '../router/index';
 //TODO : FINIR BACKEND + réintégrer CODE enlevé dans composants 
 // import SignUp from '../components/SignUp.vue';
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -98,7 +99,37 @@ export default {
         password: '',
       },
     };
-  }
+  },
+  methods: {
+    signup() {
+      if (
+        this.input.firstName != '' &&
+        this.input.lastName != '' &&
+        this.input.email != '' &&
+        this.input.password != ''
+      ) {
+        apiClient
+          .post('api/auth/signup', this.input)
+          .then((data) => {
+            if (!data.token) {
+              this.errorMessage = data.error.errors[0].message;
+            } else {
+              localStorage.setItem('userToken', data.token);
+              localStorage.setItem('userData', JSON.stringify(data.user));
+              router.push({ name: 'Posts' });
+            }
+          })
+          .catch((error) => {
+            if (error.error) {
+              return (this.errorMessage = error.error.errors[0].message);
+            }
+            this.errorMessage = 'Probl�me de connexion';
+          });
+      } else {
+        this.errorMessage = 'Veuillez renseigner tous les champs !';
+      }
+    },
+  },
 }
 </script>
 

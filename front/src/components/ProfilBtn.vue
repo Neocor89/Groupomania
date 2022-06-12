@@ -16,37 +16,40 @@
     </button>
     <div
       id="profile-collapsed"
-      v-bind:class="`collapsed mt-2 position-fixed ${
+      v-bind:class="`collapsed collapse mt-2 position-fixed ${
         areActionsVisible && 'visible'
       }`"
     >
       <div class="card border-0" @click="toggleActions">
         <p class="card-text">
           <button
-            class="collapsed-btn btn-block text-left"
+            data-toggle="collapse"
+            class="collapsed-btn collapse btn-block text-left"
             @click="changeOrReloadPage('Profile')"
-            aria-label="Voir mon profil"
+            aria-label="Afficher le profil"
           >
             <i icon="person" class="mr-2"></i>Voir mon profil
           </button>
         </p>
         <p class="card-text">
           <button
-            class="collapsed-btn btn-block text-left"
+            data-toggle="collapse"
+            class="collapsed-btn collapse btn-block text-left"
             @click="changeOrReloadPage('Posts')"
-            aria-label="Voir la page d'accueil"
+            aria-label="Afficher la page d'accueil"
           >
             <i icon="house" class="mr-2"></i>Voir la page d'accueil
           </button>
         </p>
         <p class="card-text">
           <button
-            class="collapsed-btn btn-block text-left"
+            data-toggle="collapse"
+            class="collapsed-btn collapse btn-block text-left"
             @click="logout"
-            aria-label="Se d�connecter"
+            aria-label="Deconnection"
           >
             <i icon="box-arrow-right" class="mr-2"></i>
-            Se d�connecter
+            Se déconnecter
           </button>
         </p>
       </div>
@@ -55,6 +58,7 @@
 </template>
 
 <script>
+//TODO = Vérif fonctionnement btn collapse sur div
 import ProfileImage from './ProfileImage';
 export default {
   name: 'ProfileButton',

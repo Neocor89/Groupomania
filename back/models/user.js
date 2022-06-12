@@ -1,19 +1,19 @@
-'use strict';
-const { Model } = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 
 const {
-//: function CheckEncryptedPassword
+  //: function CheckEncryptedPassword
   ensurePasswordIsStrongEnough,
   addAuthenticationOn,
-//: addAuthentication
-} = require('../services/authentication');
+  //: addAuthentication
+} = require("../services/authentication");
 
-const { deleteFile } = require('../services/file-removal');
+const { deleteFile } = require("../services/file-deleted");
 
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
-      User.hasMany(models.Post, { foreignKey: 'userId' });
+      User.hasMany(models.Post, { foreignKey: "userId" });
     }
 
     softDestroy() {
@@ -21,8 +21,8 @@ module.exports = (sequelize, DataTypes) => {
         deleted: true,
         email: `deleted-user${this.id}@groupamania.com`,
         imageUrl: null,
-        firstName: 'Utilisateur',
-        lastName: 'Supprimé',
+        firstName: "Utilisateur",
+        lastName: "Supprimé",
       });
     }
   }
@@ -45,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
           async ensureEmailIsUnique(email) {
             if (await User.findOne({ where: { email } }))
               throw new Error(
-                'Un compte existe déjà avec cette adresse mail !'
+                "Un compte existe déjà avec cette adresse mail !"
               );
           },
         },
@@ -56,7 +56,6 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           ensurePasswordIsStrongEnough,
           //: CheckEncryptedPassword
-
         },
       },
       imageUrl: DataTypes.STRING,
@@ -71,12 +70,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: 'User',
+      modelName: "User",
     }
   );
 
   addAuthenticationOn(User);
-//: addAuthentication
+  //: addAuthentication
   User.afterUpdate(async (user) => {
     if (user.dataValues.imageUrl !== user._previousDataValues.imageUrl) {
       await deleteFile(user._previousDataValues.imageUrl);
