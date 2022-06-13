@@ -30,6 +30,51 @@ employés
 
 ## Setup
 
+**Back-end**  
+
+Build with:  
+
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?-style=for-the-badge&logo=mysql&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?-style=for-the-badge&logo=express&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?-style=for-the-badge&logo=node.js&logoColor=white)  
+
+To launch the back you must go via your terminal in the folder :
+```
+cd groupomania back
+```
+`Dependencies`  
+Start by installing the *dependencies* needed to run the project : 🏃‍♂️
+```
+npm install 
+```
+
+`Database`  
+Log in to MySQL with your usual login and password  
+[For more Information 🤔](https://dev.mysql.com/doc/)
+
+Once connected, create the **Groupomania** database :
+```sql
+CREATE DATABASE Groupomania;
+```
+then selected with :
+```sql
+USE Groupomania;
+```
+To initialize the database go back to the project terminal and run the command :
+```sql
+sequelize init
+```
+In the json file of the config folder created by the previous command, replace the default info by :
+
+```json
+ "development": {
+    "username": "root",
+    "password": null,
+    "database": "groupomania",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+```
+You can enter a password, but **don't forget** to create an `.env` file in the root of the project to **protect your information**.
+
 `Launch server 🚀`
 ```node
 npm run start

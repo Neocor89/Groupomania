@@ -48,12 +48,7 @@
           aria-label="Publier"
         >
           <span class="mr-2 d-none d-md-block">Publier</span>
-          <svg
-            style="width: 24px; height: 24px; margin-bottom: 5px"
-            viewBox="0 0 24 24"
-          >
-            <path fill="#17a2b8" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
-          </svg>
+         <i class="fa-solid fa-comment-plus"></i>
         </button>
         <input
           ref="fileInput"
@@ -66,7 +61,7 @@
 </template>
 
 <script>
-// import { apiClient } from '../services/apiClient';
+import { apiClient } from '../services/apiClient';
 import ProfileImage from './ProfileImage';
 export default {
   name: 'PostForm',
