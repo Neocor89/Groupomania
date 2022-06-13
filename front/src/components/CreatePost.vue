@@ -12,7 +12,7 @@
 </template>
 
 <script>
-// import { apiClient } from '../services/apiClient';
+import { apiClient } from '../services/apiClient';
 // import { mapActions } from 'vuex';
 import PostForm from './PostForm';
 export default {
@@ -29,7 +29,7 @@ export default {
     };
   },
   methods: {
-    ...mapActions(['createPost', 'displayNotification']),
+    ...mapActions(['createPost']),
     onFileSelected(file) {
       this.selectedFile = file;
     },

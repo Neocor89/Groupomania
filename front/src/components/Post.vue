@@ -47,7 +47,7 @@
         >
           <div slot="modal-title"></div>
           <div class="d-flex align-items-center justify-content-center">
-            <img class="modal-photo__img" :src="post.imageUrl" alt="" />
+            <img class="modal-photo__img" :src="post.imageUrl" alt="post image" />
           </div>
           <div slot="modal-footer"></div>
         </div>
@@ -61,39 +61,13 @@ import { apiClient } from '../services/apiClient';
 import router from '../router/index';
 import EditPost from '../components/EditPost';
 import ProfileImage from './ProfileImage';
-import CommentsList from '../components/CommentsList';
-import LikesList from '../components/LikesList';
 export default {
   name: 'Post',
   components: {
     EditPost,
     ProfileImage,
-    CommentsList,
-    LikesList,
   },
-  props: ['post'],
-  async mounted() {
-    const res = await apiClient.get(`api/posts/${this.post.id}/like`);
-    this.likesThisPost = res.like;
-  },
-  data() {
-    return {
-      likesThisPost: false,
-      likesCount: this.post.likesCount,
-    };
-  },
-  methods: {
-    async likeOrUnlikePost() {
-      const res = await apiClient.post(`api/posts/${this.post.id}/likes`);
-      if (res.like !== this.likesThisPost) {
-        this.likesCount += res.like ? 1 : -1;
-      }
-      this.likesThisPost = res.like;
-    },
-    focusInput() {
-      document.getElementById(`comment-area-${this.post.id}`).focus();
-    },
-  },
+  props: ['post']
 };
 </script>
 
@@ -120,49 +94,47 @@ export default {
 }
 .line {
   display: block;
-  width: 100%;
+  width: $full-size;
   height: 1px;
   background-color: rgba(192, 192, 192, 0.5);
 }
-.blue {
-  color: rgb(32, 120, 244);
-}
+
 .react-btn {
-  background: white;
-  border: none;
+  background: $light;
+  border: $nothing;
   margin: 3px;
-  color: #747474;
+  color: $col-thrd;
   border-radius: 0.25rem;
-  font-weight: bold;
+  font-weight: $w800;
   padding: 0.375rem 0.75rem;
   &:focus {
-    border: none !important;
-    outline: none !important;
+    border: $nothing !important;
+    outline: $nothing !important;
   }
   &:hover {
-    color: #747474 !important;
-    background-color: #17a3b828 !important;
+    color: $col-thrd !important;
+    background-color: $col-prim !important;
   }
 }
 .like-btn {
-  color: #747474;
-  font-weight: normal;
+  color: $col-thrd;
+  font-weight: $w500;
   &:hover,
   &:focus,
   &:active {
-    color: #747474 !important;
-    font-weight: normal;
-    background: none !important;
+    color: $col-thrd !important;
+    font-weight: $w500;
+    background: $nothing !important;
   }
 }
 .modal-photo {
   &__img {
-    max-width: 100%;
+    max-width: $full-size;
     max-height: calc(100vh - 110px);
   }
 }
 .header-style {
   padding-bottom: 0;
-  border-bottom: none;
+  border-bottom: $nothing;
 }
 </style>

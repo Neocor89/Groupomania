@@ -88,4 +88,10 @@ footer {
  bottom: 0;
 }
 
+i:hover {
+  box-shadow: 5px 5px 34px 0;
+  background: transparent;
+  border-radius: 35px;
+}
+
 </style>

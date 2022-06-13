@@ -60,13 +60,13 @@ export default {
 .post {
   display: block;
   overflow: hidden;
-  width: 100%;
+  width: $full-size;
   height: 350px;
   &__image {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: $full-size;
+    max-height: $full-size;
     &:focus {
-      outline: none;
+      outline: $nothing;
     }
   }
 }

@@ -82,7 +82,7 @@ exports.modifyPost = (req, res, next) => {
     include: db.User,
   }).then((post) => {
     if (!post) {
-      res.status(400).json({ error: "VVous ne disposez pas de l'autorisation" });
+      res.status(400).json({ error: "Vous ne disposez pas de l'autorisation" });
     } else {
       post.update(postObject).then((post) => res.status(200).json({ post }));
     }

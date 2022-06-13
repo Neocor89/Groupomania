@@ -34,16 +34,16 @@ export default {
 
 <style lang="scss">
 .delete-account {
-  font-size: 14px;
+  font-size: $fsize-XXS;
   border-radius: 0.25rem;
   background-color: transparent;
-  border: none;
+  border: $nothing;
   &:hover {
-    color: red;
+    color: #f33232;
     text-decoration: underline;
   }
   &:focus {
-    outline: none;
+    outline: $nothing;
   }
 }
 </style>

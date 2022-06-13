@@ -113,22 +113,22 @@ export default {
   color: #747474;
   &:hover {
     outline: none;
-    background-color: #17a3b828;
+    background-color: $col-prim;
   }
   &:focus {
-    outline: none;
+    outline: $nothing;
   }
 }
 .btn-secondary {
   font-weight: 500;
-  color: #000;
+  color: $dark;
   background-color: white;
-  border: none;
+  border: $nothing;
 }
 .btn-outline-secondary,
 .btn-secondary {
   &:hover {
-    color: #000 !important;
+    color: $dark !important;
     background-color: rgba(108, 117, 125, 0.1) !important;
     box-shadow: none !important;
   }
