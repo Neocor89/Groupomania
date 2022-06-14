@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         validate: {
           isEmail: true,
-          //utilisation d'une m�thode pour pouvoir afficher un message d'erreur customis�
+          //: méthode gestion affichage message d'erreur
           async ensureEmailIsUnique(email) {
             if (await User.findOne({ where: { email } }))
               throw new Error(
