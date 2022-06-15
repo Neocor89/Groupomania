@@ -1,11 +1,12 @@
 "use strict";
 const { Model } = require("sequelize");
+//? const { Sequelize, Model, DataTypes } = require("sequelize");
 
 const {
-  //: function CheckEncryptedPassword
-  ensurePasswordIsStrongEnough,
-  addAuthenticationOn,
-  //: addAuthentication
+  CheckEncryptedPassword,
+  // ensurePasswordIsStrongEnough,
+  addAuthentication
+  // addAuthenticationOn,
 } = require("../services/authentication");
 
 const { deleteFile } = require("../services/file-deleted");
@@ -54,8 +55,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          ensurePasswordIsStrongEnough,
-          //: CheckEncryptedPassword
+          // ensurePasswordIsStrongEnough,
+          CheckEncryptedPassword
         },
       },
       imageUrl: DataTypes.STRING,
@@ -74,8 +75,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  addAuthenticationOn(User);
-  //: addAuthentication
+  addAuthentication(User);
+  //: addAuthenticationOn
   User.afterUpdate(async (user) => {
     if (user.dataValues.imageUrl !== user._previousDataValues.imageUrl) {
       await deleteFile(user._previousDataValues.imageUrl);
