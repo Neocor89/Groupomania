@@ -89,81 +89,97 @@ export default {
 </script>
 
 <style lang="scss">
-.profile-btn {
-  font-weight: 500;
-  border: 2px solid #aedfe6;
-  color: #000;
-  top: 175px;
-  right: 45px;
-  height: 45px;
-  padding: 5px 5px 5px 16px;
-  background-color: #ffffff !important;
-  border-radius: 15px;
-  z-index: 2;
-  &:focus {
-    outline: none;
-  }
-  &:hover,
-  &:visited {
-    background-color: rgb(255, 255, 255) !important;
-    border: 1px solid #aedfe6;
-  }
-  &__img {
-    height: 30px;
-  }
-}
-.collapsed-btn {
-  font-weight: 500;
-  color: #000;
-  background-color: white;
-  border: none;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.25rem;
-  &:hover,
-  &:focus,
-  &active {
-    background-color: #17a3b828;
-    outline: none;
-  }
-  .b-icon.bi {
-    font-size: 125%;
-    vertical-align: text-bottom;
-  }
-}
-.div-profile-btn-img {
-  width: 30px;
-  height: 30px;
-  margin-left: 8px;
-}
-#profile-collapsed {
-  top: 212px;
-  right: 44px;
-  z-index: 1;
-}
-@media screen and (min-width: 280px) and (max-width: 769px) {
-  .profile-btn {
-    top: 150px;
-    right: 30px;
-    height: 35px;
-    border: 1px solid grey;
-    padding: 0;
-    &__img {
-      height: 35px;
-    }
-  }
-  .div-profile-btn-img {
-    width: 35px;
-    height: 35px;
-    margin-left: 0;
-  }
-  #profile-collapsed {
-    top: 180px;
-    right: 50px;
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 992px) {
-  .name-profile-btn {
-    display: block !important;
-  }
-}
+
+// overall style
+@import "@/assets/scss/utils/_variables.scss";
+@import "@/assets/scss/utils/_mixins.scss";
+@import "@/assets/scss/utils/_breakpoints.scss";
+
+// component style
+@import "@/assets/scss/style-components-pages/_ProfilBtn.scss";
+
+// .profile-btn {
+//   font-weight: $w500;
+//   border: 2px solid $col-extra;
+//   color: $dark;
+//   top: 175px;
+//   right: 45px;
+//   height: 45px;
+//   padding: 5px 5px 5px 16px;
+//   background-color: $light !important;
+//   border-radius: 15px;
+//   z-index: 2;
+//   &:focus {
+//     outline: $nothing;
+//   }
+//   &:hover,
+//   &:visited {
+//     background-color: rgb(255, 255, 255) !important;
+//     border: 1px solid $col-secd;
+//   }
+//   &__img {
+//     height: 30px;
+//   }
+// }
+
+// .collapsed-btn {
+//   font-weight: $w500;
+//   color: $dark;
+//   background-color: $light;
+//   border: $nothing;
+//   padding: 0.375rem 0.75rem;
+//   border-radius: $border-size;
+//   &:hover,
+//   &:focus,
+//   &active {
+//     background-color: $col-secd;
+//     outline: $nothing;
+//   }
+// }
+// .div-profile-btn-img {
+//   width: 30px;
+//   height: 30px;
+//   margin-left: 8px;
+// }
+// #profile-collapsed {
+//   top: 212px;
+//   right: 44px;
+//   z-index: 1;
+// }
+
+
+// .profile-btn {
+//   @include mobile-tablet-large {
+//   top: 150px;
+//   right: 30px;
+//   height: 35px;
+//   border: 1px solid $col-thrd;
+//   padding: 0;
+//     &__img {
+//       @include mobile-tablet-large {
+//         height: 35px;
+//       }
+//     }
+//   }
+// }
+// .div-profile-btn-img {
+//   @include mobile-tablet-large {
+//     width: 35px;
+//     height: 35px;
+//     margin-left: 0;
+//   }
+// }
+// #profile-collapsed {
+//   @include mobile-tablet-large {
+//     top: 180px;
+//     right: 50px;
+//   }
+// }
+
+//   .name-profile-btn {
+//     @include large-screnn {
+//     display: block !important;
+//   }
+// }
+
 </style>

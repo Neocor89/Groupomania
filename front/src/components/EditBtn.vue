@@ -90,75 +90,93 @@ export default {
 </script>
 
 <style lang="scss">
-.post-button {
-  top: 0px;
-  right: 8px;
-  margin-top: 15px;
-  background-color: transparent;
-  border: 0;
-  border-radius: 50rem;
-  font-size: 0.5rem;
-  font-weight: $w700;
-  color: #747474;
-  &:hover {
-    outline: none;
-    background-color: $col-prim;
-  }
-  &:focus {
-    outline: $nothing;
-  }
-}
-.btn-secondary {
-  font-weight: $w500;
-  color: $dark;
-  background-color: $light;
-  border: $nothing;
-}
-.btn-outline-secondary,
-.btn-secondary {
-  &:hover {
-    color: $dark !important;
-    background-color: rgba(108, 117, 125, 0.1) !important;
-    box-shadow: none !important;
-  }
-}
-.btn-collapsed {
-  top: 60px;
-  right: 15px;
-  z-index: 2;
-}
-.collapsed {
-  visibility: hidden;
-  display: block !important;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.1s, opacity 0.5s ease-in-out;
-  opacity: 0;
-  .card-body {
-    padding: 1rem;
-    box-shadow: 0px 1px 5px 4px rgba(204, 204, 204, 0.2);
-  }
-}
-.visible {
-  visibility: visible;
-  opacity: 1;
-  transform: scaleY(1);
-}
-@media screen and (min-width: 280px) and (max-width: 767px) {
-  .collapsed {
-    .card-body {
-      padding: 0.5rem;
-      box-shadow: 0px 1px 2px 2px rgba(204, 204, 204, 0.2);
-    }
-  }
-  .btn-collapsed {
-    top: 28px;
-    right: 8px;
-  }
-  .post-button {
-    top: 0px;
-    right: 5px;
-    font-size: 15px !important;
-  }
-}
+
+// overall style
+@import "@/assets/scss/utils/_variables.scss";
+@import "@/assets/scss/utils/_mixins.scss";
+@import "@/assets/scss/utils/_breakpoints.scss";
+
+// Component style
+@import "@/assets/scss/style-components-pages/EditBtn.scss";
+
+// .post-button {
+//   top: 0px;
+//   right: 8px;
+//   margin-top: 15px;
+//   background-color: transparent;
+//   border: 0;
+//   border-radius: 50rem;
+//   font-size: 0.5rem;
+//   font-weight: $w700;
+//   color: #747474;
+//   &:hover {
+//     outline: $nothing;
+//     background-color: $col-prim;
+//   }
+//   &:focus {
+//     outline: $nothing;
+//   }
+// }
+// .btn-secondary {
+//   font-weight: $w500;
+//   color: $dark;
+//   background-color: $light;
+//   border: $nothing;
+// }
+// .btn-outline-secondary,
+// .btn-secondary {
+//   &:hover {
+//     color: $dark !important;
+//     background-color: rgba(108, 117, 125, 0.1) !important;
+//     box-shadow: $nothing !important;
+//   }
+// }
+// .btn-collapsed {
+//   top: 60px;
+//   right: 15px;
+//   z-index: 2;
+// }
+// .collapsed {
+//   visibility: hidden;
+//   display: block !important;
+//   transform: scaleY(0);
+//   transform-origin: top;
+//   transition: transform 0.1s, opacity 0.5s ease-in-out;
+//   opacity: 0;
+//   .card-body {
+//     padding: 1rem;
+//     box-shadow: 0px 1px 5px 4px rgba(204, 204, 204, 0.2);
+//   }
+// }
+// .visible {
+//   visibility: visible;
+//   opacity: 1;
+//   transform: scaleY(1);
+// }
+
+//   .collapsed {
+//     .card-body {
+//       @include mobile-tablet-small {
+//       padding: 0.5rem;
+//       box-shadow: 0px 1px 2px 2px rgba(204, 204, 204, 0.2);
+//     }
+//   }
+// }
+
+//   .btn-collapsed {
+//     @include mobile-tablet-small {
+//     top: 28px;
+//     right: 8px;
+//   }
+// }
+
+//   .post-button {
+//     @include mobile-tablet-small {
+//     top: 0px;
+//     right: 5px;
+//     font-size: 15px !important;
+//   }
+
+// }
+
 </style>

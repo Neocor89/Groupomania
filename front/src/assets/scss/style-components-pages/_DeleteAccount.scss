@@ -1,6 +1,6 @@
 .delete-account {
   font-size: $fsize-XXS;
-  border-radius: 0.25rem;
+  border-radius: $border-size;
   background-color: transparent;
   border: $nothing;
   &:hover {

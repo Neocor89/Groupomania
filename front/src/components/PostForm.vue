@@ -101,39 +101,48 @@ export default {
 </script>
 
 <style lang="scss">
-#preview img {
-  max-width: 100%;
-  max-height: 500px;
-}
-.disabled {
-  cursor: not-allowed;
-}
-.form-control {
-  border: 1px solid rgba(192, 192, 192, 0.5);
-  &:focus {
-    border: none;
-  }
-}
-.line {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: rgba(192, 192, 192, 0.5);
-}
-.create-button {
-  background: white;
-  color: #747474;
-  border: none;
-  border-radius: 0.25rem;
-  font-weight: 500;
-  padding: 0.375rem 0.75rem;
-  &:hover {
-    background-color: #17a3b828;
-  }
-  &:active,
-  &:focus {
-    background-color: white !important;
-    outline: none;
-  }
-}
+
+// overall style
+@import "@/assets/scss/utils/_variables.scss";
+@import "@/assets/scss/utils/_mixins.scss";
+@import "@/assets/scss/utils/_breakpoints.scss";
+
+// component style
+@import "@/assets/scss/style-components-pages/_PostForm.scss" ;
+
+// #preview img {
+//   max-width: $full-size;
+//   max-height: 500px;
+// }
+// .disabled {
+//   cursor: not-allowed;
+// }
+// .form-control {
+//   border: 1px solid $bg-effect;
+//   &:focus {
+//     border: $nothing;
+//   }
+// }
+// .line {
+//   display: block;
+//   width: $full-size;
+//   height: 1px;
+//   background-color: $bg-effect;
+// }
+// .create-button {
+//   background: $light;
+//   color: #747474;
+//   border: $nothing;
+//   border-radius: $border-size;
+//   font-weight: $w500;
+//   padding: 0.375rem 0.75rem;
+//   &:hover {
+//     background-color: $col-prim;
+//   }
+//   &:active,
+//   &:focus {
+//     background-color: $light !important;
+//     outline: $nothing;
+//   }
+// }
 </style>

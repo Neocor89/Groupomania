@@ -2,7 +2,7 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: $txt-center;
+  text-align: $centered;
 }
 
 
@@ -23,8 +23,8 @@
   display: grid;
 	grid-template-columns: 200px;
 	grid-template-rows: 100px;
-	justify-content: center;
-	align-items: center;
+	justify-content: $centered;
+	align-items: $centered;
 	padding: 15px;
 }
 
@@ -46,7 +46,7 @@
   line-height: 2.5;
   outline: transparent;
   padding: 0 1rem;
-  text-align: $txt-center;
+  text-align: $centered;
   text-decoration: $nothing;
   transition: box-shadow .2s ease-in-out;
   user-select: $nothing;
@@ -66,6 +66,11 @@
 
 @mixin border-solid($width: 2px, $color: $col-prim) {
   border: $width solid $color;
+}
+
+@mixin without-borders {
+  border: $nothing !important;
+    outline: $nothing !important;
 }
 
 
@@ -91,6 +96,12 @@
 
 @mixin tablet-large-screnn {
   @media screen and (min-width: map-get($breakpoints, md-screen-size1)) and (max-width: map-get($breakpoints, lg-screen)) {
+      @content;
+  }
+}
+
+@mixin large-screnn {
+  @media screen and (min-width: map-get($breakpoints, md-screen-size3)) and (max-width: map-get($breakpoints, lg-screen-size2)) {
       @content;
   }
 }

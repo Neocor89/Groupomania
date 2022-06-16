@@ -1,0 +1,8 @@
+.profile-picture {
+  overflow: hidden;
+  border-radius: $full-size;
+  background: $dark;
+  &__img {
+    object-fit: cover;
+  }
+}

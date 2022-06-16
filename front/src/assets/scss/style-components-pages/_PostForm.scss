@@ -1,0 +1,35 @@
+#preview img {
+  max-width: $full-size;
+  max-height: 500px;
+}
+.disabled {
+  cursor: not-allowed;
+}
+.form-control {
+  border: 1px solid $bg-effect;
+  &:focus {
+    border: $nothing;
+  }
+}
+.line {
+  display: block;
+  width: $full-size;
+  height: 1px;
+  background-color: $bg-effect;
+}
+.create-button {
+  background: $light;
+  color: #747474;
+  border: $nothing;
+  border-radius: $border-size;
+  font-weight: $w500;
+  padding: 0.375rem 0.75rem;
+  &:hover {
+    background-color: $col-prim;
+  }
+  &:active,
+  &:focus {
+    background-color: $light !important;
+    outline: $nothing;
+  }
+}

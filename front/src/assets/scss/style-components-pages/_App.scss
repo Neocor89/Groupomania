@@ -8,7 +8,7 @@
 .size__img {
   width: $full-size;
   max-height: $full-size;
-  background-position: center center;
+  background-position: $centered $centered;
 }
 
 #app {

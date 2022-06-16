@@ -15,7 +15,11 @@
 // }
 /* 
 
-? End < Example use breakpoints
+.b-icon.bi {
+    font-size: 125%;
+    vertical-align: text-bottom;
+  }
+
 
 @mixin mobile-only {
     @media screen and (max-width: map-get($breakpoints, mobile)) {
@@ -23,43 +27,14 @@
     }
 }
 
-@mixin tablet-only {
-    @media screen and (max-width: map-get($breakpoints, tablet)) {
-        @content;        
-    }
-}
-    @mixin mobile-tablet {
+@mixin mobile-tablet {
         @media screen and (min-width: map-get($breakpoints, sm-screen)) and (max-width: map-get($breakpoints, md-screen)) {
             #  { $signup-cardsElmts }
                 padding: 0.7rem;
         }
     }
 
-@mixin mobile-tablet-small {
-        @media screen and (min-width: map-get($breakpoints, sm-screen)) and (max-width: map-get($breakpoints, md-screen)) {
-            @content;
-        }
-}
-
-@mixin tablet-large-screnn {
-        @media screen and (min-width: map-get($breakpoints, md-screen-size1)) and (max-width: map-get($breakpoints, lg-screen)) {
-            @content;
-        }
-}
-
-@media screen and (min-width: 767px) and (max-width: 991px) {
-  #nav #logo {
-    max-width: 200px;
-  }
-  
-}
-
-@mixin xsscreen-only {
-    @media screen and (max-width: map-get($breakpoints, xsscreen)) {
-        @content;  = //: Contenu générique en attendant contenu à placer
-    }
-}
-
+? End < Example use breakpoints
 */
 
 /* 
@@ -74,5 +49,6 @@ $breakpoints: (
   md-screen-size2: 768px,
   md-screen-size3: 769px,
   lg-screen: 991px,
+  lg-screen-size2: 992px,
   xl-screen: 1024px,
 );

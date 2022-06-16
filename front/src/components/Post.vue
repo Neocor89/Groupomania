@@ -72,69 +72,82 @@ export default {
 </script>
 
 <style lang="scss">
-.div-post-picture {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 1rem;
-}
-.post-profile-picture {
-  height: 50px;
-}
-@media screen and (min-width: 280px) and (max-width: 769px) {
-  .div-post-picture {
-    width: 42px;
-    height: 42px;
-  }
-  .post-profile-picture {
-    height: 42px;
-  }
-}
-.btn-block + .btn-block {
-  margin-top: 3px;
-}
-.line {
-  display: block;
-  width: $full-size;
-  height: 1px;
-  background-color: rgba(192, 192, 192, 0.5);
-}
 
-.react-btn {
-  background: $light;
-  border: $nothing;
-  margin: 3px;
-  color: $col-thrd;
-  border-radius: 0.25rem;
-  font-weight: $w800;
-  padding: 0.375rem 0.75rem;
-  &:focus {
-    border: $nothing !important;
-    outline: $nothing !important;
-  }
-  &:hover {
-    color: $col-thrd !important;
-    background-color: $col-prim !important;
-  }
-}
-.like-btn {
-  color: $col-thrd;
-  font-weight: $w500;
-  &:hover,
-  &:focus,
-  &:active {
-    color: $col-thrd !important;
-    font-weight: $w500;
-    background: $nothing !important;
-  }
-}
-.modal-photo {
-  &__img {
-    max-width: $full-size;
-    max-height: calc(100vh - 110px);
-  }
-}
-.header-style {
-  padding-bottom: 0;
-  border-bottom: $nothing;
-}
+// overall style
+@import "@/assets/scss/utils/_variables.scss";
+@import "@/assets/scss/utils/_mixins.scss";
+@import "@/assets/scss/utils/_breakpoints.scss";
+
+// Component style
+@import "@/assets/scss/style-components-pages/_Post.scss";
+
+// .div-post-picture {
+//   width: 50px;
+//   height: 50px;
+//   margin-bottom: 1rem;
+// }
+// .post-profile-picture {
+//   height: 50px;
+// }
+
+//   .div-post-picture {
+//     @include mobile-tablet-large {
+//       width: 42px;
+//       height: 42px;
+//     }
+//   }
+//   .post-profile-picture {
+//     @include mobile-tablet-large {
+//     height: 42px;
+//   }
+// }
+
+// .btn-block + .btn-block {
+//   margin-top: 3px;
+// }
+
+// .line {
+//   display: block;
+//   width: $full-size;
+//   height: 1px;
+//   background-color: $bg-effect;
+// }
+
+// .react-btn {
+//   background: $light;
+//   border: $nothing;
+//   margin: 3px;
+//   color: $col-thrd;
+//   border-radius: 0.25rem;
+//   font-weight: $w800;
+//   padding: 0.375rem 0.75rem;
+//   &:focus {
+//     @include without-borders;
+//   }
+//   &:hover {
+//     color: $col-thrd !important;
+//     background-color: $col-prim !important;
+//   }
+// }
+// .like-btn {
+//   color: $col-thrd;
+//   font-weight: $w500;
+//   &:hover,
+//   &:focus,
+//   &:active {
+//     color: $col-thrd !important;
+//     font-weight: $w500;
+//     background: $nothing !important;
+//   }
+// }
+// .modal-photo {
+//   &__img {
+//     max-width: $full-size;
+//     max-height: calc(100vh - 110px);
+//   }
+// }
+// .header-style {
+//   padding-bottom: 0;
+//   border-bottom: $nothing;
+// }
 </style>

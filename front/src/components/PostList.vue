@@ -54,25 +54,35 @@ export default {
 </script>
 
 <style lang="scss">
-.col-12 {
-  margin-top: 15px;
-}
-.post {
-  display: block;
-  overflow: hidden;
-  width: $full-size;
-  height: 350px;
-  &__image {
-    max-width: $full-size;
-    max-height: $full-size;
-    &:focus {
-      outline: $nothing;
-    }
-  }
-}
-@media screen and (min-width: 280px) and (max-width: 769px) {
-  .post {
-    height: 230px;
-  }
-}
+
+// overall style
+@import "@/assets/scss/utils/_variables.scss";
+@import "@/assets/scss/utils/_mixins.scss";
+@import "@/assets/scss/utils/_breakpoints.scss";
+
+// component style
+@import "@/assets/scss/style-components-pages/_PostList.scss" ;
+
+// .col-12 {
+//   margin-top: 15px;
+// }
+// .post {
+//   display: block;
+//   overflow: hidden;
+//   width: $full-size;
+//   height: 350px;
+//   &__image {
+//     max-width: $full-size;
+//     max-height: $full-size;
+//     &:focus {
+//       outline: $nothing;
+//     }
+//   }
+// }
+
+//   .post {
+//     @include mobile-tablet-large {
+//     height: 230px;
+//   }
+// }
 </style>
