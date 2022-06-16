@@ -48,53 +48,12 @@ export default {
 
 <style lang="scss">
 
+// overall style
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-.resize__logo {
-  width: 200px;
-  height: 120px;
-  object-fit: cover;
-}
+// style component
+@import "@/assets/scss/style-components-pages/_App.scss";
 
-
-.size__img {
-  width: $full-size;
-  max-height: $full-size;
-  background-position: center center;
-}
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: $txt-center;
-}
-
-#nav {
-  background-image: url('./assets/groupomania_background_mixte01.png');
-  @include nav-position;
-  // z-index: 1; 
-}
-
-@media screen and (min-width: 280px) and (max-width: 767px) {
-  body,
-  .btn,
-  .form-control {
-    font-size: 13px !important;
-  }
-
-  .logo__size {
-    width: 170px;
-  }
-
-  
-}
-@media screen and (min-width: 767px) and (max-width: 991px) {
-  #nav #logo {
-    max-width: 200px;
-  }
-  
-}
 </style>

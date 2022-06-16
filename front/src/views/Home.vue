@@ -27,20 +27,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+// overall style
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-.router__links {
-	@include linksPosition;
-} 
-.link--effect:hover {
-	@include btnEffects;
-}
-
-@media screen and (min-width: 280px) and (max-width: 768px) {
-  
-
-}
+// Component style
+@import "@/assets/scss/style-pages-views/_Home.scss";
 
 </style>

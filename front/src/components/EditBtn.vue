@@ -98,7 +98,7 @@ export default {
   border: 0;
   border-radius: 50rem;
   font-size: 0.5rem;
-  font-weight: 700;
+  font-weight: $w700;
   color: #747474;
   &:hover {
     outline: none;
@@ -109,9 +109,9 @@ export default {
   }
 }
 .btn-secondary {
-  font-weight: 500;
+  font-weight: $w500;
   color: $dark;
-  background-color: white;
+  background-color: $light;
   border: $nothing;
 }
 .btn-outline-secondary,

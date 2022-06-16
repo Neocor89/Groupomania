@@ -91,9 +91,12 @@ export default {
 
 <style lang="scss" scoped>
 
+// overall style 
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
-@import "@/assets/scss/style-pages/_login.scss";
+
+// Component style
+@import "@/assets/scss/style-pages-views/_Login.scss";
 
 </style>

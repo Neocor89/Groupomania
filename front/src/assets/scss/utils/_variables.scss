@@ -7,7 +7,7 @@
 $col-prim: #e76f51;
 $col-secd: #C65E3A;
 $col-thrd: #747474;
-$col-extra: #FAAE7B;
+// $col-extra: #FAAE7B;
 $gradient-btn: #FF9A5A;
 
 /* ----  ----  ---- ----
@@ -77,16 +77,14 @@ $fsize-XS: 16px;
 $fsize-S: 1.1rem;
 $fsize-M: 1.2rem;
 $fsize-L: 1.3rem;
-$fsize-XL: 500;
-
 
 /* 
 ::*::*::*::*::*::*::
  * * Border Style * * 
 ::*::*::*::*::*::*::
 */
-$nothing: none;
 
+$nothing: none;
 
 /* 
 ::*::*::*::*::*::*::
@@ -95,3 +93,16 @@ $nothing: none;
 */
 
 $txt-center: center;
+
+
+/* 
+::*::*::*::*::*::*::
+ * * Elements * * 
+::*::*::*::*::*::*::
+*/
+
+$login-classText: ".logoText";
+$login-classBtn: ".btn__subscribe";
+$signup-cardsElmts: ".account-card, .card-body";
+$card: ".card";
+$nav-log: "#nav #logo";

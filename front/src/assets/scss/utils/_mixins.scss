@@ -1,3 +1,11 @@
+@mixin basic-app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: $txt-center;
+}
+
+
 @mixin btnEffects {
   border-radius: 4rem;
 	transition: border-radius 0.3s ease-in;
@@ -58,4 +66,31 @@
 
 @mixin border-solid($width: 2px, $color: $col-prim) {
   border: $width solid $color;
+}
+
+
+//+ :: MIXINIS MEDIA QUERIES :: +
+
+@mixin mobile-tablet-small {
+  @media screen and (min-width: map-get($breakpoints, sm-screen)) and (max-width: map-get($breakpoints, md-screen-size1)) {
+      @content;
+  }
+}
+
+@mixin mobile-tablet-medium {
+  @media screen and (min-width: map-get($breakpoints, sm-screen)) and (max-width: map-get($breakpoints,  md-screen-size2)) {
+      @content;
+  }
+}
+
+@mixin mobile-tablet-large {
+  @media screen and (min-width: map-get($breakpoints, sm-screen)) and (max-width: map-get($breakpoints,  md-screen-size3)) {
+      @content;
+  }
+}
+
+@mixin tablet-large-screnn {
+  @media screen and (min-width: map-get($breakpoints, md-screen-size1)) and (max-width: map-get($breakpoints, lg-screen)) {
+      @content;
+  }
 }

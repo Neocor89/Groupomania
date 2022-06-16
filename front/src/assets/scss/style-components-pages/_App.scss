@@ -1,0 +1,42 @@
+.resize__logo {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+}
+
+
+.size__img {
+  width: $full-size;
+  max-height: $full-size;
+  background-position: center center;
+}
+
+#app {
+  @include basic-app;
+}
+
+#nav {
+  background-image: url('./assets/groupomania_background_mixte01.png');
+  @include nav-position;
+  // z-index: 1; 
+}
+
+body,
+.btn,
+.form-control {
+  @include mobile-tablet-small {
+    font-size: 13px !important;
+  }
+}
+.logo__size {
+  @include mobile-tablet-small {
+    width: 170px;
+  }
+}
+
+
+#nav #logo {
+  @include tablet-large-screnn {
+    max-width: 200px;
+  }
+}

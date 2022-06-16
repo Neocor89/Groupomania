@@ -130,58 +130,70 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+// overall style
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-.row {
-  margin-left: 0;
-  margin-right: 0;
-}
-.div-main-picture {
-  width: $size-medium-comp;
-  height: $size-medium-comp;
-  margin-bottom: 1rem;
-}
-.profile-main-picture {
-  height: $size-medium-comp;
-}
-.custom-file-label {
-  text-align: left;
-}
+// component style
+@import "@/assets/scss/style-pages-views/_Profile.scss" ;
 
-.save-btn {
-  @include submit-btn;
-  &:focus {
-    box-shadow: $shadow-focus;
-  } &:hover {
-    box-shadow: $shadow-hover;
-  }
+
+// .row {
+//   margin-left: 0;
+//   margin-right: 0;
+// }
+// .div-main-picture {
+//   width: $size-medium-comp;
+//   height: $size-medium-comp;
+//   margin-bottom: 1rem;
+// }
+// .profile-main-picture {
+//   height: $size-medium-comp;
+// }
+// .custom-file-label {
+//   text-align: left;
+// }
+
+// .save-btn {
+//   @include submit-btn;
+//   &:focus {
+//     box-shadow: $shadow-focus;
+//   } &:hover {
+//     box-shadow: $shadow-hover;
+//   }
   
-}
+// }
 
-.card-body {
-  padding-bottom: 0;
-}
+// .card-body {
+//   padding-bottom: 0;
+// }
 
-.shadow {
-  box-shadow: $shadow !important;
-}
+// .shadow {
+//   box-shadow: $shadow !important;
+// }
 
-@media screen and (min-width: 280px) and (max-width: 768px) {
+//   .create-button {
+//     @include mobile-tablet-medium {
+//     width: 100% !important;
+//   }
+// }
+//   .div-main-picture {
+//     @include mobile-tablet-medium {
+//     width: $size-small-comp;
+//     height: $size-small-comp;
+//   }
+// }
+//   .profile-main-picture {
+//     @include mobile-tablet-medium {
+//     height: $size-small-comp;
+//   }
+// }
+//   .shadow {
+//     @include mobile-tablet-medium {
+//     box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.08) !important;
+//   }
+// }
 
-  .create-button {
-    width: 100% !important;
-  }
-  .div-main-picture {
-    width: $size-small-comp;
-    height: $size-small-comp;
-  }
-  .profile-main-picture {
-    height: $size-small-comp;
-  }
-  .shadow {
-    box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.08) !important;
-  }
-}
 </style>
