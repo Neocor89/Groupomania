@@ -1,8 +1,10 @@
+//:: Imports ::
 const db = require('../models');
 const Sequelize = db.Sequelize;
 const jwt = require('jsonwebtoken');
 const { User } = db.sequelize.models;
 
+//:: Creation of a signed token ::
 const newToken = (user) => {
   token = jwt.sign({ userId: user.id }, 'RANDOM_TOKEN_SECRET', {
     expiresIn: '24h',
@@ -68,7 +70,7 @@ exports.getAllUsers = (req, res, next) => {
         ' ',
         Sequelize.col('lastName')
       ),
-      {
+      { //++  Modifier test de recherche Table Like plus mise en place  ++
         [Sequelize.Op.like]: `%${req.query.search}%`,
       }
     ),

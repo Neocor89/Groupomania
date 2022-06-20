@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt');
 
+//: Regexp implementation to validate the password entry
 function CheckEncryptedPassword(value) {
   const regex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z0-9\d@$!%*?&]{8,}$/;

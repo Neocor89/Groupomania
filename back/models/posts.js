@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     readableCreatedAt() {
+      //: Package "moment" ajout heure locale françaisae 
       return moment(this.createdAt).locale("fr").format("LL");
     }
   }
@@ -32,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         eitherContentOrImageUrl() {
           if (!this.content && !this.imageUrl) {
-            throw new Error("Vous ne pouvez pas créer de publication vide !");
+            throw new Error("Publication vide ! Veuillez ajouter un contenu ou une image");
           }
         },
       },
