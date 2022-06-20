@@ -11,6 +11,7 @@ function CheckEncryptedPassword(value) {
   }
 }
 
+//: Creation of salting function password :
 function addAuthentication(User) {
   const encryptPassword = (user) => {
     if (user.changed('password')) {
@@ -28,7 +29,7 @@ function addAuthentication(User) {
     }
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
-
+//:: approvedPassword ::
     if (isPasswordValid) return { valid: true, user };
     else return { valid: false, message: 'Mot de passe incorrect' };
   };

@@ -1,5 +1,6 @@
 import router from '../router/index';
 
+//: Backend | Frontend connection
 class ApiClient {
   constructor() {
     this.baseUrl = 'http://localhost:3000/';
@@ -29,7 +30,7 @@ class ApiClient {
         }
         return response.json();
       })
-      .catch(() => alert("Connection aux données de l'API "));
+      .catch(() => alert("Connection to API data "));
   }
 
   post(path, body, options = {}) {
