@@ -1,10 +1,8 @@
 "use strict";
 const { Model } = require("sequelize");
 
-
 const {
   CheckEncryptedPassword,
-  // ensurePasswordIsStrongEnough,
   addAuthentification
 } = require("../services/authentification");
 
@@ -54,15 +52,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          // ensurePasswordIsStrongEnough,
           CheckEncryptedPassword
         },
       },
       imageUrl: DataTypes.STRING,
-      deleted: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false,
-      },
       admin: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,

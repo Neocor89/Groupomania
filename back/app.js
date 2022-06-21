@@ -32,9 +32,5 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/api/posts', postsRoutes);
 app.use('/api/auth', userRoutes);
 
-app.get('/api/users/:id', auth, userCtrl.getOneUser);
-app.get('/api/users', auth, userCtrl.getAllUsers);
-app.delete('/api/users/:id', auth, userCtrl.deleteUserAccount);
-
 
 module.exports = app;
