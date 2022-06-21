@@ -1,13 +1,14 @@
 "use strict";
-const { Model } = require("sequelize");
 
+//: Imports
+const { Model } = require("sequelize");
 const {
   CheckEncryptedPassword,
   addAuthentification
 } = require("../services/authentification");
-
 const { deleteFile } = require("../services/file-deleted");
 
+//: Users Model
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {

@@ -26,69 +26,92 @@ La création d’un réseau social interne, moderne et ludique, qui permettra au
 * les utilisateurs doivent pouvoir facilement repérer les dernières participations des employés;
 * le ou la chargé-e de communication Groupomania doit pouvoir modérer les interactions entre
 employés 
-* la chargé-e de communication **Groupomania** doit pouvoir afficher les dernières **messages** des salariés ;
+* la chargé-e de communication **Groupomania** doit pouvoir afficher les dernières **messages** des salariés.
+---
 
-## Setup
-
-**Back-end**  
+## S E T U P
+---
+## **Back-end**  
 
 Build with:  
 
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?-style=for-the-badge&logo=mysql&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?-style=for-the-badge&logo=express&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?-style=for-the-badge&logo=node.js&logoColor=white)  
 
-To launch the back you must go via your terminal in the folder :
-```
+1️⃣ `Backend launch & its dependencies`  
+To launch the backend you must go via your terminal in the folder and installing the *dependencies* needed to run the project : 🏃‍♂️
+```node
 cd groupomania back
-```
-`Dependencies`  
-Start by installing the *dependencies* needed to run the project : 🏃‍♂️
-```
-npm install 
+npm install
 ```
 
-`Database`  
-Log in to *MySQL* with your usual login and password  
-[For more Information 🤔](https://dev.mysql.com/doc/)
+2️⃣ `Database`  
+The **database** of this project has been realized with **sequelize**.
+### 🚨 what is sequelize ?
 
-when you are connected create the **groupomania database** with :
-
-```sql
-CREATE DATABASE Groupomania;
-```
-
-then selected with :
-
-```sql
-USE Groupomania;
-```
-
-or 
-
-### Use Sequelize and Sequelize-cli 🧬
-
+Sequelize 🧬
+-
 *Sequelize* is a promise-based Node.js ORM for 
 
 - **Postgres**, 
 - **MySQL**, 
 - **MariaDB**, 
-- **SQLite**,
+- **SQLite** and 
 - **Microsoft SQL Server**. 
 
 It features solid transaction support, relations, eager and lazy loading, read replication and more.
 
 Sequelize follows Semantic Versioning and supports *Node v10* and above.
 
-*Sequelize-cli* is the command interface of *Sequelize*, and ships support for **migrations** and project **bootstrapping**.
+sequelize-cli
+-
 
-### Initializing a database project with Sequelize
+*sequelize-cli* is is a command line interface for *sequelize*
+it allows versioning of your database by keeping track of changes and evolution of your database throughout your project.
+sequelize-cli is used for data migration and database bootstrapping
 
-To initialize the database go back to the project terminal and run the command :
+To begin it is necessary to connect to **mysql** with your usual login and password.  
+[For more Information 🤔](https://dev.mysql.com/doc/)
 
+Then create your **database** called **groupomania** via mysql  with the commands :
 ```sql
-sequelize-cli init
+CREATE DATABASE groupomania;
+```
+selected it with :
+```sql
+USE groupomania;
 ```
 
-In the json file of the config folder created by the previous command, replace the default info by :
+ Or on **phpmyadmin** by starting your server with **xampp** **lampp** **mampp**.
+
+Be aware that it is also possible to create your database with `sequelize` from the terminal with the command :
+```
+npx sequelize-cli db:create groupomania
+```
+
+Then from the project terminal without the backend part run the command :
+```sql
+npx sequelize-cli init
+```
+
+This command creates 4 folders 🗃️
+
+- **config** folder with the *config.json* file 
+- **migrations** folder 
+- **seeders** folder and 
+- **models** folder containing an *index.js* file.
+
+
+In the json file of the config folder created by the previous command, replace the default info 
+```json
+  "development": {
+    "username": "root",
+    "password": null,
+"database": "database_dev",
+  "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+```
+by :
 
 ```json
  "development": {
@@ -99,20 +122,27 @@ In the json file of the config folder created by the previous command, replace t
     "dialect": "mysql"
   }
 ```
+The default dialect is `mysql` you can change by the one you use.
 
 You can enter a password, but **don't forget** to create an `.env` file in the root of the project to **protect your information**.
 
-### Create database
-
-If you have not yet created a database you can do so using Seq with :
-```
-sequelize db:create
-```
-
 ### Sequelize syntax and Command 
-#### sequelize **:** `name_of_the_command`
 
-🧾 list and description of possible actions
+[🧾 sequelize documentation](https://devdocs.io/sequelize~6-manual/)
+
+
+when your database is created generate the models of the `users` and `posts` table. 
+
+run the following command:
+
+```sql
+sequelize-cli model:generate --name User --attributes firstName:string, lastName:string, email:string, password:string,imageUrl:text,admin:boolean
+```
+**and**
+```sql
+sequelize-cli model:generate --name Post --attributes userId:integer,content:text,imageUrl:text
+```
+
 
 ```
 sequelize db:migrate                        Run pending migrations
@@ -160,33 +190,13 @@ sequelize seed:generate                     Generates a new seed file
 sequelize seed:create      
 ```
 
-### Create database
-
-when your database is created generate the models of the users and message table. 
-
-run the following command:
-
-```
-sequelize-cli model:generate --name User --attributes firstName:string, lastName:string, email:string, password:string, isAdmin:boolean
-```
-
-This will create the config and model folders in the config/config.json file
-
-### 
-
 ___
 
-
-`Launch server 🚀`
+` And Launch with 🚀`
 ```node
 npm run start
 ```
 
-
-
-
-## Setup
-
-**Front-end**  
+## **Front-end**  
 
 Build with:  

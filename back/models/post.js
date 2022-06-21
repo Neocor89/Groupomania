@@ -1,10 +1,11 @@
 "use strict";
+
+//: Imports
 const { Model } = require("sequelize");
-
 const moment = require("moment");
-
 const { deleteFile } = require("../services/file-deleted");
 
+//: Posts Model
 module.exports = (sequelize, DataTypes) => {
   class Post extends Model {
     /**
