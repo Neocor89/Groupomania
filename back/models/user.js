@@ -1,13 +1,12 @@
 "use strict";
 const { Model } = require("sequelize");
-//? const { Sequelize, Model, DataTypes } = require("sequelize");
+
 
 const {
   CheckEncryptedPassword,
   // ensurePasswordIsStrongEnough,
-  addAuthentication
-  // addAuthenticationOn,
-} = require("../services/authentication");
+  addAuthentification
+} = require("../services/authentification");
 
 const { deleteFile } = require("../services/file-deleted");
 
@@ -75,8 +74,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  addAuthentication(User);
-  //: addAuthenticationOn
+  addAuthentification(User);
   User.afterUpdate(async (user) => {
     if (user.dataValues.imageUrl !== user._previousDataValues.imageUrl) {
       await deleteFile(user._previousDataValues.imageUrl);
