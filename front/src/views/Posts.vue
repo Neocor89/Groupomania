@@ -17,7 +17,7 @@
 
 <script>
 import { apiClient } from '../services/apiClient';
-import router from '../router/index';
+// import router from '../router/index';
 import { mapState } from 'vuex';
 import CreatePost from '../components/CreatePost';
 import PostsList from '../components/PostsList';
