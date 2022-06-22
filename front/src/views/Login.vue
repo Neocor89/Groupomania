@@ -2,7 +2,7 @@
   <div class="page-container">
     <div class="slogan">
       <h2>
-        <span class="pb-3 logoText"> Garder le contact avec votre équipe</span> <br />
+        <span class="pb-3 logoText"> Partager avec vos équipes</span> <br />
       </h2>
     </div>
     <div class="container-fluid">
@@ -91,12 +91,12 @@ export default {
 
 <style lang="scss" scoped>
 
-// overall style 
+//+ overall style 
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-// Component style
+//+ component style
 @import "@/assets/scss/style-pages-views/_Login.scss";
 
 </style>

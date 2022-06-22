@@ -28,6 +28,8 @@
 </template>
 
 <script>
+
+//+ Import Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Footer from './components/Footer';
@@ -48,12 +50,12 @@ export default {
 
 <style lang="scss">
 
-// overall style
+//+ overall style
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-// style component
+//+ style component
 @import "@/assets/scss/style-components-pages/_App.scss";
 
 </style>

@@ -2,7 +2,7 @@
 <div class="page__container">
    <div class="slogan">
       <h2 class="color__text py-3">
-        <span class="text__slogan">Prennez contact avec votre équipe</span> <br />
+        <span class="text__slogan">Partager avec vos équipes</span> <br />
       </h2>
     </div>
     <div class="container-fluid">
@@ -135,58 +135,13 @@ export default {
 
 <style lang="scss" scoped>
 
+//+ overall style 
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-.btn__subscribe {
-  @include submit-btn;
-  &:not([disabled]):focus {
-    box-shadow: $shadow-focus;
-  } &:hover {
-      box-shadow: $shadow-hover;
-  }
-}
-
-
-.page__container {
-  background: rgba(255, 255, 255, 0);
-}
-
-span.text__slogan {
-  color: $col-prim;
-  font-weight: $w800;
-  text-shadow: 2px 2px 2px rgb(0, 0, 0);
-}
-a {
-  text-decoration: $nothing;
-}
-
-.account-card {
-    .card-body {
-      @include mobile-tablet-large {
-      padding: 0.7rem;
-    }
-  }
-}
-  .shadow {
-     @include mobile-tablet-large {
-    box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.08) !important;
-  }
-}
-  .login-text {
-     @include mobile-tablet-large {
-    font-size: $fsize-S;
-  }
-}
-
-  .slogan {
-     @include mobile-tablet-large {
-    display: $nothing;
-  }
-}
-
-
+//+ component style
+@import "@/assets/scss/style-pages-views/_SignUp.scss";
 
 // .btn__subscribe {
 //   @include submit-btn;
@@ -211,8 +166,7 @@ a {
 //   text-decoration: $nothing;
 // }
 
-// @media screen and (min-width: 280px) and (max-width: 769px) {
-//   .account-card {
+// .account-card {
 //     .card-body {
 //       @include mobile-tablet-large {
 //       padding: 0.7rem;
@@ -220,12 +174,18 @@ a {
 //   }
 // }
 //   .shadow {
+//      @include mobile-tablet-large {
 //     box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.08) !important;
 //   }
+// }
 //   .login-text {
+//      @include mobile-tablet-large {
 //     font-size: $fsize-S;
 //   }
+// }
+
 //   .slogan {
+//      @include mobile-tablet-large {
 //     display: $nothing;
 //   }
 // }

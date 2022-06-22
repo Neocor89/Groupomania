@@ -23,7 +23,7 @@ import CreatePost from '../components/CreatePost';
 import PostsList from '../components/PostsList';
 import Menu from '../components/Menu';
 export default {
-  name: 'Posts',
+  name: 'AllPosts',
   components: {
     CreatePost,
     PostsList,
@@ -41,22 +41,13 @@ export default {
 </script>
 
 <style lang="scss">
-.card-body {
-  padding-bottom: 0;
-}
-.shadow {
-  box-shadow: 0rem 0.2rem 0.5rem rgba(53, 53, 53, 0.445) !important;
-}
-@media screen and (min-width: 280px) and (max-width: 769px) {
-  .card-body {
-    padding: 0.7rem;
-  }
-  .shadow {
-    box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.37) !important;
-  }
-}
-.row {
-  margin-left: 0;
-  margin-right: 0;
-}
+
+//+ overall style 
+@import "@/assets/scss/utils/_variables.scss";
+@import "@/assets/scss/utils/_mixins.scss";
+@import "@/assets/scss/utils/_breakpoints.scss";
+
+//+ component style
+@import "@/assets/style-pages-views/_Posts.scss";
+
 </style>

@@ -1,0 +1,17 @@
+.card-body {
+  padding-bottom: 0;
+ @include mobile-tablet-large {
+   padding: 0.7rem;
+ }
+}
+.shadow {
+  box-shadow: 0rem 0.2rem 0.5rem rgba(53, 53, 53, 0.445) !important;
+ @include mobile-tablet-large {
+   box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.37) !important;
+ }
+}
+
+.row {
+margin-left: 0;
+margin-right: 0;
+}
