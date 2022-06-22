@@ -1,3 +1,7 @@
+/* ---- ---- ---- ---- ----
+ + + Mixins Components + + 
+---- ---- ---- ---- ---- */
+
 @mixin basic-app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,9 +18,7 @@
     34px 34px 68px 0px rgb(140, 120, 115), 
     inset -8px -8px 16px 0px rgba(153, 121, 102, 0.7), 
     inset 0px 14px 28px 0px hsl(120deg 20% 95%);
-	// border: 2px solid;
 	border: $nothing;
-	// box-shadow: 10px 0.2rem 25px rgba(192, 192, 192, 0.533);
 }
 
 @mixin linksPosition {
@@ -74,7 +76,9 @@
 }
 
 
-//+ :: MIXINIS MEDIA QUERIES :: +
+/* ---- ---- ---- ---- ----
+ + + Responsive Mixins + + 
+---- ---- ---- ---- ---- */
 
 @mixin mobile-tablet-small {
   @media screen and (min-width: map-get($breakpoints, sm-screen)) and (max-width: map-get($breakpoints, md-screen-size1)) {
