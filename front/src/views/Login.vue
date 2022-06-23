@@ -2,7 +2,7 @@
   <div class="page-container">
     <div class="slogan">
       <h2>
-        <span class="pb-3 logoText"> Partager avec vos équipes</span> <br />
+        <span class="pb-3 logoText">Partager entre équipes</span> <br />
       </h2>
     </div>
     <div class="container-fluid">
@@ -57,25 +57,19 @@
         </div>
       </div>
     </div>
-    <!-- <Profile /> -->
   </div>
 </template>
 
 <script>
-//TODO : Revoir les 3 SPA à réintégrer et corriger
-//TODO : FINIR BACKEND + réintégrer CODE enlevé dans composants 
 // import Signup from '../components/Signup';
-// import Profile from '../views/Profile';
-// import { apiClient } from '../services/apiClient';
-// import router from '../router/index';
+import { apiClient } from '../services/api-client';
+import router from '../router/index';
 
 export default {
   name: 'LoginVue',
   components: {
     // Signup,
-    // Profile
   },
-  // props: ['notification'],
   data() {
     return {
       errorMessage: '',
@@ -84,19 +78,53 @@ export default {
         password: '',
       },
     };
-  }
+  },
+  mounted() {
+    if (this.$route.query.deletedAccount) {
+      this.$bvToast.toast('Votre compte a bien été supprimé', {
+        title: 'Notification',
+        autoHideDelay: 4000,
+      });
+    }
+  },
+  methods: {
+    login() {
+      if (this.input.email != '' && this.input.password != '') {
+        apiClient
+          .post('api/auth/login', this.input)
+          .then((data) => {
+            if (!data.token) {
+              this.errorMessage = 'Utilisateur introuvable';
+            } else {
+              localStorage.setItem('userToken', data.token);
+              localStorage.setItem('userData', JSON.stringify(data.user));
+              router.push({ name: 'Posts' });
+            }
+          })
+          .catch((error) => {
+            if (error.error) {
+              return (this.errorMessage = error.error);
+            }
+            this.errorMessage = 'Problème lors de la connexion';
+          });
+      } else {
+        this.errorMessage =
+          'Veuillez renseigner les champs email et mot de passe !';
+      }
+    },
+  },
 
 };
 </script>
 
 <style lang="scss" scoped>
 
-//+ overall style 
+//+ :: overall style ::
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-//+ component style
+//+ :: component style ::
 @import "@/assets/scss/style-pages-views/_Login.scss";
 
 </style>

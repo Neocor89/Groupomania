@@ -42,12 +42,12 @@ export default {
 
 <style lang="scss">
 
-//+ overall style 
+//+ :: overall style ::
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-//+ component style
+//+ :: component style ::
 @import "@/assets/style-pages-views/_Posts.scss";
 
 </style>

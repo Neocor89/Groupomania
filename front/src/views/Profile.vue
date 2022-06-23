@@ -17,6 +17,7 @@
               />
             </div>
             <div class="form-group">
+              <!-- :: Revoir cette partie et optimiser :: -->
               <button
                 class="create-button btn-block w-50 mx-auto mb-3 d-flex align-items-center justify-content-center"
                 @click="triggerInput"
@@ -30,7 +31,7 @@
                   >
                     Modifier
                   </span>
-                  
+                  <i class="fa-solid fa-id-card" aria-label="profile picture modification"></i>
               </button>
               <div class="d-flex align-items-center">
                 <div class="col-sm-10">
@@ -146,7 +147,8 @@ export default {
     };
   },
   methods: {
-    onFileSelected() {
+    onFileSelected(event) {
+      //: Before modification =  onFileSelected()
       this.url = URL.createObjectURL(event.target.files[0]);
       this.selectedFile = event.target.files[0];
     },
@@ -155,6 +157,7 @@ export default {
     },
     editUser() {
       let body = this.input;
+      //: Check and fixed bug 
       const isFormData = !!this.selectedFile;
       if (isFormData) {
         const formData = new FormData();

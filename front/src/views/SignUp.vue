@@ -2,13 +2,13 @@
 <div class="page__container">
    <div class="slogan">
       <h2 class="color__text py-3">
-        <span class="text__slogan">Partager avec vos équipes</span> <br />
+        <span class="text__slogan">Partager et communiquer avec vos équipes</span> <br />
       </h2>
     </div>
     <div class="container-fluid">
       <div class=" row text-center justify-content-center">
         <div class="col-lg-8">
-        <!--: Avant <div class="col-12 lg-4"> -->
+        <!-- Avant modif = <div class="col-12 lg-4"> -->
           <div
             class="card account-card border-0 shadow p-3 mt-1 bg-white rounded"
           >
@@ -82,13 +82,8 @@
 import { apiClient } from '../services/api-client';
 import router from '../router/index';
 //TODO : FINIR BACKEND + réintégrer CODE enlevé dans composants 
-// import SignUp from '../components/SignUp.vue';
-// import "bootstrap/dist/css/bootstrap.min.css";
 export default {
  name: 'SignUp',
- components: {
-  //  SignUp
- },
   data() {
     return {
       errorMessage: '',
@@ -135,60 +130,13 @@ export default {
 
 <style lang="scss" scoped>
 
-//+ overall style 
+//+ :: overall style ::
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-//+ component style
+//+ :: component style ::
 @import "@/assets/scss/style-pages-views/_SignUp.scss";
-
-// .btn__subscribe {
-//   @include submit-btn;
-//   &:not([disabled]):focus {
-//     box-shadow: $shadow-focus;
-//   } &:hover {
-//       box-shadow: $shadow-hover;
-//   }
-// }
-
-
-// .page__container {
-//   background: rgba(255, 255, 255, 0);
-// }
-
-// span.text__slogan {
-//   color: $col-prim;
-//   font-weight: $w800;
-//   text-shadow: 2px 2px 2px rgb(0, 0, 0);
-// }
-// a {
-//   text-decoration: $nothing;
-// }
-
-// .account-card {
-//     .card-body {
-//       @include mobile-tablet-large {
-//       padding: 0.7rem;
-//     }
-//   }
-// }
-//   .shadow {
-//      @include mobile-tablet-large {
-//     box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.08) !important;
-//   }
-// }
-//   .login-text {
-//      @include mobile-tablet-large {
-//     font-size: $fsize-S;
-//   }
-// }
-
-//   .slogan {
-//      @include mobile-tablet-large {
-//     display: $nothing;
-//   }
-// }
 
 </style>>
 
