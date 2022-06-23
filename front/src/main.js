@@ -2,14 +2,10 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-//: ADD import from use bootstrap in project Vue
-// import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
-
+import moment from 'moment';
+//: Import moment
+App.prototype.moment = moment;
 // import 'bootstrap/dist/css/bootstrap.css'
 // import 'bootstrap-vue/dist/bootstrap-vue.css'
  
-//: TEST THIS = import 'bootstrap-vue/dist/bootstrap.js'
-// use(BootstrapVue)
-// use(BootstrapVueIcons)
-
 createApp(App).use(store).use(router).mount('#app')

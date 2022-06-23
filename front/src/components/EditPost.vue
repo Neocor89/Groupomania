@@ -68,7 +68,6 @@ export default {
         selectedFile: this.selectedFile,
         content: this.content,
       });
-      this.displayNotification('Publication modifiée !');
     },
   },
 };
@@ -76,34 +75,12 @@ export default {
 
 <style lang="scss">
 
-// overall style
+//+ :: overall style ::
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-// component style
+//+ :: component style ::
 @import "@/assets/scss/style-components-pages/_EditPost.scss" ;
 
-// .modal-body {
-//   padding: 1rem 1rem 0 1rem;
-// }
-// .modal-title {
-//   color: #747474;
-// }
-// .btn-light {
-//   border: $nothing;
-//   color: #747474;
-//   font-weight: $w500;
-//   display: block;
-//   width: $full-size;
-//   margin: 0 1rem 1rem 1rem;
-// }
-// .modal-content {
-//   font-family: Avenir, Helvetica, Arial, sans-serif;
-//   border: $nothing;
-//   box-shadow: 0px 1px 5px 4px rgba(204, 204, 204, 0.2);
-// }
-// .modal-backdrop {
-//   background-color: rgba(108, 117, 125, 0.2);
-// }
 </style>
