@@ -10,7 +10,7 @@
 import ProfilBtn from '../components/ProfilBtn';
 
 export default {
-  name: 'Menu',
+  name: 'MenuProfile',
   components: {
     ProfilBtn
   },

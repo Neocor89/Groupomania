@@ -1,7 +1,7 @@
 <template>
   <div>
-    <!-- <Menu /> -->
-    <!-- Route à éditer !!!! -->
+    <Menu />
+
     <div class="row text-center justify-content-center">
       <div class="col-lg-6">
         <div
@@ -9,21 +9,28 @@
         >
           <form @submit="editUser">
             <div class="d-flex align-items-center flex-column">
-              <ProfileImage/>
+              <ProfileImage
+                @click="triggerInput"
+                :src="url || userData.imageUrl"
+                customClass="profile-main-picture"
+                divCustomClass="div-main-picture"
+              />
             </div>
             <div class="form-group">
               <button
                 class="create-button btn-block w-50 mx-auto mb-3 d-flex align-items-center justify-content-center"
                 @click="triggerInput"
                 type="button"
-                aria-label="Changer ma photo de profil"
+                aria-label="Modifier la photo du profil"
               >
                 <span class="button-text mr-2 d-none d-md-block"
-                  >Changer ma photo de profil</span
+                  >Modifier la photo du profil</span
                 >
                 <span class="button-text mr-2 d-md-none d-lg-none d-xl-none"
-                  >Modifier</span
-                >
+                  >
+                    Modifier
+                  </span>
+                  
               </button>
               <div class="d-flex align-items-center">
                 <div class="col-sm-10">
@@ -112,20 +119,64 @@
 <script>
 //TODO : Revoir les 3 SPA à réintégrer et corriger
 //TODO : FINIR BACKEND + réintégrer CODE enlevé dans composants 
-// import { apiClient } from '../services/api-client';
-import ProfileImage from '../components/ProfilImage.vue';
+import { apiClient } from '../services/api-client';
+import ProfileImage from '../components/ProfileImage';
 // import PostsList from '../components/PostsList';
-// import Menu from '../components/Menu';
+import Menu from '../components/Menu.vue';
 // import UserDeleteAccount from '../components/UserDeleteAccount';
 export default {
   name: 'ProfileVue',
   components: {
     ProfileImage,
     // PostsList,
-    // Menu,
+    Menu
     // UserDeleteAccount,
   },
-
+  data() {
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    return {
+      userData,
+      input: {
+        firstName: userData.firstName,
+        lastName: userData.lastName,
+        email: userData.email,
+      },
+      selectedFile: null,
+      url: null,
+    };
+  },
+  methods: {
+    onFileSelected() {
+      this.url = URL.createObjectURL(event.target.files[0]);
+      this.selectedFile = event.target.files[0];
+    },
+    triggerInput() {
+      this.$refs.fileUpload.click();
+    },
+    editUser() {
+      let body = this.input;
+      const isFormData = !!this.selectedFile;
+      if (isFormData) {
+        const formData = new FormData();
+        formData.append('image', this.selectedFile);
+        formData.append('user', JSON.stringify(body));
+        body = formData;
+      }
+      apiClient.put('api/auth/edit', body, { isFormData }).then((res) => {
+        localStorage.setItem('userData', JSON.stringify(res.user));
+        this.userData = res.user;
+        window.location.reload();
+      });
+    },
+  },
+  computed: {
+    emptyInput() {
+      return (
+        !this.input.firstName.trim().length ||
+        !this.input.lastName.trim().length
+      );
+    },
+  },
 };
 </script>
 
@@ -138,62 +189,5 @@ export default {
 
 // component style
 @import "@/assets/scss/style-pages-views/_Profile.scss" ;
-
-
-// .row {
-//   margin-left: 0;
-//   margin-right: 0;
-// }
-// .div-main-picture {
-//   width: $size-medium-comp;
-//   height: $size-medium-comp;
-//   margin-bottom: 1rem;
-// }
-// .profile-main-picture {
-//   height: $size-medium-comp;
-// }
-// .custom-file-label {
-//   text-align: left;
-// }
-
-// .save-btn {
-//   @include submit-btn;
-//   &:focus {
-//     box-shadow: $shadow-focus;
-//   } &:hover {
-//     box-shadow: $shadow-hover;
-//   }
-  
-// }
-
-// .card-body {
-//   padding-bottom: 0;
-// }
-
-// .shadow {
-//   box-shadow: $shadow !important;
-// }
-
-//   .create-button {
-//     @include mobile-tablet-medium {
-//     width: 100% !important;
-//   }
-// }
-//   .div-main-picture {
-//     @include mobile-tablet-medium {
-//     width: $size-small-comp;
-//     height: $size-small-comp;
-//   }
-// }
-//   .profile-main-picture {
-//     @include mobile-tablet-medium {
-//     height: $size-small-comp;
-//   }
-// }
-//   .shadow {
-//     @include mobile-tablet-medium {
-//     box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.08) !important;
-//   }
-// }
 
 </style>
