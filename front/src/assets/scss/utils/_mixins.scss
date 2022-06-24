@@ -11,7 +11,7 @@
 
 
 @mixin btnEffects {
-  border-radius: 4rem;
+  border-radius: $rounded;
 	transition: border-radius 0.3s ease-in;
   background-color: rgb(250, 250, 250);
   box-shadow: 
@@ -39,7 +39,7 @@
 @mixin submit-btn {
   background: linear-gradient(to bottom right, $col-prim, $gradient-btn);
   border: 0;
-  border-radius: 12px;
+  border-radius: $medium-border;
   color: $light;
   cursor: pointer;
   display: inline-block;
