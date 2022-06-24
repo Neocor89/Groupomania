@@ -16,33 +16,21 @@
       </router-link>
     </div>
     
-    <!-- <img class="size__img" src="./assets/groupomania_background_mixte01.png" alt=""> -->
     <router-view />
-     <!-- <SignUp /> -->
-    <!-- <router-link to="/">Home</router-link>  -->
-    <!-- <router-link to="/AboutPage">About</router-link> | -->
-    <!-- <router-link to="/signUp">SignUp</router-link> -->
-     <!-- <Login /> -->
      <Footer />
   </div>
 </template>
 
 <script>
 
-//+ Import Bootstrap
+//+ :: Import Bootstrap ::
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import Footer from './components/Footer';
-// import SignUp from './components/SignUp';
-// import Login from './views/Login';
-
 
 export default {
   name: 'App',
   components: {
     Footer
-    // SignUp
-    // Login
   },
 }
 

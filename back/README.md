@@ -2,17 +2,19 @@
 
 Build with:  
 
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?-style=for-the-badge&logo=mysql&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?-style=for-the-badge&logo=express&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?-style=for-the-badge&logo=node.js&logoColor=white)  ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?-style=for-the-badge&logo=Sequelize&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?-style=for-the-badge&logo=mysql&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?-style=for-the-badge&logo=express&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?-style=for-the-badge&logo=node.js&logoColor=white)  ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?-style=for-the-badge&logo=Sequelize&logoColor=white)   ![JWT](https://img.shields.io/badge/JWT-black?-style=for-the-badge&logo=JSON%20web%20tokens)
 
 ---
 ## **S E T U P**
 
 1️⃣ `Backend launch & its dependencies`  
 To launch the backend you must go via your terminal in the folder and installing the *dependencies* needed to run the project : 🏃‍♂️
+
 ```node
 cd groupomania back
 npm install
 ```
+
 
 2️⃣ `Database`  
 The **database** of this project has been realized with **sequelize**.
@@ -71,7 +73,7 @@ This command creates 4 folders 🗃️
 - **models** folder containing an *index.js* file.
 
 
-In the json file of the config folder created by the previous command, replace the default info 
+In the json file of the config folder created by the previous command, replace the default name of database 
 ```json
   "development": {
     "username": "root",
@@ -125,12 +127,6 @@ sequelize db:migrate:undo:all               Revert all migrations ran
 sequelize seed:generate                     Generates a new seed file
 
 sequelize db:seed                           Run specified seeder
-
-sequelize db:seed:undo                      Deletes data from the database
-
-sequelize db:seed:all                       Run every seeder
-
-sequelize db:seed:undo:all                  Deletes data from the database
 
 sequelize db:create                         Create database specified by configuration
 

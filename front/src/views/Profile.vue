@@ -45,56 +45,56 @@
               </div>
               <div class="d-flex align-items-center">
                 <div class="col-sm-2 d-none d-lg-block p-0">
-                  <label> Prénom </label>
+                  <label>Prénom</label>
                 </div>
                 <div class="col-sm-10">
                   <input
                     id="firstName"
                     type="text"
                     placeholder="Prénom"
-                 
+                    v-model="input.firstName"
                     class="text-dark mb-3 pl-lg-3"
                   />
                 </div>
               </div>
               <div class="d-flex align-items-center">
                 <div class="col-sm-2 d-none d-lg-block p-0">
-                  <label for="lastName"> Nom </label>
+                  <label for="lastName">Nom</label>
                 </div>
                 <div class="col-sm-10">
                   <input
                     id="lastName"
                     type="text"
                     placeholder="Nom"
-                  
+                     v-model="input.lastName"
                     class="text-dark mb-3 pl-lg-3"
                   />
                 </div>
               </div>
               <div class="d-flex align-items-center">
                 <div class="col-sm-2 d-none d-lg-block p-0">
-                  <label for="email"> Email </label>
+                  <label for="email">Email</label>
                 </div>
                 <div class="col-sm-10">
                   <input
                     id="email"
                     type="email"
                     placeholder="Email"
-        
+                     v-model="input.email"
                     class="mb-3 pl-lg-3 test"
                     disabled
                   />
                 </div>
               </div>
-              <div  class="d-flex align-items-center">
+              <div v-if="userData.admin" class="d-flex align-items-center">
                 <div class="col-sm-2 d-none d-lg-block p-0">
-                  <label for="admin"> Statut </label>
+                  <label for="admin">Statut</label>
                 </div>
                 <div class="col-sm-10">
                   <input
                     id="admin"
                     type="text"
-                    placeholder="Admin"
+                    placeholder="admin profile"
                     class="mb-4 pl-lg-3"
                     disabled
                   />
@@ -120,11 +120,13 @@
 
 <script>
 
+//: Imports
 import { apiClient } from '../services/api-client';
 import ProfileImage from '../components/ProfileImage';
 import PostsList from '../components/PostsList';
 import Menu from '../components/Menu.vue';
 import UserDeleteAccount from '../components/UserDeleteAccount';
+
 export default {
   name: 'ProfileVue',
   components: {

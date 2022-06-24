@@ -55,7 +55,7 @@
                   type="submit"
                   id="signup-button"
                   class="btn mt-3 btn__subscribe"
-                  aria-label="S'inscrire"
+                  aria-label="Inscription"
                 >
                   Inscription
                 </button>
@@ -118,7 +118,7 @@ export default {
             if (error.error) {
               return (this.errorMessage = error.error.errors[0].message);
             }
-            this.errorMessage = 'Probl�me de connexion';
+            this.errorMessage = 'Problème de connexion';
           });
       } else {
         this.errorMessage = 'Veuillez renseigner tous les champs !';
