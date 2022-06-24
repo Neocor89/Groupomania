@@ -25,7 +25,49 @@
 </template>
 
 <script>
-export default {
 
-}
+import { apiClient } from '../services/apiClient';
+import ProfileImage from '../components/ProfileImage';
+import PostsList from '../components/PostsList';
+import Menu from '../components/Menu';
+import AdminDeleteAccount from '../components/AdminDeleteAccount';
+
+export default {
+  name: 'UserProfile',
+  components: {
+    ProfileImage,
+    PostsList,
+    Menu,
+    AdminDeleteAccount,
+  },
+  watch: {
+    $route(to, from) {
+      window.location.reload();
+    },
+  },
+  data() {
+    return {
+      userProfile: {},
+      userData: JSON.parse(localStorage.getItem('userData')),
+    };
+  },
+  async mounted() {
+    const res = await apiClient.get(`api/users/${this.$route.params.userId}/`);
+    this.userProfile = res.user;
+  },
+};
+
 </script>
+
+
+<style lang="scss">
+
+//+ :: overall style ::
+@import "@/assets/scss/utils/_variables.scss";
+@import "@/assets/scss/utils/_mixins.scss";
+@import "@/assets/scss/utils/_breakpoints.scss";
+
+//+ :: component style ::
+@import "@/assets/scss/utils/_UserProfile.scss";
+
+</style>

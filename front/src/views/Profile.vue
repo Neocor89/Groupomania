@@ -110,28 +110,28 @@
               Enregistrer
             </button>
           </form>
-
+            <UserDeleteAccount />
         </div>
       </div>
     </div>
+    <PostsList :userId="userData.id" />
   </div>
 </template>
 
 <script>
-//TODO : Revoir les 3 SPA à réintégrer et corriger
-//TODO : FINIR BACKEND + réintégrer CODE enlevé dans composants 
+
 import { apiClient } from '../services/api-client';
 import ProfileImage from '../components/ProfileImage';
-// import PostsList from '../components/PostsList';
+import PostsList from '../components/PostsList';
 import Menu from '../components/Menu.vue';
-// import UserDeleteAccount from '../components/UserDeleteAccount';
+import UserDeleteAccount from '../components/UserDeleteAccount';
 export default {
   name: 'ProfileVue',
   components: {
     ProfileImage,
-    // PostsList,
-    Menu
-    // UserDeleteAccount,
+    PostsList,
+    Menu,
+    UserDeleteAccount,
   },
   data() {
     const userData = JSON.parse(localStorage.getItem('userData'));
@@ -157,8 +157,8 @@ export default {
     },
     editUser() {
       let body = this.input;
-      //: Check and fixed bug 
-      const isFormData = !!this.selectedFile;
+      //: Check and fixed bug = !!this.selectedFile;
+      const isFormData = !this.selectedFile;
       if (isFormData) {
         const formData = new FormData();
         formData.append('image', this.selectedFile);
@@ -185,12 +185,12 @@ export default {
 
 <style lang="scss" scoped>
 
-// overall style
+//+ :: overall style ::
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-// component style
+//+ :: component style ::
 @import "@/assets/scss/style-pages-views/_Profile.scss" ;
 
 </style>

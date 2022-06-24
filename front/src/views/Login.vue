@@ -61,14 +61,14 @@
 </template>
 
 <script>
-// import Signup from '../components/Signup';
+import Signup from '../components/Signup';
 import { apiClient } from '../services/api-client';
 import router from '../router/index';
 
 export default {
   name: 'LoginVue',
   components: {
-    // Signup,
+    Signup,
   },
   data() {
     return {
