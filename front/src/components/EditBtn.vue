@@ -56,7 +56,7 @@
 </template>
 
 <script>
-// import { apiClient } from '../services/apiClient';
+// import { apiClient } from '../services/api-client.js';
 export default {
   name: 'EditBtn',
   props: [

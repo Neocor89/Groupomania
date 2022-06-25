@@ -31,7 +31,7 @@
 </template>
 
 <script>
-// import { apiClient } from '../services/apiClient';
+import { apiClient } from '../services/api-client.js';
 import { mapActions } from 'vuex';
 import PostForm from './PostForm';
 import EditBtn from './EditBtn';
@@ -55,7 +55,8 @@ export default {
       this.areActionsVisible = !this.areActionsVisible;
     },
     async onDelete() {
-      await this.deletePost(this.post.id);
+      //: await this.deletePost(this.post.id);
+      await apiClient.deletePost(this.post.id);
       this.displayNotification('Publication supprimée !');
     },
     onFileSelected(file) {

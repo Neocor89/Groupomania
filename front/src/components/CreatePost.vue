@@ -12,7 +12,7 @@
 </template>
 
 <script>
-// import { apiClient } from '../services/apiClient';
+import { apiClient } from '../services/api-client.js';
 import { mapActions } from 'vuex';
 import PostForm from './PostForm';
 export default {
@@ -34,7 +34,7 @@ export default {
       this.selectedFile = file;
     },
     async onSubmit(event) {
-      await this.createPost({
+      await apiClient.createPost({
         selectedFile: this.selectedFile,
         content: this.content,
       });

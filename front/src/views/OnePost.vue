@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { apiClient } from '../services/apiClient';
+import { apiClient } from '../services/api-client';
 import router from '../router/index';
 import Post from '../components/Post';
 import Menu from '../components/Menu';

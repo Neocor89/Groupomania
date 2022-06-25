@@ -26,7 +26,7 @@
 
 <script>
 
-// import { apiClient } from '../services/apiClient';
+import { apiClient } from '../services/api-client.js';
 import ProfileImage from '../components/ProfileImage';
 import PostsList from '../components/PostsList';
 import Menu from '../components/Menu';
@@ -41,8 +41,9 @@ export default {
     AdminDeleteAccount,
   },
   watch: {
-    $route() {
-      window.location.reload();
+    $route(to, from) {
+      //: $route()
+      window.location.reload(to, from);
     },
   },
   data() {
@@ -51,14 +52,13 @@ export default {
       userData: JSON.parse(localStorage.getItem('userData')),
     };
   },
-  // async mounted() {
-  //   const res = await apiClient.get(`api/users/${this.$route.params.userId}/`);
-  //   this.userProfile = res.user;
-  // },
+  async mounted() {
+    const res = await apiClient.get(`api/users/${this.$route.params.userId}/`);
+    this.userProfile = res.user;
+  },
 };
 
 </script>
-
 
 <style lang="scss">
 

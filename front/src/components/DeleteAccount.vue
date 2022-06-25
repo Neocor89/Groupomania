@@ -15,7 +15,7 @@
 </template>
 
 <script>
-// import { apiClient } from '../services/apiClient';
+// import { apiClient } from '../services/api-client.js';
 // import { mapActions } from 'vuex';
 export default {
   name: 'DeleteAccount',

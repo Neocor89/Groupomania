@@ -57,7 +57,7 @@
 </template>
 
 <script>
-// import { apiClient } from '../services/apiClient';
+import { apiClient } from '../services/api-client';
 // import router from '../router/index';
 import EditPost from '../components/EditPost';
 import ProfileImage from './ProfileImage';
@@ -67,7 +67,11 @@ export default {
     EditPost,
     ProfileImage,
   },
-  props: ['post']
+  props: ['post'],
+  async mounted() {
+    const res = await apiClient.get(`api/posts/${this.post.id}/like`);
+    this.likesThisPost = res.like;
+  }
 };
 </script>
 

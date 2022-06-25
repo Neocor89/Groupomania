@@ -18,20 +18,12 @@ export default {
 
 <style lang="scss" scoped>
 
-// overall style
+//+ :: overall style ::
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-// component style
+//+ :: component style ::
 @import "@/assets/scss/style-components-pages/_ProfilImage.scss";
 
-// .profile-picture {
-//   overflow: hidden;
-//   border-radius: 100%;
-//   background: black;
-//   &__img {
-//     object-fit: cover;
-//   }
-// }
 </style>
