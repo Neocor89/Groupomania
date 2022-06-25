@@ -57,12 +57,12 @@
 </template>
 
 <script>
-import { apiClient } from '../services/apiClient';
-import router from '../router/index';
+// import { apiClient } from '../services/apiClient';
+// import router from '../router/index';
 import EditPost from '../components/EditPost';
 import ProfileImage from './ProfileImage';
 export default {
-  name: 'Post',
+  name: 'PostOne',
   components: {
     EditPost,
     ProfileImage,

@@ -82,7 +82,13 @@ export default {
 
 <style> 
 
-/* component style */
+
+
+@import "@/assets/scss/utils/_variables.scss";
+@import "@/assets/scss/utils/_mixins.scss";
+@import "@/assets/scss/utils/_breakpoints.scss";
+
+
 @import "@/assets/scss/style-components-pages/_Footer.scss";
 
 </style>

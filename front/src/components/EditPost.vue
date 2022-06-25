@@ -8,7 +8,7 @@
       :elementId="post.id"
       modifyText="Modifier la publication"
       deleteText="Supprimer la publication"
-    >
+    />
     <div
         class="modal"
         :id="`modal-${post.id}`"
@@ -26,20 +26,20 @@
           />
         </form>
       </div>
-    </EditButton>
+    <EditBtn />
     </div>
 </template>
 
 <script>
-import { apiClient } from '../services/apiClient';
+// import { apiClient } from '../services/apiClient';
 import { mapActions } from 'vuex';
 import PostForm from './PostForm';
-import EditButton from './EditButton';
+import EditBtn from './EditBtn';
 export default {
   name: 'EditPost',
   components: {
     PostForm,
-    EditButton,
+    EditBtn,
   },
   props: ['post'],
   data() {

@@ -26,7 +26,7 @@
 
 <script>
 
-import { apiClient } from '../services/apiClient';
+// import { apiClient } from '../services/apiClient';
 import ProfileImage from '../components/ProfileImage';
 import PostsList from '../components/PostsList';
 import Menu from '../components/Menu';
@@ -41,7 +41,7 @@ export default {
     AdminDeleteAccount,
   },
   watch: {
-    $route(to, from) {
+    $route() {
       window.location.reload();
     },
   },
@@ -51,10 +51,10 @@ export default {
       userData: JSON.parse(localStorage.getItem('userData')),
     };
   },
-  async mounted() {
-    const res = await apiClient.get(`api/users/${this.$route.params.userId}/`);
-    this.userProfile = res.user;
-  },
+  // async mounted() {
+  //   const res = await apiClient.get(`api/users/${this.$route.params.userId}/`);
+  //   this.userProfile = res.user;
+  // },
 };
 
 </script>
@@ -68,6 +68,6 @@ export default {
 @import "@/assets/scss/utils/_breakpoints.scss";
 
 //+ :: component style ::
-@import "@/assets/scss/utils/_UserProfile.scss";
+@import "@/assets/scss/style-pages-views/_UserProfile.scss";
 
 </style>

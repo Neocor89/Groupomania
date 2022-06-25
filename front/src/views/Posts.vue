@@ -16,12 +16,12 @@
 </template>
 
 <script>
-import { apiClient } from '../services/apiClient';
-import router from '../router/index';
+// import { apiClient } from '../services/api-client';
+// import router from '../router/index';
 import { mapState } from 'vuex';
-import CreatePost from '../components/CreatePost';
-import PostsList from '../components/PostsList';
-import Menu from '../components/Menu';
+import CreatePost from '../components/CreatePost.vue';
+import PostsList from '../components/PostsList.vue';
+import Menu from '../components/Menu.vue';
 export default {
   name: 'AllPosts',
   components: {
@@ -48,6 +48,6 @@ export default {
 @import "@/assets/scss/utils/_breakpoints.scss";
 
 //+ :: component style ::
-@import "@/assets/style-pages-views/_Posts.scss";
+// @import "@/assets/scss/style-pages-views/_Posts.scss";
 
 </style>

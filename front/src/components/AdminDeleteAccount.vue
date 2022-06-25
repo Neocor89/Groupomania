@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { apiClient } from '../services/apiClient';
+// import { apiClient } from '../services/apiClient';
 import DeleteAccount from '../components/DeleteAccount';
 export default {
   name: 'UserDeleteAccount',
@@ -14,12 +14,12 @@ export default {
   },
   props: ['userProfile'],
   methods: {
-    async confirmDeletion() {
-      if (confirm('êtes-vous sûr de vouloir supprimer ce compte ?')) {
-        await apiClient.delete(`api/users/${this.userProfile.id}`);
-        window.location.reload();
-      }
-    },
+    // async confirmDeletion() {
+    //   if (confirm('êtes-vous sûr de vouloir supprimer ce compte ?')) {
+    //     await apiClient.delete(`api/users/${this.userProfile.id}`);
+    //     window.location.reload();
+    //   }
+    // },
   },
 };
 </script>

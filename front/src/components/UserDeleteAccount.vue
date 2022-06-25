@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { apiClient } from '../services/apiClient';
+// import { apiClient } from '../services/apiClient';
 import DeleteAccount from '../components/DeleteAccount';
 export default {
   name: 'UserDeleteAccount',
@@ -18,15 +18,15 @@ export default {
     };
   },
   methods: {
-    async confirmDeletion() {
-      if (confirm('Veuillez confirmer la suppression définitive de ce compte ?')) {
-        await apiClient.delete(`api/users/${this.userData.id}`);
-        localStorage.clear();
-        this.$router.push({
-          path: '/login?deletedAccount=true',
-        });
-      }
-    },
+    // async confirmDeletion() {
+    //   if (confirm('Veuillez confirmer la suppression définitive de ce compte ?')) {
+    //     await apiClient.delete(`api/users/${this.userData.id}`);
+    //     localStorage.clear();
+    //     this.$router.push({
+    //       path: '/login?deletedAccount=true',
+    //     });
+    //   }
+    // },
   },
 };
 </script>

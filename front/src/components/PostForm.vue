@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <div class="form-group">
       <div class="d-flex align-items-center">
         <div class="d-flex mr-2 mr-lg-3 mt-2">
@@ -21,12 +22,14 @@
       </div>
       <div
         id="preview"
-        class="d-flex justify-content-center align-items-center"
-      >
+        class="d-flex justify-content-center align-items-center">
         <img class="mt-3" v-if="url" :src="url" alt="" />
       </div>
+
     </div>
+
     <div class="line mb-3"></div>
+
     <div class="form-group">
       <div class="d-flex justify-content-around">
         <button
@@ -56,12 +59,14 @@
           type="file"
           @change="onFileSelected"
         />
+      </div>
     </div>
+
   </div>
 </template>
 
 <script>
-import { apiClient } from '../services/apiClient';
+// import { apiClient } from '../services/apiClient';
 import ProfileImage from './ProfileImage';
 export default {
   name: 'PostForm',

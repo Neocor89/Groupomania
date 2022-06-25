@@ -12,6 +12,14 @@ const routes = [
 
   },
   {
+    path: '/Posts',
+    name: 'Posts',
+    component: () => import('../views/Posts.vue'),
+    meta: {
+      middleware: auth,
+  }
+  },
+  {
     path: '/login',
     name: 'Login',
     component: () => import('../views/Login.vue'),
