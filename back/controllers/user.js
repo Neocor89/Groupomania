@@ -69,10 +69,10 @@ exports.getAllUsers = (req, res, next) => {
         Sequelize.col('firstName'),
         ' ',
         Sequelize.col('lastName')
-      ),
-      { //++  Modifier test de recherche Table Like plus mise en place  ++
-        [Sequelize.Op.like]: `%${req.query.search}%`,
-      }
+      ), 
+      // { 
+      //   [Sequelize.Op.like]: `%${req.query.search}%`,
+      // }
     ),
     limit: 10,
   };

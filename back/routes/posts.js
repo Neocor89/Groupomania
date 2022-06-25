@@ -9,10 +9,13 @@ const auth = require('../middleware/auth');
 const multer = require('../middleware/multer-config');
 
 //: All routes for posts management
+//! Problème identifié sur certaines route et la route modifyPost
 router.post('/', auth, multer, postsCtrl.createPost);
 router.get('/:id', auth, postsCtrl.getOnePost);
 router.get('/', auth, postsCtrl.getAllPosts);
 router.put('/:id', auth, multer, postsCtrl.modifyPost);
 router.delete('/:id', auth, postsCtrl.deletePost);
+
+//: router.get('/api/posts', auth, postsCtrl.getAllPosts);
 
 module.exports = router;

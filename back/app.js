@@ -29,8 +29,8 @@ app.use(bodyParser.json());
 
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-app.use('/api/posts', postsRoutes);
-app.use('/api/auth', userRoutes);
+app.use('/api', postsRoutes);
+app.use('/api', userRoutes);
 
 
 module.exports = app;
