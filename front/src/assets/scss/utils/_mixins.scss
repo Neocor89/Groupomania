@@ -43,7 +43,7 @@
   color: $light;
   cursor: pointer;
   display: inline-block;
-  font-size: $fsize-XS;
+  font-size: $fsize-custom;
   font-weight: $w500;
   line-height: 2.5;
   outline: transparent;
@@ -66,8 +66,18 @@
     5px 5px 15px 7px rgba(184, 184, 184, 0);
 }
 
-@mixin border-solid($width: 2px, $color: $col-prim) {
-  border: $width solid $color;
+@mixin link-connection {
+  text-decoration: $nothing;
+  color: $col-prim;
+  font-family: $font-primary;
+}
+
+@mixin title-style {
+  color: $col-prim;
+  font-weight: $w900;
+  font-family: $font-secondary;
+  font-size: $fsize-title;
+  letter-spacing: 1.7px;
 }
 
 @mixin without-borders {

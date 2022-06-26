@@ -7,19 +7,27 @@
   }
 }
 
+a {
+  @include link-connection ;
+}
 
 .page__container {
   background: rgba(255, 255, 255, 0);
 }
 
 span.text__slogan {
-  color: $col-prim;
-  font-weight: $w800;
+  @include title-style;
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 a {
   text-decoration: $nothing;
 }
+
+form input {
+  height: 32px;
+  padding: 0 0 0 15px;
+}
+
 
 .account-card {
     .card-body {
@@ -34,8 +42,11 @@ a {
   }
 }
   .login-text {
+    font-family: $font-tercary;
+    font-weight: $w800;
      @include mobile-tablet-large {
-    font-size: $fsize-S;
+      font-family: $font-primary;
+    font-weight: $w800;
   }
 }
 

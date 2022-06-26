@@ -13,7 +13,7 @@
             class="card account-card border-0 shadow p-3 mt-1 bg-white rounded"
           >
             <div class="pt-sm-3 pt-lg-0">
-              <p class=" card-text login-text h4">S'inscrire</p>
+              <p class=" card-text login-text h3">S'inscrire</p>
               <form>
                 <div class="form-group">
                   <input
@@ -22,7 +22,7 @@
                     placeholder="Prénom"
                     v-model="input.firstName"
                     class=" input-group account-input text-dark mb-2 mt-4 pl-3 w-100"
-                    aria-label="écrire votre pr�nom"
+                    aria-label="entrez votre prénom"
                   />
                   <input
                     id="lastName"
@@ -30,7 +30,7 @@
                     placeholder="Nom"
                     v-model="input.lastName"
                     class="account-input text-dark mb-2 pl-3 w-100"
-                    aria-label="écrire votre nom"
+                    aria-label="entrez votre nom"
                   />
                   <input
                     id="email"
@@ -38,7 +38,7 @@
                     placeholder="em@il"
                     v-model="input.email"
                     class="account-input text-dark mb-2 pl-3 w-100"
-                    aria-label="écrire votre adresse mail"
+                    aria-label="entrez votre adresse mail"
                   />
                   <input
                     id="password"
@@ -46,7 +46,7 @@
                     placeholder="Mot de passe"
                     v-model="input.password"
                     class="account-input text-dark mb-2 pl-3 w-100"
-                    aria-label="écrire votre mot de passe"
+                    aria-label="entrez votre mot de passe"
                   />
                 </div>
 

@@ -3,9 +3,14 @@ footer {
   width: 100%;
   bottom: 0;
  }
+
+ a {
+  text-decoration: none;
+  outline: none;
+ }
  
  i:hover {
-   box-shadow: 5px 5px 34px 0;
+   box-shadow: 5px 5px 34px rgb(245, 117, 31);
    background: transparent;
    border-radius: 35px;
  }

@@ -12,7 +12,7 @@
 
 <script>
 import { apiClient } from '../services/api-client';
-import router from '../router/index';
+// import router from '../router/index';
 import Post from '../components/Post';
 import Menu from '../components/Menu';
 export default {
@@ -27,7 +27,8 @@ export default {
     };
   },
   watch: {
-    $route(to, from) {
+    $route() {
+      //: $route(to, from)
       this.loadPost();
     },
   },

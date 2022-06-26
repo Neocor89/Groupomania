@@ -1,6 +1,12 @@
 .router__links {
 	@include linksPosition;
-} 
+}
+.home__page {
+	background-image: url('../assets/home-background.jpg');
+	min-height: 80vh;
+	background-repeat: no-repeat;
+	background-position: $centered 70%;
+}
 .link--effect:hover {
 	@include btnEffects;
 }

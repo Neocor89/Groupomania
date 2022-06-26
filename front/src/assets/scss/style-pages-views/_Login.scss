@@ -1,30 +1,46 @@
 a {
-  text-decoration: none;
-  color: #e2421a !important;
+  @include link-connection ;
+  margin-left: 1.2rem;
+  @include mobile-tablet-medium {
+    font-size: 13px;
+  }
 }
 
+form input {
+  height: 30px;
+}
+
+
 .logoText {
-   color: #e76f51;
-  font-weight: 800;
+  @include title-style;
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.login-text {
+  font-family: $font-tercary;
+  font-weight: $w900;
+   @include mobile-tablet-large {
+    font-family: $font-primary;
+  font-weight: $w800;
+}
 }
 
 
 .line {
   display: block;
-  width: 100%;
+  width: $full-size;
   height: 1px;
   background-color: $bg-effect;
 }
 .account-input {
   &:-webkit-autofill {
-    border: none;
+    border: $nothing;
     -webkit-text-fill-color: #212529;
     transition: background-color 5000s ease-in-out 0s;
   }
   &:focus {
-    border: none;
-    border-radius: 6px;
+    border: $nothing;
+    border-radius: $border-light;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(32, 120, 244, 0.5);
   }
@@ -45,10 +61,17 @@ a {
   .logoText {
   font-size: 1.3rem;
   font-family: 'Kdam Thmor Pro', sans-serif;
+  line-height: 6rem;
+}
+
+input {
+  line-height: 25px;
+  padding: 5px;
+  margin: 0 auto;
 }
 
 .btn__subscribe {
-  background: #fff;
+  margin-top: 2rem;
 }
 
 }

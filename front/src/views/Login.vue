@@ -12,7 +12,7 @@
             class="card account-card border-0 shadow p-3 mb-5 mt-3 bg-white rounded"
           >
             <div class="pt-sm-3 pt-lg-0">
-              <p class="card-text login-text h4">Se connecter</p>
+              <p class="card-text login-text h4">Se Connecter</p>
               <form role="form">
                 <div class="form-group">
                   <input

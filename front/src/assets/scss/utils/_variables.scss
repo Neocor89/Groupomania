@@ -1,11 +1,11 @@
 /* ----  ----  ---- ----
- * * Color Themes * * 
+ + + Color Themes + + 
  ----  ----  ---- ---- */
 
 $col-prim: #e76f51;
 $col-secd: #C65E3A;
 $col-thrd: #747474;
-$col-extra: #FAAE7B;
+$col-extra: #faae7b;
 $gradient-btn: #FF9A5A;
 
 /* ---- ---- ----
@@ -24,7 +24,7 @@ $bg-effect: rgba(192, 192, 192, 0.5);
 
 
  /* ----  ----  ---- ----
- * * Shadow Themes * * 
+ + + Shadow Themes + + 
 ----  ----  ---- ---- */
 
 $shadow: 0rem 0.2rem 0.5rem rgba(53, 53, 53, 0.37);
@@ -36,7 +36,7 @@ $shadow-hover: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 7
 
 
 /* ----  ----  ---- ----
-* * Size Themes * * 
++ + Size Themes + + 
 ----  ----  ---- ---- */
 
 $full-size: 100%;
@@ -46,10 +46,12 @@ $size-medium-comp: 100px;
 
 
 /* ----  ----  ---- ----
- * * Font Style * * 
+ + + Font Style + + 
 ----  ----  ---- ---- */
 
-$web-font: 'Roboto Flex', sans-serif;
+$font-primary: 'Roboto Flex', sans-serif;
+$font-secondary: 'League Gothic', sans-serif;
+$font-tercary: 'Roboto Slab', serif;
 
 
 /* ---- ---- 
@@ -60,6 +62,7 @@ $w500: 500;
 $w600: 600;
 $w700: 700;
 $w800: 800;
+$w900: 900;
 
 
 /* ---- ----  
@@ -71,9 +74,11 @@ $fsize-XS: 16px;
 $fsize-S: 1.1rem;
 $fsize-M: 1.2rem;
 $fsize-L: 1.3rem;
+$fsize-custom: clamp(1rem, .5rem + 1.1vw, 1.3rem);
+$fsize-title: 2.3rem;
 
 /* ----  ----  ---- ----
- * Border Style * 
+ + Border Style + 
 ----  ----  ---- ---- */
 $nothing: none;
 $rounded: 25rem;
@@ -82,18 +87,7 @@ $border-light: 0.25rem;
 
 
 /* ----  ----  ---- ----
- * * Positioning * * 
+ + + Positioning + + 
 ----  ----  ---- ---- */
 
 $centered: center;
-
-
-/* ----  ----  ---- ----
- * * Elements * * 
-----  ----  ---- ---- */
-
-$login-classText: ".logoText";
-$login-classBtn: ".btn__subscribe";
-$signup-cardsElmts: ".account-card, .card-body";
-$card: ".card";
-$nav-log: "#nav #logo";

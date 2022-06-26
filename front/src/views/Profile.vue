@@ -125,7 +125,7 @@ import { apiClient } from '../services/api-client';
 import ProfileImage from '../components/ProfileImage';
 import PostsList from '../components/PostsList.vue';
 import Menu from '../components/Menu.vue';
-import UserDeleteAccount from '../components/UserDeleteAccount';
+import UserDeleteAccount from '../components/UserDeleteAccount.vue';
 
 export default {
   name: 'ProfileVue',
