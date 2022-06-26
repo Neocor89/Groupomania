@@ -2,15 +2,15 @@
 <div class="home__page">
   <br>
 	<div class="router__links link--one">
-  <router-link to="/login" class="btn btn-outline btn-lg link--effect" data-mdb-ripple-color="#000000" style="font-weight:bold; color:#333; border-color:#e0600b;" >Login</router-link>
+  <router-link to="/login" class="btn btn-outline btn-lg link--effect" data-mdb-ripple-color="#000000" >Login</router-link>
 	</div>
 
 	<div class="router__links">
-  <router-link to="/Profile" class="btn btn-outline  btn-lg link--effect" data-mdb-ripple-color="#000000" style="font-weight:bold; color:#333; border-color:#e0600b;" >Profile</router-link>
+  <router-link to="/Profile" class="btn btn-outline  btn-lg link--effect" data-mdb-ripple-color="#000000" >Profile</router-link>
 	</div>
 
 	<div class="router__links">
-  <router-link to="Signup" class="btn btn-outline  btn-lg link--effect" data-mdb-ripple-color="#000000" style="font-weight:bold; color:#333; border-color:#e0600b;" >Signup</router-link>
+  <router-link to="Signup" class="btn btn-outline  btn-lg link--effect" data-mdb-ripple-color="#000000" >Signup</router-link>
 	</div>
 
   <router-view/>

@@ -7,8 +7,18 @@
 	background-repeat: no-repeat;
 	background-position: $centered 70%;
 }
+
+.link--effect {
+	border: 1px solid #fff;
+	color: $light;
+	font-weight: $w900;
+	font-family: $font-tercary;
+
+}
+
 .link--effect:hover {
 	@include btnEffects;
+	color: #1a1818;
 }
 
 @media screen and (min-width: 280px) and (max-width: 768px) {

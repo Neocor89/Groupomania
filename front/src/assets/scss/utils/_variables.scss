@@ -1,5 +1,5 @@
 /* ----  ----  ---- ----
- + + Color Themes + + 
+ +===  Color Themes  ===+ 
  ----  ----  ---- ---- */
 
 $col-prim: #e76f51;
@@ -8,23 +8,14 @@ $col-thrd: #747474;
 $col-extra: #faae7b;
 $gradient-btn: #FF9A5A;
 
-/* ---- ---- ----
- :: Classic ::
----- ---- ---- */
-
 $light: #FFF;
 $dark: #333;
-
- /* ---- ---- ---- ---- 
- :: Background :: 
----- ---- ---- ---- */
 
 $bg-effect: rgba(192, 192, 192, 0.5);
 
 
-
  /* ----  ----  ---- ----
- + + Shadow Themes + + 
+ +=== Shadow Themes ===+ 
 ----  ----  ---- ---- */
 
 $shadow: 0rem 0.2rem 0.5rem rgba(53, 53, 53, 0.37);
@@ -34,9 +25,8 @@ $shadow-focus: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(255, 1
 $shadow-hover: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(241, 198, 171, 0.5);
 
 
-
 /* ----  ----  ---- ----
-+ + Size Themes + + 
++=== Size Themes ===+ 
 ----  ----  ---- ---- */
 
 $full-size: 100%;
@@ -44,19 +34,13 @@ $size-small-comp: 75px;
 $size-medium-comp: 100px;
 
 
-
 /* ----  ----  ---- ----
- + + Font Style + + 
+ +=== Font Style ===+ 
 ----  ----  ---- ---- */
 
 $font-primary: 'Roboto Flex', sans-serif;
 $font-secondary: 'League Gothic', sans-serif;
 $font-tercary: 'Roboto Slab', serif;
-
-
-/* ---- ---- 
- :: Weight :: 
----- ---- */
 
 $w500: 500;
 $w600: 600;
@@ -64,21 +48,17 @@ $w700: 700;
 $w800: 800;
 $w900: 900;
 
-
-/* ---- ----  
- :: Size :: 
----- ---- */
-
 $fsize-XXS: 14px;
 $fsize-XS: 16px;
 $fsize-S: 1.1rem;
 $fsize-M: 1.2rem;
 $fsize-L: 1.3rem;
-$fsize-custom: clamp(1rem, .5rem + 1.1vw, 1.3rem);
+$fsize-custom: clamp(1.1rem, .5rem + 1.1vw, 1.1rem);
 $fsize-title: 2.3rem;
 
+
 /* ----  ----  ---- ----
- + Border Style + 
+ +=== Border Style ===+ 
 ----  ----  ---- ---- */
 $nothing: none;
 $rounded: 25rem;
@@ -87,7 +67,7 @@ $border-light: 0.25rem;
 
 
 /* ----  ----  ---- ----
- + + Positioning + + 
+ +=== Positioning ===+ 
 ----  ----  ---- ---- */
 
 $centered: center;

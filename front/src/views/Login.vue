@@ -2,7 +2,7 @@
   <div class="page-container">
     <div class="slogan">
       <h2>
-        <span class="pb-3 logoText">Partager entre équipes</span> <br />
+        <span class="logoText">Partager entre équipes</span> <br />
       </h2>
     </div>
     <div class="container-fluid">
