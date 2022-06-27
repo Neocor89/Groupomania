@@ -34,7 +34,7 @@
         v-if="post.imageUrl"
       >
         <img
-          v-b-modal="`modal-photo-${post.id}`"
+          b-modal="`modal-photo-${post.id}`"
           class="post__image"
           :src="post.imageUrl"
           alt=""
@@ -55,7 +55,7 @@
     </div>
   </div>
 </template>
-
+//TODO A SUPPRIMER 
 <script>
 import { apiClient } from '../services/api-client';
 // import router from '../router/index';
@@ -69,8 +69,8 @@ export default {
   },
   props: ['post'],
   async mounted() {
-    const res = await apiClient.get(`api/posts/${this.post.id}/like`);
-    this.likesThisPost = res.like;
+    const res = await apiClient.get(`api/posts/${this.post.id}`);
+    this.likesThisPost = res.modify;
   }
 };
 </script>

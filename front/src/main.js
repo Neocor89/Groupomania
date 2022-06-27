@@ -4,10 +4,9 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-// App.prototype.moment = moment;
 
 // Vue.config.productionTip = false;
-// Vue.prototype.moment = moment;
+// App.prototype.moment = moment;
 
 //! Ajout => 
 router.beforeEach((to, from, next) => {

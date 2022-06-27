@@ -58,7 +58,7 @@
 </template>
 
 <script>
-//TODO = Vérif fonctionnement btn collapse sur div
+
 import ProfileImage from './ProfileImage';
 export default {
   name: 'ProfileBtn',

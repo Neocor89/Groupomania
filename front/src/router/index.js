@@ -5,19 +5,19 @@ import VueRouteMiddleware from 'vue-route-middleware';
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: () =>
     import(/* webpackChunkName: "about" */ '../views/Home.vue'),
 
   },
   {
-    path: '/posts',
+    path: '/',
     name: 'Posts',
     component: () => import('../views/Posts.vue'),
-    // meta: {
-    //   middleware: auth,
-    // }
+    meta: {
+      middleware: auth,
+    }
   },
   {
     path: '/posts/:postId',
@@ -33,7 +33,7 @@ const routes = [
     component: () => import('../views/Login.vue'),
   },
   {
-    path: '/profile',
+    path: '/Profile',
     name: 'Profile',
     component: () => import('../views/Profile.vue'),
     meta: {

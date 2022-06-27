@@ -5,9 +5,9 @@ const app = express();
 
 const path = require('path');
 
-const auth = require('./middleware/auth');
+// const auth = require('./middleware/auth');
 
-const userCtrl = require('./controllers/user');
+// const userCtrl = require('./controllers/user');
 
 const postsRoutes = require('./routes/posts');
 const userRoutes = require('./routes/user');

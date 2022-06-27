@@ -46,7 +46,7 @@ export default {
       dispatch('fetchPosts', params);
     },
 
-    fetchPosts({ state, commit }, params = {}) {
+    async fetchPosts({ state, commit }, params = {}) {
       let userIdParams = '';
       if (params.userId) {
         userIdParams = `&userId=${params.userId}`;

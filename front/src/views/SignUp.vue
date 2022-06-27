@@ -81,7 +81,6 @@
 <script>
 import { apiClient } from '../services/api-client';
 import router from '../router/index';
-//TODO : FINIR BACKEND + réintégrer CODE enlevé dans composants 
 export default {
  name: 'SignUp',
   data() {
