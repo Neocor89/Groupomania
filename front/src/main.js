@@ -1,11 +1,19 @@
+// //: Import moment
+// import moment from 'moment';
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-// import moment from 'moment';
-// //: Import moment
 // App.prototype.moment = moment;
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
- 
+
+// Vue.config.productionTip = false;
+// Vue.prototype.moment = moment;
+
+//! Ajout => 
+router.beforeEach((to, from, next) => {
+  window.scrollTo(0, 0);
+
+  next();
+});
+//! <==
 createApp(App).use(store).use(router).mount('#app')

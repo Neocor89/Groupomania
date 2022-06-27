@@ -26,11 +26,12 @@ app.use((req, res, next) => {
 });
 
 app.use(bodyParser.json());
-
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-app.use('/api', postsRoutes);
-app.use('/api', userRoutes);
+
+//! Verification
+app.use('/api/auth', userRoutes);
+app.use('/api/posts', postsRoutes);
 
 
 module.exports = app;

@@ -16,10 +16,4 @@ router.get('/', auth, postsCtrl.getAllPosts);
 router.put('/:id', auth, multer, postsCtrl.modifyPost);
 router.delete('/:id', auth, postsCtrl.deletePost);
 
-// router.post('/', auth, multer, postsCtrl.createPost);
-// router.get('api/posts/:id', auth, postsCtrl.getOnePost);
-// router.get('api/posts', auth, postsCtrl.getAllPosts);
-// router.put('api/posts/:id', auth, multer, postsCtrl.modifyPost);
-// router.delete('api/posts/:id', auth, postsCtrl.deletePost);
-
 module.exports = router;

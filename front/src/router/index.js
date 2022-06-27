@@ -60,8 +60,6 @@ const router = createRouter({
   routes,
 })
 
-
-
 router.beforeEach(VueRouteMiddleware());
 
 export default router

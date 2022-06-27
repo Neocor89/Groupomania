@@ -1,4 +1,4 @@
-import { apiClient } from '../services/apiClient';
+import { apiClient } from '../services/api-client';
 
 export default {
   state: {

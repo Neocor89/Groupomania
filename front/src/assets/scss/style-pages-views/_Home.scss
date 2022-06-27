@@ -5,7 +5,7 @@
 	background-image: url('../assets/home-background.jpg');
 	min-height: 80vh;
 	background-repeat: no-repeat;
-	background-position: $centered 70%;
+	background-position: $centered 64%;
 }
 
 .link--effect {
@@ -18,10 +18,5 @@
 
 .link--effect:hover {
 	@include btnEffects;
-	color: #1a1818;
-}
-
-@media screen and (min-width: 280px) and (max-width: 768px) {
-  
-
+	color: $dark;
 }
