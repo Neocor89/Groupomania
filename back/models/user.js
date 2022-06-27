@@ -15,15 +15,15 @@ module.exports = (sequelize, DataTypes) => {
       User.hasMany(models.Post, { foreignKey: "userId" });
     }
 
-    softDestroy() {
-      return this.update({
-        deleted: true,
-        email: `deleted-user${this.id}@groupamania.com`,
-        imageUrl: null,
-        firstName: "Utilisateur",
-        lastName: "Supprimé",
-      });
-    }
+    // softDestroy() {
+    //   return this.update({
+    //     deleted: true,
+    //     email: `deleted-user${this.id}@groupamania.com`,
+    //     imageUrl: null,
+    //     firstName: "Utilisateur",
+    //     lastName: "Supprimé",
+    //   });
+    // }
   }
   User.init(
     {
@@ -38,16 +38,17 @@ module.exports = (sequelize, DataTypes) => {
       email: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          isEmail: true,
-          //: méthode gestion affichage message d'erreur
-          async ensureEmailIsUnique(email) {
-            if (await User.findOne({ where: { email } }))
-              throw new Error(
-                "Un compte existe déjà avec cette adresse mail !"
-              );
-          },
-        },
+        unique: true,
+        // validate: {
+        //   isEmail: true,
+        //   //: méthode gestion affichage message d'erreur
+        //   async ensureEmailIsUnique(email) {
+        //     if (await User.findOne({ where: { email } }))
+        //       throw new Error(
+        //         "Un compte existe déjà avec cette adresse mail !"
+        //       );
+        //   },
+        // },
       },
       password: {
         type: DataTypes.STRING,

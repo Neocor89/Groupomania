@@ -99,7 +99,7 @@ export default {
   },
   computed: {
     emptyField() {
-      return !this.value.trim().length && !this.url;
+      return !this.value?.trim().length && !this.url;
     },
   },
 };

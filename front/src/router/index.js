@@ -15,9 +15,9 @@ const routes = [
     path: '/posts',
     name: 'Posts',
     component: () => import('../views/Posts.vue'),
-    meta: {
-      middleware: auth,
-    }
+    // meta: {
+    //   middleware: auth,
+    // }
   },
   {
     path: '/posts/:postId',

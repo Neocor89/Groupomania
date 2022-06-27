@@ -2,7 +2,7 @@
 const db = require('../models');
 const Sequelize = db.Sequelize;
 const jwt = require('jsonwebtoken');
-const { User } = db.sequelize.models;
+// const { User } = db.sequelize.models;
 
 //:: Creation of a signed token ::
 const newToken = (user) => {
@@ -12,8 +12,9 @@ const newToken = (user) => {
   return { user, token };
 };
 
-exports.signup = (req, res, next) => {
-  User.create({
+exports.signup = async (req, res, next) => {
+  console.log(req);
+  db.User.create({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
@@ -25,7 +26,7 @@ exports.signup = (req, res, next) => {
 
 exports.login = async (req, res, next) => {
   try {
-    const response = await User.authenticate(req.body.email, req.body.password);
+    const response = await db.User.authenticate(req.body.email, req.body.password);
 
     if (response.valid) {
       res.status(201).json(newToken(response.user));
@@ -56,28 +57,28 @@ exports.editUser = (req, res, next) => {
 };
 
 exports.getOneUser = (req, res, next) => {
-  User.findOne({ where: { id: req.params.id } })
+  db.User.findOne({ where: { id: req.params.id } })
     .then((user) => res.status(200).json({ user }))
     .catch((error) => res.status(404).json({ error }));
 };
 
 exports.getAllUsers = (req, res, next) => {
-  const options = {
-    where: Sequelize.where(
-      Sequelize.fn(
-        'concat',
-        Sequelize.col('firstName'),
-        ' ',
-        Sequelize.col('lastName')
-      ), 
-      // { 
-      //   [Sequelize.Op.like]: `%${req.query.search}%`,
-      // }
-    ),
-    limit: 10,
-  };
+  // const options = {
+  //   where: Sequelize.where(
+  //     Sequelize.fn(
+  //       'concat',
+  //       Sequelize.col('firstName'),
+  //       ' ',
+  //       Sequelize.col('lastName')
+  //     ), 
+  //     { 
+  //       [Sequelize.Op.like]: `%${req.query.search}%`,
+  //     }
+  //   ),
+  //   limit: 10,
+  // };
 
-  User.findAll(options)
+  db.User.findAll()
     .then((users) => {
       res.status(200).json({ users });
     })
@@ -90,9 +91,9 @@ exports.getAllUsers = (req, res, next) => {
 exports.deleteUserAccount = async (req, res, next) => {
   try {
     const user = req.user.admin
-      ? await User.findOne({ where: { id: req.params.id } })
+      ? await db.User.findOne({ where: { id: req.params.id } })
       : req.user;
-    await user.softDestroy();
+    await user;
     res.status(200).json({ message: 'Compte supprimé' });
   } catch (error) {
     res.status(400).json({ error });

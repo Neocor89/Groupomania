@@ -29,7 +29,7 @@ exports.createPost = async (req, res, next) => {
 };
 
 exports.getOnePost = (req, res, next) => {
-  Post.findOne({
+  db.Post.findOne({
     where: { id: req.params.id },
     include: [
       {
@@ -62,7 +62,7 @@ exports.getAllPosts = (req, res, next) => {
     };
   }
 
-  Post.findAll(options)
+  db.Post.findAll(options)
     .then((posts) => res.status(200).json({ posts }))
     .catch((error) => res.status(400).json({ error }));
 };
@@ -77,7 +77,7 @@ exports.modifyPost = (req, res, next) => {
       }
     : { ...req.body };
 
-  Post.findOne({
+  db.Post.findOne({
     where: { id: req.params.id, userId: req.user.id },
     include: db.User,
   }).then((post) => {
@@ -98,7 +98,7 @@ exports.deletePost = (req, res, next) => {
     where.userId = req.user.id;
   }
 
-  Post.findOne({ where })
+  db.Post.findOne({ where })
     .then((post) => {
       if (!post) {
         res.status(400).json({ error: "Vous ne disposez pas de l'autorisation" });
