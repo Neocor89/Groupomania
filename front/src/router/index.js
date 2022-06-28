@@ -19,8 +19,8 @@ const routes = [
       middleware: auth,
     }
   },
-  {
-    path: '/posts/:postId',
+  { //! Avant => /posts/:postsId
+    path: '/posts',
     name: 'OnePost',
     component: () => import('../views/OnePost.vue'),
     meta: {

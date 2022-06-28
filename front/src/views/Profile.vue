@@ -16,10 +16,10 @@
                 divCustomClass="div-main-picture"
               />
             </div>
-            <div class="form-group">
+            <div class="form-group profile_style">
               <!-- :: Revoir cette partie et optimiser :: -->
               <button
-                class="create-button btn-block w-50 mx-auto mb-3 d-flex align-items-center justify-content-center"
+                class="create-button btn-block w-50 mx-auto my-2 d-flex align-items-center justify-content-center"
                 @click="triggerInput"
                 type="button"
                 aria-label="Modifier la photo du profil"
@@ -43,7 +43,7 @@
                   />
                 </div>
               </div>
-              <div class="d-flex align-items-center">
+              <div class="d-flex align-items-center justify-content-around">
                 <div class="col-sm-2 d-none d-lg-block p-0">
                   <label>Prénom</label>
                 </div>
@@ -57,7 +57,7 @@
                   />
                 </div>
               </div>
-              <div class="d-flex align-items-center">
+              <div class="d-flex align-items-center justify-content-around">
                 <div class="col-sm-2 d-none d-lg-block p-0">
                   <label for="lastName">Nom</label>
                 </div>
@@ -71,7 +71,7 @@
                   />
                 </div>
               </div>
-              <div class="d-flex align-items-center">
+              <div class="d-flex align-items-center justify-content-around">
                 <div class="col-sm-2 d-none d-lg-block p-0">
                   <label for="email">Email</label>
                 </div>

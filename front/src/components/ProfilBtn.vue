@@ -13,6 +13,7 @@
         customClass="profile-btn__img"
         divCustomClass="div-profile-btn-img"
       />
+      
     </button>
     <div
       id="profile-collapsed"
@@ -42,6 +43,7 @@
           </button>
         </p>
         <p class="card-text">
+          <!-- Probleme avec mes buttons collapse -->
           <button
             data-toggle="collapse"
             class="collapsed-btn collapse btn-block text-left"
@@ -69,7 +71,7 @@ export default {
   data() {
     return {
       userData: JSON.parse(localStorage.getItem('userData')),
-      areActionsVisible: false,
+      areActionsVisible: true,
     };
   },
   methods: {

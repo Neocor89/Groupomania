@@ -93,6 +93,12 @@ cd groupomania back
 npm install
 ```
 
+Inside the project you will find a sql file containing the database.
+
+```node
+npm run start
+```
+
 
 2️⃣ `Database`  
 The **database** of this project has been realized with **sequelize**.
@@ -233,6 +239,9 @@ Inside the project you will find a sql file containing the database.
 Once imported you will be able to use all the features.
 
 5️⃣ `Launch 🚀`
+
+you can now start the project with the command :
+
 ```node
 npm run start
 ```
