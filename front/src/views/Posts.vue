@@ -42,6 +42,7 @@ export default {
 
 <style lang="scss">
 
+
 //+ :: overall style ::
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";

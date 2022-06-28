@@ -33,7 +33,7 @@ export default {
     },
   },
   async mounted() {
-    this.loadPost();
+    await this.loadPost();
   },
   methods: {
     async loadPost() {

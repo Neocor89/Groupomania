@@ -1,7 +1,6 @@
 <template>
   <div class="profile-picture" :class="divCustomClass">
     <img
-      class="profile-picture__img"
       :class="customClass"
       :src="src || '../assets/avatar-placeholder.png'"
       alt="photo générique d'un utilisateur"

@@ -1,13 +1,13 @@
 <template>
   <div>
-    <b-form v-on:submit="onSubmit">
+    <div v-on:submit="onSubmit">
       <PostForm
         @onFileSelected="onFileSelected"
         v-model="content"
         :onFormSubmit="didSubmitForm"
         :isCreating="true"
       />
-    </b-form>
+    </div>
   </div>
 </template>
 

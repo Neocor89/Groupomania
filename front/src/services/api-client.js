@@ -1,6 +1,8 @@
 import router from '../router/index';
 
-//: Backend | Frontend connection
+//: Backend && Frontend connection
+//:: Creation d'une class pour la gestion des différentes actions provenant du Backend
+
 class ApiClient {
   constructor() {
     this.baseUrl = 'http://localhost:3000/';

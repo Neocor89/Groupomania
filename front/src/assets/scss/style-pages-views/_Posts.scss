@@ -1,5 +1,6 @@
 .card-body {
   padding-bottom: 0;
+  
  @include mobile-tablet-large {
    padding: 0.7rem;
  }

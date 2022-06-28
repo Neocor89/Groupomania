@@ -16,7 +16,7 @@
 
 <script>
 // import { apiClient } from '../services/api-client.js';
-// import { mapActions } from 'vuex'; btn_action--delete
+// import { mapActions } from 'vuex'; 
 export default {
   name: 'DeleteAccount',
   data() {

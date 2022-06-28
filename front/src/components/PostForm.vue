@@ -15,7 +15,7 @@
           :value="value"
           @input="updateValue"
           id="content"
-          :placeholder="`Quoi de neuf,  ${userData.firstName} ?`"
+          :placeholder="`Publication de,  ${userData.firstName}`"
           aria-label="écrire une publication"
           class="text-dark mb-2 mr-2 w-100"
         ></textarea>
@@ -38,7 +38,7 @@
           type="button"
           aria-label="Choisir un fichier"
         >
-          <span class="mr-2 d-none d-md-block">Choisir un fichier</span>
+          <span class="mr-2 d-md-block">Choisir un fichier</span>
           <i class="fa-solid fa-folder-magnifying-glass"></i>
         </button>
         <button
@@ -50,7 +50,7 @@
           type="submit"
           aria-label="Publier"
         >
-          <span class="mr-2 d-none d-md-block">Publier</span>
+          <span class="mr-2 d-md-block">Publier</span>
          <i class="fa-solid fa-comment-plus"></i>
         </button>
         <input
@@ -106,48 +106,13 @@ export default {
 </script>
 
 <style lang="scss">
-
-// overall style
+//: Ligne 41 & 53 sur span => d-none enlevé
+//+ :: overall style ::
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
-// component style
+//+ :: component style ::
 @import "@/assets/scss/style-components-pages/_PostForm.scss" ;
 
-// #preview img {
-//   max-width: $full-size;
-//   max-height: 500px;
-// }
-// .disabled {
-//   cursor: not-allowed;
-// }
-// .form-control {
-//   border: 1px solid $bg-effect;
-//   &:focus {
-//     border: $nothing;
-//   }
-// }
-// .line {
-//   display: block;
-//   width: $full-size;
-//   height: 1px;
-//   background-color: $bg-effect;
-// }
-// .create-button {
-//   background: $light;
-//   color: #747474;
-//   border: $nothing;
-//   border-radius: $border-size;
-//   font-weight: $w500;
-//   padding: 0.375rem 0.75rem;
-//   &:hover {
-//     background-color: $col-prim;
-//   }
-//   &:active,
-//   &:focus {
-//     background-color: $light !important;
-//     outline: $nothing;
-//   }
-// }
 </style>

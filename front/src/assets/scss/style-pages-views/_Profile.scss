@@ -2,14 +2,9 @@
   margin-left: 0;
   margin-right: 0;
 }
-.div-main-picture {
-  width: $size-medium-comp;
-  height: $size-medium-comp;
-  margin-bottom: 1rem;
-}
-.profile-main-picture {
-  height: $size-medium-comp;
-}
+
+
+
 .custom-file-label {
   text-align: left;
 }
@@ -17,13 +12,33 @@
 .profile_style {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: space-evenly;
 }
 
-.save-btn {
-  @include  mobile-tablet-large {
-   
+label {
+  margin-left: 30px;
+  margin-bottom: 10px;
+  @include large-screnn {
+    margin-left: 0;
+    margin-bottom: 0;
   }
+}
+
+input {
+  margin-right: 40px;
+  @include large-screnn {
+    margin-right: 0;
+
+  }
+  @include  mobile-tablet-large {
+    margin-right: 0;
+  }
+}
+
+
+
+.save-btn {
   @include submit-btn;
   &:focus {
     box-shadow: $shadow-focus;
@@ -37,27 +52,33 @@
   padding-bottom: 0;
 }
 
-.shadow {
-  box-shadow: $shadow !important;
-}
-
   .create-button {
     @include mobile-tablet-medium {
     width: 100% !important;
   }
+  & i {
+    @include mobile-tablet-medium {
+      padding-left: 20px;
+    }
+  }
 }
   .div-main-picture {
+    width: $size-medium-comp;
+    height: $size-medium-comp;
+    margin-bottom: 1rem;
     @include mobile-tablet-medium {
     width: $size-small-comp;
     height: $size-small-comp;
   }
 }
   .profile-main-picture {
+    height: $size-medium-comp;
     @include mobile-tablet-medium {
     height: $size-small-comp;
   }
 }
   .shadow {
+    box-shadow: $shadow !important;
     @include mobile-tablet-medium {
     box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.08) !important;
   }

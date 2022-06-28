@@ -6,6 +6,8 @@ export default {
     page: 1,
     isOnLastPage: false,
     list: [],
+    //! Ajout
+    posts: []
   },
   mutations: {
     UPDATE_POSTS_LIST(state, posts) {

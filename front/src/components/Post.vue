@@ -55,10 +55,11 @@
     </div>
   </div>
 </template>
-//TODO A SUPPRIMER 
+
 <script>
 import { apiClient } from '../services/api-client';
 // import router from '../router/index';
+
 import EditPost from '../components/EditPost';
 import ProfileImage from './ProfileImage';
 export default {
@@ -70,7 +71,7 @@ export default {
   props: ['post'],
   async mounted() {
     const res = await apiClient.get(`api/posts/${this.post.id}`);
-    this.likesThisPost = res.modify;
+    this.dateThisPost = res.modify;
   }
 };
 </script>

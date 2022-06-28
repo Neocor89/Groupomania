@@ -4,7 +4,7 @@
       id="nav"
       class="sticky-top justify-content-start justify-content-sm-center mb-1"
     >
-      <router-link to="/home">
+      <router-link to="/">
         <img
         class="resize__logo logo__size"
           id="logo"

@@ -1,8 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
-// import VueRouter from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
+
+//: Importation de l'authentification
 import auth from '../middleware/auth';
+
+//: middleware de vérification avant chaque changement d’itinéraire
 import VueRouteMiddleware from 'vue-route-middleware';
 
+//: Gestion des toutes les routes provenant des composants views
 const routes = [
   {
     path: '/home',
@@ -19,8 +23,8 @@ const routes = [
       middleware: auth,
     }
   },
-  { //! Avant => /posts/:postsId
-    path: '/posts',
+  { //! Avant => /posts/:postId
+    path: '/posts/:postId',
     name: 'OnePost',
     component: () => import('../views/OnePost.vue'),
     meta: {

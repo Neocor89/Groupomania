@@ -19,22 +19,22 @@
             <div class="form-group profile_style">
               <!-- :: Revoir cette partie et optimiser :: -->
               <button
-                class="create-button btn-block w-50 mx-auto my-2 d-flex align-items-center justify-content-center"
+                class="create-button "
                 @click="triggerInput"
                 type="button"
                 aria-label="Modifier la photo du profil"
               >
-                <span class="button-text mr-2 d-none d-md-block"
+                <span class="mr-2 d-none d-md-block"
                   >Modifier la photo du profil</span
                 >
-                <span class="button-text mr-2 d-md-none d-lg-none d-xl-none"
+                <span class="mr-2 d-md-none d-lg-none d-xl-none"
                   >
                     Modifier
                   </span>
-                  <i class="fa-solid fa-id-card" aria-label="profile picture modification"></i>
+                  <i class="fa-solid fa-id-card picture_profile" aria-label="profile picture modification"></i>
               </button>
               <div class="d-flex align-items-center">
-                <div class="col-sm-10">
+                <div class="col-sm-8 ">
                   <input
                     ref="fileUpload"
                     class="d-none"
@@ -43,11 +43,11 @@
                   />
                 </div>
               </div>
-              <div class="d-flex align-items-center justify-content-around">
+              <div class="d-flex align-items-center justify-content-center">
                 <div class="col-sm-2 d-none d-lg-block p-0">
-                  <label>Prénom</label>
+                  <label class="">Prénom</label>
                 </div>
-                <div class="col-sm-10">
+                <div class="col-sm-10 ">
                   <input
                     id="firstName"
                     type="text"

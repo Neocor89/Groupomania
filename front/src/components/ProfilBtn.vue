@@ -13,7 +13,7 @@
         customClass="profile-btn__img"
         divCustomClass="div-profile-btn-img"
       />
-      
+
     </button>
     <div
       id="profile-collapsed"
@@ -25,7 +25,7 @@
         <p class="card-text">
           <button
             data-toggle="collapse"
-            class="collapsed-btn collapse btn-block text-left"
+            class="collapsed-btn  btn-block text-left"
             @click="changeOrReloadPage('Profile')"
             aria-label="Afficher le profil"
           >
@@ -35,7 +35,7 @@
         <p class="card-text">
           <button
             data-toggle="collapse"
-            class="collapsed-btn collapse btn-block text-left"
+            class="collapsed-btn  btn-block text-left"
             @click="changeOrReloadPage('Posts')"
             aria-label="Afficher la page d'accueil"
           >
@@ -46,7 +46,7 @@
           <!-- Probleme avec mes buttons collapse -->
           <button
             data-toggle="collapse"
-            class="collapsed-btn collapse btn-block text-left"
+            class="collapsed-btn  btn-block text-left"
             @click="logout"
             aria-label="Deconnection"
           >
