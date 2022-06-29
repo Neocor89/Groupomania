@@ -1,14 +1,10 @@
+//: Imports
 const express = require('express');
 const bodyParser = require('body-parser');
-
 const app = express();
-
 const path = require('path');
-
 // const auth = require('./middleware/auth');
-
 // const userCtrl = require('./controllers/user');
-
 const postsRoutes = require('./routes/posts');
 const userRoutes = require('./routes/user');
 
@@ -27,9 +23,7 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 app.use('/public', express.static(path.join(__dirname, 'public')));
-
-
-//! Verification
+//: Routes users & posts
 app.use('/api/auth', userRoutes);
 app.use('/api/posts', postsRoutes);
 

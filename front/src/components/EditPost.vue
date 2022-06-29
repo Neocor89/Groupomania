@@ -44,6 +44,8 @@ export default {
   props: ['post'],
   data() {
     return {
+      isCreator: "",
+      isAdmin: "",
       content: this.post.content,
       userData: JSON.parse(localStorage.getItem('userData')),
       selectedFile: null,

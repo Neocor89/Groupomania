@@ -5,9 +5,9 @@
   <router-link to="/login" class="btn btn-outline btn-lg link--effect" data-mdb-ripple-color="#000000" >Login</router-link>
 	</div>
 
-	<div class="router__links">
+	<!-- <div class="router__links">
   <router-link to="/Profile" class="btn btn-outline  btn-lg link--effect" data-mdb-ripple-color="#000000" >Profile</router-link>
-	</div>
+	</div> -->
 
 	<div class="router__links">
   <router-link to="Signup" class="btn btn-outline  btn-lg link--effect" data-mdb-ripple-color="#000000" >Signup</router-link>

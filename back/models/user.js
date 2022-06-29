@@ -13,17 +13,17 @@ module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
       User.hasMany(models.Post, { foreignKey: "userId" });
-    }
 
-    // softDestroy() {
-    //   return this.update({
-    //     deleted: true,
-    //     email: `deleted-user${this.id}@groupamania.com`,
-    //     imageUrl: null,
-    //     firstName: "Utilisateur",
-    //     lastName: "Supprimé",
-    //   });
-    // }
+    } //!  REAJOUTE => NOUVEAU TEST
+    softDestroy() {
+      return this.update({
+        deleted: true,
+        email: `deleted-user${this.id}@groupamania.com`,
+        imageUrl: null,
+        firstName: "Utilisateur",
+        lastName: "Supprimé",
+      });
+    }
   }
   User.init(
     {

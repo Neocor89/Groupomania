@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Post.belongsTo(models.User, { foreignKey: "userId" });
-      
+      //: Relation entre table User & Post
     }
 
     readableCreatedAt() {
@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Post.init(
-    {
+    { //: Contenu de la table Post
       userId: DataTypes.INTEGER,
       content: DataTypes.TEXT,
       imageUrl: DataTypes.STRING,
@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       validate: {
+        //: Validator custom avec message d'erreur
         eitherContentOrImageUrl() {
           if (!this.content && !this.imageUrl) {
             throw new Error("Publication vide ! Veuillez ajouter un contenu ou une image");
@@ -47,12 +48,19 @@ module.exports = (sequelize, DataTypes) => {
       await deleteFile(post.imageUrl);
     }
   });
-
+//: 
   Post.afterUpdate(async (post) => {
-    if (post.dataValues.imageUrl !== post._previousDataValues.imageUrl) {
-      await deleteFile(post._previousDataValues.imageUrl);
+    if (post.imageUrl !== post.imageUrl) {
+      await deleteFile(post.imageUrl);
     }
   });
 
   return Post;
 };
+
+
+// Post.afterUpdate(async (post) => {
+//   if (post.dataValues.imageUrl !== post._previousDataValues.imageUrl) {
+//     await deleteFile(post._previousDataValues.imageUrl);
+//   }
+// });

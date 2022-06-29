@@ -28,11 +28,10 @@ export default {
   },
   watch: {
     $route() {
-      //: $route(to, from)
       this.loadPost();
     },
   },
-  async mounted() {
+  async unmounted() {
     await this.loadPost();
   },
   methods: {

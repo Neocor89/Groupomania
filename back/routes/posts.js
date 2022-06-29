@@ -8,7 +8,7 @@ const postsCtrl = require('../controllers/posts');
 const auth = require('../middleware/auth');
 const multer = require('../middleware/multer-config');
 
-//! Problème identifié sur certaines route et la route modifyPost
+
 //: All routes for posts management
 router.post('/', auth, multer, postsCtrl.createPost);
 router.get('/:id', auth, postsCtrl.getOnePost);

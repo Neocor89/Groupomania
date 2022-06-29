@@ -8,7 +8,7 @@
         <p @click="onDeleteAccount" class="my-2 mr-1 mr-lg-2 btn_action--delete">
           Supprimer votre compte
         </p>
-        <i icon="trash"></i>
+        <i class="fa-solid fa-trash-xmark"></i>
       </button>
     </div>
   </div>

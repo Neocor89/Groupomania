@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="position__avatar">
     <button
       @click="toggleActions"
       class="profile-btn d-flex position-fixed justify-content-center justify-content-lg-between align-items-center"
@@ -29,29 +29,29 @@
             @click="changeOrReloadPage('Profile')"
             aria-label="Afficher le profil"
           >
-            <i icon="person" class="mr-2"></i>Voir mon profil
+            <i class="fa-solid fa-person m-2"></i>Profil
           </button>
         </p>
         <p class="card-text">
           <button
             data-toggle="collapse"
-            class="collapsed-btn  btn-block text-left"
+            class="collapsed-btn btn-home btn-block text-left"
             @click="changeOrReloadPage('Posts')"
             aria-label="Afficher la page d'accueil"
           >
-            <i icon="house" class="mr-2"></i>Voir la page d'accueil
+            <i class="fa-solid fa-house-user m-2"></i>Accueil
           </button>
         </p>
         <p class="card-text">
-          <!-- Probleme avec mes buttons collapse -->
+          <!--  -->
           <button
             data-toggle="collapse"
-            class="collapsed-btn  btn-block text-left"
+            class="collapsed-btn btn-logout btn-block text-left"
             @click="logout"
             aria-label="Deconnection"
           >
-            <i icon="box-arrow-right" class="mr-2"></i>
-            Se déconnecter
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Deconnection
           </button>
         </p>
       </div>

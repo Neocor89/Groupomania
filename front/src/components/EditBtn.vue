@@ -1,17 +1,18 @@
 <template>
   <div>
+    <!--:: Gestion Suppression eidtion text user ::-->
     <button @click="toggleActions"
-      v-if="isAdmin || isCreator"
+      v-if="isAdmin || isCreator == true"
       :class="customClass"
       class="post-button d-block position-absolute"
-      aria-label="Afficher les actions possibles"
+      aria-label="Afficher les actions"
     >
       <i class="fa-solid fa-unlock-keyhole"></i>
     </button>
     <div
       v-bind:class="`${
         classCollapse || ''
-      } btn-collapsed collapse collapsed mt-2 position-absolute ${
+      }  mt-2 position-absolute ${
         areActionsVisible && 'visible'
       }`"
     >
@@ -19,22 +20,22 @@
         <p class="card-text" v-if="isCreator">
           <button
             class="text-left w-100"
-            v-if="editingPost && isCreator"
+            v-if="editingPost && isCreator == true"
             block
             v-b-modal="`modal-${elementId}`"
             aria-label="Modifier"
           >
-            <i icon="pencil" class="mr-2 mr-lg-3"></i
+          <i class="fa-solid fa-pencil mr-2 mr-lg-3"></i>
             ><span>{{ modifyText }}</span></button
           >
           <button
             class="text-left w-100"
-            v-if="!editingPost && isCreator"
+            v-if="!editingPost && isCreator == true"
             block
             @click="clickedEditButton"
             aria-label="Modifier"
           >
-            <i icon="pencil" class="mr-2 mr-lg-3"></i
+            <i class="fa-solid fa-pencil mr-2 mr-lg-3"></i>
             ><span>{{ modifyText }}</span></button
           >
           <slot></slot>
@@ -42,11 +43,11 @@
         <p class="card-text">
           <button
             class="text-left w-100"
-            v-if="isAdmin || isCreator"
+            v-if="isAdmin || isCreator == true"
             block
             v-on:click="onDelete"
             aria-label="Supprimer"
-            ><i icon="trash" class="mr-2 mr-lg-3"></i>
+            ><i class="fa-solid fa-trash-xmark mr-2 mr-lg-3"></i>
             <span>{{ deleteText }}</span></button
           >
         </p>
@@ -80,7 +81,7 @@ export default {
       this.areActionsVisible = !this.areActionsVisible;
     },
     async onDelete() {
-      this.$emit('onDelete');
+     await this.$emit('onDelete');
     },
     async clickedEditButton() {
       this.$emit('clickedEditButton');

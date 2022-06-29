@@ -63,21 +63,6 @@ exports.getOneUser = (req, res, next) => {
 };
 
 exports.getAllUsers = (req, res, next) => {
-  // const options = {
-  //   where: Sequelize.where(
-  //     Sequelize.fn(
-  //       'concat',
-  //       Sequelize.col('firstName'),
-  //       ' ',
-  //       Sequelize.col('lastName')
-  //     ), 
-  //     { 
-  //       [Sequelize.Op.like]: `%${req.query.search}%`,
-  //     }
-  //   ),
-  //   limit: 10,
-  // };
-
   db.User.findAll()
     .then((users) => {
       res.status(200).json({ users });

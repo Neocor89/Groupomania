@@ -42,7 +42,6 @@ export default {
   },
   watch: {
     $route(to, from) {
-      //: $route()
       window.location.reload(to, from);
     },
   },

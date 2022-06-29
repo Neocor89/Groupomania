@@ -1,8 +1,9 @@
+//: Imports
 const fs = require('fs');
-
 const db = require('../models');
-const { Post } = db.sequelize.models;
+// const { Post } = db.sequelize.models;
 
+//: 
 exports.createPost = async (req, res, next) => {
   let postObject = req.body;
 

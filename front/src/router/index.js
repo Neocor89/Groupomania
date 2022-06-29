@@ -9,21 +9,21 @@ import VueRouteMiddleware from 'vue-route-middleware';
 //: Gestion des toutes les routes provenant des composants views
 const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'Home',
     component: () =>
     import(/* webpackChunkName: "about" */ '../views/Home.vue'),
 
   },
   {
-    path: '/',
+    path: '/posts',
     name: 'Posts',
     component: () => import('../views/Posts.vue'),
     meta: {
       middleware: auth,
     }
   },
-  { //! Avant => /posts/:postId
+  { 
     path: '/posts/:postId',
     name: 'OnePost',
     component: () => import('../views/OnePost.vue'),

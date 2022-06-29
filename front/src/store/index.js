@@ -1,7 +1,7 @@
-// import Vue from "vue";
+
 import { createStore } from 'vuex';
 import posts from "./posts";
-// export default new Vuex.Store({})
+
 
 export default createStore({
   state: {

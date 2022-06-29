@@ -11,7 +11,7 @@ function CheckEncryptedPassword(value) {
   }
 }
 
-//: Creation of salting function password :
+//: Creation d'une function pour crypter le mot de passe 
 function addAuthentification(User) {
   const encryptPassword = (user) => {
     if (user.changed('password')) {
@@ -33,7 +33,7 @@ function addAuthentification(User) {
     if (isPasswordValid) return { valid: true, user };
     else return { valid: false, message: 'Mot de passe incorrect' };
   };
-
+//: Verification mot de passe
   User.beforeCreate(encryptPassword);
   User.beforeUpdate(encryptPassword);
 }

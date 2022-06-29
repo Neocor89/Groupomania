@@ -1,4 +1,6 @@
+
 .profile-btn {
+  position: absolute;
   font-weight: $w500;
   border: 2px solid $col-extra;
   color: $dark;
@@ -23,6 +25,8 @@
 }
 
 .collapsed-btn {
+  position: relative;
+  right: -20px;
   font-weight: $w500;
   color: $dark;
   background-color: $light;
@@ -50,7 +54,7 @@
 
 .profile-btn {
   @include mobile-tablet-large {
-  top: 150px;
+  top: 125px;
   right: 30px;
   height: 35px;
   border: 1px solid $col-thrd;
