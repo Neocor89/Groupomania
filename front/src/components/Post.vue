@@ -56,6 +56,12 @@
   </div>
 </template>
 
+<script setup>
+
+  import moment from 'moment'
+
+</script>
+
 <script>
 import { apiClient } from '../services/api-client';
 // import router from '../router/index';

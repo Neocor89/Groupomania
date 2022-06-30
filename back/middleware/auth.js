@@ -1,6 +1,6 @@
 const db = require('../models');
 const jwt = require('jsonwebtoken');
-const { User } = db.sequelize.models;
+// const { User } = db.sequelize.models;
 
 module.exports = (req, res, next) => {
   try {
@@ -11,10 +11,7 @@ module.exports = (req, res, next) => {
     if (req.body.userId && req.body.userId !== userId) {
       throw 'UserID Invalide !';
     } else {
-      User.findOne({ where: { id: userId } }).then((user) => {
-        req.user = user;
         next();
-      });
     }
   } catch (error) {
     res.status(401).json({

@@ -14,7 +14,7 @@ const newToken = (user) => {
 
 exports.signup = async (req, res, next) => {
   console.log(req);
-  db.User.create({
+  await db.User.create({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
@@ -38,7 +38,7 @@ exports.login = async (req, res, next) => {
   }
 };
 
-exports.editUser = (req, res, next) => {
+exports.editUser = async (req, res, next) => {
   try {
     const userObject = req.file
       ? {
@@ -50,20 +50,20 @@ exports.editUser = (req, res, next) => {
       : { ...req.body };
 
     console.log(userObject);
-    req.user.update(userObject).then((user) => res.status(200).json({ user }));
+    await db.User.update(userObject).then((user) => res.status(200).json({ user }));
   } catch (error) {
     res.status(400).json({ error });
   }
 };
 
-exports.getOneUser = (req, res, next) => {
-  db.User.findOne({ where: { id: req.params.id } })
+exports.getOneUser = async (req, res, next) => {
+  await db.User.findOne({ where: { id: req.params.id } })
     .then((user) => res.status(200).json({ user }))
     .catch((error) => res.status(404).json({ error }));
 };
 
-exports.getAllUsers = (req, res, next) => {
-  db.User.findAll()
+exports.getAllUsers = async (req, res, next) => {
+  await db.User.findAll()
     .then((users) => {
       res.status(200).json({ users });
     })

@@ -91,6 +91,12 @@
  +=== Responsive Mixins ===+ 
 ---- ---- ---- ---- ---- */
 
+@mixin tablet-classic-screnn {
+  @media screen and (min-width: map-get($breakpoints, md-screen-size1)) {
+      @content;
+  }
+}
+
 @mixin mobile-tablet-small {
   @media screen and (min-width: map-get($breakpoints, sm-screen)) and (max-width: map-get($breakpoints, md-screen-size1)) {
       @content;

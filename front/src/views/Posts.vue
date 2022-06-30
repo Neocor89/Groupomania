@@ -42,13 +42,13 @@ export default {
 
 <style lang="scss">
 
-
+//assets/avatar
 //+ :: overall style ::
 @import "@/assets/scss/utils/_variables.scss";
 @import "@/assets/scss/utils/_mixins.scss";
 @import "@/assets/scss/utils/_breakpoints.scss";
 
 //+ :: component style ::
-// @import "@/assets/scss/style-pages-views/_Posts.scss";
+@import "@/assets/scss/style-pages-views/_Posts.scss";
 
 </style>

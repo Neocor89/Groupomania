@@ -43,7 +43,7 @@ class ApiClient {
     }).then((response) => this.handleResponse(response));
   }
 
-  delete(path) {
+   delete(path) {
     return fetch(this.baseUrl + path, {
       method: 'DELETE',
       headers: this.headers(),

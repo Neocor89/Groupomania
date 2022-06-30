@@ -4,12 +4,12 @@
       id="nav"
       class="sticky-top justify-content-start justify-content-sm-center mb-1"
     >
-      <router-link to="/">
+        <router-link to="/">
         <img
         class="resize__logo logo__size"
           id="logo"
           :src="
-            require('./assets/background-removebg.png')
+            require('./assets/background-removebg.png' || './assets/avatar-placeholder.png')
           "
           alt="logo Groupomania"
         />

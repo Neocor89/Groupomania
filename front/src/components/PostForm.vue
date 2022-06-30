@@ -49,6 +49,7 @@
           :disabled="emptyField"
           type="submit"
           aria-label="Publier"
+          @click="onFormSubmit"
         >
           <span class="mr-2 d-md-block">Publier</span>
          <i class="fa-solid fa-comment-plus"></i>

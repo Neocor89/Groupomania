@@ -3,9 +3,16 @@
 }
 .home__page {
 	background-image: url('../assets/home-background.jpg');
-	min-height: 80vh;
+	min-height:	80vh;
+
 	background-repeat: no-repeat;
 	background-position: $centered 64%;
+	@include  tablet-classic-screnn {
+		bottom: -459px;
+		@include mobile-tablet-large {
+			background: none;
+		}
+	}
 }
 
 .link--effect {

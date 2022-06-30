@@ -89,12 +89,12 @@ export default {
         });
     },
 
-    modifyPost({ commit }, { postId, selectedFile, content }) {
+    async modifyPost({ commit }, { postId, selectedFile, content }) {
       let body = {
         content: content,
       };
 
-      const isFormData = !!selectedFile;
+      const isFormData = !selectedFile;
 
       if (isFormData) {
         const formData = new FormData();
@@ -103,7 +103,7 @@ export default {
         body = formData;
       }
 
-      apiClient
+      return apiClient
         .put('api/posts/' + postId, body, { isFormData })
         .then((response) => {
           commit('UPDATE_ONE_POST', response.post);
@@ -114,7 +114,7 @@ export default {
       let body = {
         content: content,
       };
-      const isFormData = !!selectedFile;
+      const isFormData = !selectedFile;
 
       if (isFormData) {
         const formData = new FormData();

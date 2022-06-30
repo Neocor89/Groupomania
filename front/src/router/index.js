@@ -25,7 +25,7 @@ const routes = [
   },
   { 
     path: '/posts/:postId',
-    name: 'OnePost',
+    name: 'posts',
     component: () => import('../views/OnePost.vue'),
     meta: {
       middleware: auth,
